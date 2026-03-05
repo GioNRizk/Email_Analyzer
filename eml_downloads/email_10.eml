@@ -1,0 +1,1212 @@
+Delivered-To: gio.rizk023@gmail.com
+Received: by 2002:ac9:1d89:0:b0:61f:3207:f67f with SMTP id u9csp2289397och;
+        Tue, 3 Mar 2026 01:06:37 -0800 (PST)
+X-Received: by 2002:a05:620a:199f:b0:8b2:e922:5297 with SMTP id af79cd13be357-8cbc8e7e8bamr1801288385a.21.1772528797335;
+        Tue, 03 Mar 2026 01:06:37 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1772528797; cv=none;
+        d=google.com; s=arc-20240605;
+        b=J80UeyDpjUnUWzAQ+8EDsROtzOTsvYUW5f/o7KW7Zv66PwxSVXEygfK5bt7XS8hrmH
+         f62Iym9hxgHzhDC3+z0ee8ktBNA2Gv7w4l1znkBhhapaNlqsR1PHgvVn36RnJ08lQX9V
+         4oIeEk9SYaHJeA5+Usx7SU4wuL46h7xMgzNmSa4+kBv2ATV8/GdLw2mJtzbKgYbNc0qM
+         2uVyp1lArpg1x+bdldJTSP9Qtu2If0Bd+6zRhC0l3zGRL96E2vGL+qV8+hVnPd7qS4TU
+         2Fc8oFxwlOtaGJw4yVpDi4wDlhFye1PefB7BH8niLKE86lDGt1Y/Hk2DS09F3wPNMU3q
+         Yywg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:mime-version:list-unsubscribe-post
+         :list-unsubscribe:date:subject:to:from:dkim-signature:dkim-signature;
+        bh=xaBkRlz1Oi+iMUe5VxlKNoaJ6TKbjLaZYFdqg9lJL/A=;
+        fh=pHR9ZBbUspVWhZQMLAbwlelSCmvY32wvDPYHetTJ3JE=;
+        b=jVWlRIIUg5BbPME44s17EuBbVmuxGJwNmaRtMt8pPivlui3Gk/a6Zy0oNXmrhYaDmF
+         jOLEUtrI9EaXJmQEwFuYHuAiapfEr9TbadHSkfW0LB5hHd8mrE3uezQjsjUbPdbdb2oD
+         6VkFamWP5N0gFen+Tf5YmXu68Zkah/4o69dzTtxjDM8H0ygx6MOZSjfXUSRcZGHwKTTU
+         qULPc+qvX7zxhBORpvN/BHRFNtCmS8Vsv8ZCSAqVuv0oRPedPEthFGe1pJS1Pc1oyY80
+         HodQ4mNwcrXmGbSbeDOHOkchCdoaE1z/WwPtq2w8ms0ZitJWLMKd4c9v2yHp4YqFSz5K
+         Uybg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@e.zoom.us header.s=11dkim1 header.b=SgZPZjOh;
+       dkim=pass header.i=@s11.y.mc.salesforce.com header.s=fbldkim11 header.b=ndnS1ZDX;
+       spf=pass (google.com: domain of bounce-qqfg6trmhzuu7po75ym6ksi4ce.110052@bounce.e.zoom.us designates 13.111.204.230 as permitted sender) smtp.mailfrom=bounce-QQFG6TRMHZUU7PO75YM6KSI4CE.110052@bounce.e.zoom.us;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=e.zoom.us
+Return-Path: <bounce-QQFG6TRMHZUU7PO75YM6KSI4CE.110052@bounce.e.zoom.us>
+Received: from mta8.e.zoom.us (mta8.e.zoom.us. [13.111.204.230])
+        by mx.google.com with ESMTPS id af79cd13be357-8cbbf7636c7si1569873985a.515.2026.03.03.01.06.37
+        for <gio.rizk023@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 03 Mar 2026 01:06:37 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-qqfg6trmhzuu7po75ym6ksi4ce.110052@bounce.e.zoom.us designates 13.111.204.230 as permitted sender) client-ip=13.111.204.230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.zoom.us header.s=11dkim1 header.b=SgZPZjOh;
+       dkim=pass header.i=@s11.y.mc.salesforce.com header.s=fbldkim11 header.b=ndnS1ZDX;
+       spf=pass (google.com: domain of bounce-qqfg6trmhzuu7po75ym6ksi4ce.110052@bounce.e.zoom.us designates 13.111.204.230 as permitted sender) smtp.mailfrom=bounce-QQFG6TRMHZUU7PO75YM6KSI4CE.110052@bounce.e.zoom.us;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=e.zoom.us
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=11dkim1; d=e.zoom.us;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=teamzoom@e.zoom.us;
+ bh=xaBkRlz1Oi+iMUe5VxlKNoaJ6TKbjLaZYFdqg9lJL/A=;
+ b=SgZPZjOhUk8jT3w3BaNyWFF6pDpEN9DIp9UedSo9ye2M0wqWHXrBUfQyHhcHQUpCLObvJfPMo6Au
+   69AxoYOKAoJiutB0GsZSH4hu/WXJ2/1jvWTx8kJ4fi8g5rnclob+CxvTB7/Y5ugmHj595nnl0RB6
+   L0FNJxkymF2OJT1tw2b7f0tEuhiVhnWJIuuxKZIHY07h0g2eXHpovN36y2yrETsV4Z8+bUyNiNMz
+   PdXrFWEjHrKHc4KI7rbCs3PEyUxl7nURw/8gjq3DqmRRfoIFsGtIhCw2jBHAZi7jYf+QtBn4xgZj
+   xg0NrW7xcgMBM6xZexduVanKB5c2t/xyptCEFA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim11; d=s11.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=xaBkRlz1Oi+iMUe5VxlKNoaJ6TKbjLaZYFdqg9lJL/A=;
+ b=ndnS1ZDXOQJB133emFbH9wt0xeWMrcFuDaK6qOxC6G8jRrIcf121GbB92Wuxnrl/Vji3UKf6/BUZ
+   i02pA8kMKcIdlE05y3bdnFYYWuqnJzGR+zapwxGi/2CTEYElEd669v5O7Yn+qiH42R8czeBJftQr
+   kmhz65i7UFt0PzhfiTEH4Rfq5jY5zJQweAY8rsqJKNbOe7ynIvOMoCj9MIPtqt4qZ9z5MpHhuTx/
+   E7x2+rlCV61Sg/BOlv9KPoAu1wSDQhfT/eqNIeWo+18PoMUK57QI2Ic1813UPCzr027sbf1LeyQl
+   0KvFgqBVZqDp5o31sWmLNA/E5v4IEBY/dhm0eg==
+Received: by mta8.e.zoom.us id hkqi9q2fmd4c for <gio.rizk023@gmail.com>; Tue, 3 Mar 2026 09:06:21 +0000 (envelope-from <bounce-QQFG6TRMHZUU7PO75YM6KSI4CE.110052@bounce.e.zoom.us>)
+From: "Zoom" <teamzoom@e.zoom.us>
+To: <gio.rizk023@gmail.com>
+Subject: Upgrade your team to Zoom Workplace Pro annual
+Date: Tue, 03 Mar 2026 03:06:21 -0600
+List-Unsubscribe: <https://click.e.zoom.us/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI1MTQwMDg1MTQiLCJzIjoiNzM3NTI1NjU4IiwibGlkIjoiMTMiLCJqIjoiMjUzMTIiLCJqYiI6IjU1IiwiZCI6IjExMDA1MiJ9.p494pIzVODWrzgVTiurwW7FnCzSTLOlgFeYo-MpUCf8>, <mailto:leave-2SFIKEEEAKMEZEG5ZICOJLSMGE.110052@leave.e.zoom.us>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Reply-To: "Zoom Video Communications, Inc" <reply-ZW57XM3YLJLURH3RQTAOD7ETIY.110052@e.zoom.us>
+X-SFMC-Stack: 11
+x-job: 514008514_25312
+Message-ID: <4cc89f94-3b99-413e-a0ba-1b378fd413cb@atl1s11mta670.xt.local>
+Feedback-ID: 514008514:25312:13.111.204.230:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="ER9jHqzWF1qw=_?:"
+
+This is a multi-part message in MIME format.
+
+--ER9jHqzWF1qw=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+Zoom
+  
+ 
+
+  
+ 
+
+ &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847;
+ &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279; &#847; &zwnj;   &#8199; &#65279;
+ 
+
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjEwM2ZhN2QwLTJiYmYtNGIzNi1hNDRhLTVlZjM4Yzg0YmUwNCIsImRla1ZlcnNpb24iOjEsIml2IjoiY1UzT2JGdlBFc21MbFJvWGs5Z1JPQT09IiwiY2lwaGVyVGV4dCI6InEzSTZsR2tnc2lLODZ4d0pxMXNSQm5GR2d0dkRNd3FmT3pJNGc2SEZCbVNhVlNLV1F0aS84b1p2ZlVpSjhqQ3diRk00S1ZDZUhYN2Zjb081aHdRb0lYT1hWYStkYWdseFRjNXNXODhTeVl1VkdoZVQyQkU0IiwiYXV0aFRhZyI6ImZ0OXlnN21IQkNnaGM1ZFZyNTFxQ1E9PSJ9 
+
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjZiZmM4NzcyLWYzMzktNDE1ZS05YmExLWNiNzlhYWMwNzc3MyIsImRla1ZlcnNpb24iOjEsIml2IjoiOVhnakFhYzVCa1RheDNNL2g3RmFxQT09IiwiY2lwaGVyVGV4dCI6IjFrdFE5TUp3QnZWYUFVZkYrUVJYSWpzL0NaOXY1ZmdWYkppR3pzMjhtaVNkRmtSbVh6WjJCL0VVdnppVnNlWjJybktraTA0TXFVSE5udVFyR252WTk3VlhXaWxqaEFiMWVDTUJwemtHUk5ySGN6K0hzVnFvIiwiYXV0aFRhZyI6IlFjMmU1Q3NhZTlqM3RWZGFLV09FQmc9PSJ9 
+
+
+  
+ 
+Give your team the licenses for success
+Enable your employees to streamline communication, collaboration, and productivity in an AI-first platform, simplifying their workday. Upgrade to Zoom Workplace Pro annual and:
+
+ 
+Host meetings
+across any device for up to 30 hours
+
+ 
+Get more done
+in and out of meetings with Zoom AI Companion*
+
+ 
+Store meeting recordings
+with 10GB of Cloud Storage
+
+ 
+Record and send short videos
+with Zoom Clips Plus
+
+ 
+Transform meeting content
+into actionable documents with AI-first Zoom Docs
+
+Save 15% off your first year when you upgrade to Zoom Workplace Pro annual and purchase 2 or more licenses by March 31, 2026.
+
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6ImY2MzYzOWQxLWQxZjYtNDA5Ni04ZjM1LTgzZTM5YjE3ZGFkZCIsImRla1ZlcnNpb24iOjEsIml2IjoiMUNYby9oU0FiSlBBZ1JTN3VRWGVvUT09IiwiY2lwaGVyVGV4dCI6IjJSTStVTFV4OVQyWVVkN3Z3UDB1bW16MHE0OXVxUFFtQjFxVjVlUnF3YUtwWDFOWXNvQUczTTNxR1dHcTlRcUR0R1JNMGxtTEQ0WnE2bm1tUTFnSkhhemYvajZWaktUVUplaitGSUJzazhDQkZMdTVCZDZoIiwiYXV0aFRhZyI6ImhtcnFlYVpEV0FrZHJOLytQcFdNcEE9PSJ9 
+Redeem now 
+
+This offer is only available to customers purchasing Zoom Workplace Pro annual plan with 2 or more licenses. Maximum of 99 licenses per purchase. Offer must be redeemed online by 3/31/2026 at 11:59 PM PT and will be effective for one annual billing cycle. This offer is not available to customers with pre-existing discounts and cannot be combined, exchanged, or used in conjunction with any other offer. Federal, State and Local governments are not eligible for this promotion.
+
+*AI Companion may not be available for all regions and industry verticals.
+
+Catch us on social
+
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjFkZjI1MTA0LTdiMzQtNDdmZi1hY2NmLTU5ZjViYWQ4NDJmNSIsImRla1ZlcnNpb24iOjEsIml2IjoiUmhWRUp0ME1IcVJKM1BjRjJMOU5FUT09IiwiY2lwaGVyVGV4dCI6IityTU5BU2wrZEhsMlQrYTVwVHF1Si9WSS9LZCtuMnFFM3BwTU1LRHkyM2NoK3VJbjhNVWs4UU40ZFcySGEveGRpc0QxSEl6TEJOZGd5blNqSTJhaVJkL0RQV0N5aGZ4R0ZVUW0zUXdlcEVuYzl3WFl2MDBSIiwiYXV0aFRhZyI6IjEyREtkS01qWnFKRjM4TTlZTEtGL0E9PSJ9 
+
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6ImE1ZjJiODg1LTVkMWMtNDk1Ny04ZGVhLWI1MmQ5YjY5ZGU0MiIsImRla1ZlcnNpb24iOjEsIml2Ijoic3RqWmtndFBDUEdMQmtFNWl0MU4xQT09IiwiY2lwaGVyVGV4dCI6IkwzNkpTRzc3cFVLUUVUUHZ3MFRLa3J1OEplWFRqY1hkN1llM0JqV3JzVmFITWM3Z3lYamR4ZGRKYmkzK0JXTmg4M0kyVzJvQUl2bTRQTDFBc1U0UXFvNm5HSFh6aDNLeTJObVNDMDhJOFlzR1FUbUszVTNVIiwiYXV0aFRhZyI6IitiZzh2VUN4VGhDcWpxY1lkZk9IY2c9PSJ9 
+
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjQxM2QzODIwLTE4Y2QtNDVjMS1hYTNjLWIxNWY5YjVlMzY0YiIsImRla1ZlcnNpb24iOjEsIml2IjoidmhPUE1EdVJseGxmWVhxbU9JZmRtZz09IiwiY2lwaGVyVGV4dCI6ImVRVzN1WWRIaTBkcVcvRDNYRlJTSEowMEppbmZEN3F2WFo4VnZwQU5CZnhFd3BhcFhYRUovcU5CdlFrNTZJYlM1ckpYYmNzNGhSRFN6a2pXZFZDV2ZZYysxQ1I3d011K0U0OHdPNUdYR1Y5aGVxWTRoOTJhIiwiYXV0aFRhZyI6IkVOTE9TTloxVUpaOWh6N1VKSHZBeXc9PSJ9 
+
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjAxN2I4MzNiLWNlM2YtNDZhZC1hNTk2LWZkYjBhODFhODFmYyIsImRla1ZlcnNpb24iOjEsIml2IjoiRlFxcEl6NWpJZjRrK0ZoK1AxYUF4UT09IiwiY2lwaGVyVGV4dCI6IlU4bTBtcHl1MVAwS2Q0eDBMeTlLbUVxa3czckY2TktVbVZHU0NoYUJiVnJ5VjI1emU4cmVGeTVvcldZMDVzK0hnenRSN2xhaXpKa0JYb1J3Z3ZzNmhEdFEvOHpSUStnVkNxa2pQbU1oL2lUNFdINC9Wb0RGIiwiYXV0aFRhZyI6Im1RRmVoSENDK3pxRU8xRC96TkZENkE9PSJ9 
+
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjU5NzMwYWUwLWFlMjYtNDBlOC1iOTZlLTRhOTJiYzM1ZWIyYyIsImRla1ZlcnNpb24iOjEsIml2IjoiZ0RYYW85Y3Fid3k3UmUySi9ZVW1ZUT09IiwiY2lwaGVyVGV4dCI6Im5YRU9VSWRsaXA0bXlDZUVVdysraGd2Y0Q2OWxvTG1DM29uS1lHSi9XWE9tMW4yZXh2d2htWGsyaDkyZHhLV2NNU1VlaWFUT2c5MUZZM2tNZnlRUEhwK1NGWEJ1eDIyQU5kcWoxeXB2REx0RjdZbjloU1poIiwiYXV0aFRhZyI6IjNVVmplUXgvSkE4ZW41SVZjRzdIYlE9PSJ9 
+
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjgwMDFhZDMxLTcxYWQtNDMzMC1hZTUwLTQwNjhlNTMwMTViMiIsImRla1ZlcnNpb24iOjEsIml2IjoiU1NtWjhhRVkydFRzRDRSc3VNZWR4Zz09IiwiY2lwaGVyVGV4dCI6IjJ5YW1OcHc1dGJ0OUNEaWhFTXlZRGgxMkY4Y0lEYnBZd1FrU2JvWEIzVDFIcUVsS0F2UWFyNFNobXRueXFoK01uY0Nucm1yYTNiOHk3QmFFUldkVUlZc1RHSlBmQTBKSktabnhvUmphMU93UGhHeTR4NTNHIiwiYXV0aFRhZyI6InZ6THNGb1JGWjFRaGl4TVlrOThEUWc9PSJ9 
+
+
+  
+ 
+
+ Visit 
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6ImVmZWNmZmNmLWZjYzQtNGU3NC05ZGE4LTRlMWRkZDRhNDgzMSIsImRla1ZlcnNpb24iOjEsIml2Ijoic3NUa3J6UDVmNEhmd0w2TndGczVhZz09IiwiY2lwaGVyVGV4dCI6ImUrMm1nbm8zbGpGK3ByN2dGZk9YSTFWSVQ0Q0hpZ3ZmUlNLNUw0UGJPZXpJRnE1QVBvWlJ1VTNKNFJuTk9JUTQzTGNWMEpVS2owTCtVNmdYM09oWFJmT0E2K0JOS3NpeXhPU3ZNL2wvZ2QvQXZvM0FXemxxIiwiYXV0aFRhZyI6IlF2NVRxQmZjNkZkRjg0RHI0RTBxeUE9PSJ9 
+zoom.us 
+
+tel:18887999666 
+1-888-799-9666 
+
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjQ3OGVhYjdkLTZiOGItNGZkNC1iNzBkLTIzNjU2MjdjODczYSIsImRla1ZlcnNpb24iOjEsIml2IjoieFlOSHpLNEJ6RGcyaVQrYmZnMVVQQT09IiwiY2lwaGVyVGV4dCI6IlZodW9POE1RamFjTFF5SXJIaDBtbk4rdUhQNVFQMDFQazh6SkJhek5TR09uYnlnYzNGVnh6VEZaaExtT1N3WkRIc24xeVBMSjdGazE4Ym02Q3drWjVRVy9JcWVYQjBIRmcwZk1yZ0hNT0RhSlA1dCtEVlE4IiwiYXV0aFRhZyI6IldUWHh1Ym9MQ1JubEJiOGlwNWNIUVE9PSJ9 
+ Zoom Video Communications, Inc 
+55 Almaden Blvd #600 San Jose, CA, 95113, US
+
+(c) 2026 Zoom Communications Inc. - All Rights Reserved.
+ 
+
+
+ You're receiving this email because you signed up for a Zoom account. You can 
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjI2ZDBmMTY1LTQ5NDUtNGQ4Ni04Mjc0LWZhZWYyYmFlM2Y5ZSIsImRla1ZlcnNpb24iOjEsIml2IjoiMThxMEViU1ZvTUxDcnlsdlVvZVhwdz09IiwiY2lwaGVyVGV4dCI6ImgzZitESE9kd0FkRlBkOEF3MEVmUUN4UEJ2UTB6S2IvMnVVNlgvY3lFL2xqVUYxYWpFWEFIM1R3cDg5K2pUeUxHTDNta0J1bkxCOUhaNG1qdTFPN295dURRbGNENTRyWHlyUVJ0Sldnd3NLdktXOVNoNWVuIiwiYXV0aFRhZyI6IkgwZG5pYU83VTd1aks0TkNWd1BuaWc9PSJ9 
+update your preferences  at any time. If you wish to be removed from our email list, 
+https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjIwNzFkMTI4LWU3YjAtNDc4NS05OGJlLTVhMWYyNDU5NjFjOSIsImRla1ZlcnNpb24iOjEsIml2IjoiL3RtY2xiOVFOdFNYS1QydnFCMGhCZz09IiwiY2lwaGVyVGV4dCI6InNJYlliOWFPM2s4QkhxejI5WUs0OWQ3TncvVDBSeDk3YmFKODFmSWZXVzI5ZzVFVkpHVzNvQlgwcUVVVU9kT3E2alM4STZrTEFzeUEwRHZnNW04R0FlL0FOaGZ2ZDd2KzJaeVZ2MUEyMUpjcFBhK29IU0VHIiwiYXV0aFRhZyI6InpJRFFPK0RtYndZQjc4QTJGKzkzdXc9PSJ9 
+unsubscribe .
+ 
+
+
+  
+ 
+
+
+
+--ER9jHqzWF1qw=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="telephone=no" name="format-detection">
+    <link rel="icon" type="image/x-icon" href="https://click.zoom.us/zm-favicon">
+    <title>Zoom</title>
+    <style type="text/css">
+        html {
+            width: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+        }
+
+        img {
+            border: 0;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+
+        .MsoNormal {
+            font-family: Arial, sans-serif !important;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        #MessageViewBody a {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        u #footerlinks a {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        .dir-left {
+            direction: ltr !important;
+        }
+
+        .dir-right {
+            direction: rtl !important;
+        }
+
+        .d-inline{
+            display: inline-block !important;
+        }
+
+        .border-radius{
+            border-radius: 20px !important;
+        }
+
+        .border-radius-small{
+            border-radius: 10px !important;
+        }
+
+        .border-radius-cta{
+            border-radius: 100px !important;
+        }
+
+        .border-radius-top{
+            border-radius: 20px 20px 0 0 !important;
+        }
+
+        .border-radius-bottom{
+            border-radius: 0 0 20px 20px !important;
+        }
+
+        .border-radius-top-right{
+            border-radius: 0 20px 0 0 !important;
+        }
+
+        .desktop-only{
+            display: block !important;
+            font-size: inherit !important;
+            line-height: inherit !important;
+            height: auto !important;
+        }
+
+        .mobile-only{
+            display: none !important;
+            height: 0px !important;
+        }
+
+        @media screen and (max-width:650px) {
+            .content-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+                padding-left: 30px !important;
+                padding-right: 30px !important;
+                box-sizing: border-box
+            }
+
+            .text-center{
+                text-align: center !important;
+            }
+            
+            .text-left{
+                text-align: left !important;
+            }
+
+            .full-width-image {
+                width: 100% !important
+            }
+
+            .mob-100 {
+                width: 100% !important;
+                min-width: 100% !important
+            }
+
+            .mob-50 {
+                width: 50% !important;
+                min-width: 50% !important
+            }
+
+            .mob-block {
+                display: block !important
+            }
+
+            .mob-cell {
+                display: table-cell !important
+            }
+
+            .mob-inline {
+                display: inline-block !important
+            }
+
+            .mob-table {
+                width: 100% !important;
+                display: table !important
+            }
+
+            .mob-hide {
+                display: none !important
+            }
+
+            .mob-left {
+                text-align: left !important
+            }
+
+            .mob-center {
+                text-align: center !important
+            }
+
+            .mob-right {
+                text-align: right !important
+            }
+
+            .mx-auto {
+                margin: 0 auto !important
+            }
+
+            .mw-auto{
+                max-width: 10000px !important;
+            }
+
+            .mob-content-pad {
+                padding: 40px !important
+            }
+
+            .m-0{
+                margin: 0 !important;
+            }
+
+            .p-0 {
+                padding: 0 !important
+            }
+
+            .px-0 {
+                padding-left: 0 !important;
+                padding-right: 0 !important
+            }
+
+            .px-10 {
+                padding-left: 10px !important;
+                padding-right: 10px !important
+            }
+
+            .px-20 {
+                padding-left: 20px !important;
+                padding-right: 20px !important
+            }
+
+            .px-15 {
+                padding-left: 14px !important;
+                padding-right: 14px !important
+            }
+
+            .px-25 {
+                padding-left: 25px !important;
+                padding-right: 25px !important
+            }
+
+            .px-30 {
+                padding-left: 30px !important;
+                padding-right: 30px !important
+            }
+
+            .px-40 {
+                padding-left: 40px !important;
+                padding-right: 40px !important
+            }
+
+            .pt-0 {
+                padding-top: 0 !important
+            }
+
+            .pt-2 {
+                padding-top: 2px !important
+            }
+
+            .pt-10 {
+                padding-top: 10px !important
+            }
+
+            .pt-15 {
+                padding-top: 14px !important
+            }
+
+            .pt-20 {
+                padding-top: 20px !important
+            }
+
+            .pt-25 {
+                padding-top: 25px !important
+            }
+
+            .pt-30 {
+                padding-top: 30px !important
+            }
+
+            .pt-35 {
+                padding-top: 35px !important
+            }
+
+            .pt-40 {
+                padding-top: 40px !important
+            }
+
+            .py-0 {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important
+            }
+
+            .py-5 {
+                padding-top: 5px !important;
+                padding-bottom: 5px !important
+            }
+
+            .py-10 {
+                padding-top: 10px !important;
+                padding-bottom: 10px !important
+            }
+
+            .py-20 {
+                padding-top: 20px !important;
+                padding-bottom: 20px !important
+            }
+
+            .py-30 {
+                padding-top: 30px !important;
+                padding-bottom: 30px !important
+            }
+
+            .py-40 {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important
+            }
+
+            .pb-0 {
+                padding-bottom: 0 !important
+            }
+
+            .pb-10 {
+                padding-bottom: 10px !important
+            }
+
+            .pb-20 {
+                padding-bottom: 20px !important
+            }
+
+            .pb-30 {
+                padding-bottom: 30px !important
+            }
+
+            .pb-40 {
+                padding-bottom: 40px !important
+            }
+
+            .pl-10{
+                padding-left: 10px !important;
+            }
+
+            .pl-20{
+                padding-left: 20px !important;
+            }
+
+            .pl-30{
+                padding-left: 30px !important;
+            }
+
+            .pl-40{
+                padding-left: 40px !important;
+            }
+
+            .pr-0{
+                padding-right: 0px !important;
+            }
+
+            .pr-10{
+                padding-right: 10px !important;
+            }
+
+            .pr-20{
+                padding-right: 20px !important;
+            }
+
+            .pr-30{
+                padding-right: 30px !important;
+            }
+
+            .pr-40{
+                padding-right: 40px !important;
+            }
+
+            ul {
+                list-style-position: inside;
+            }
+
+            table{
+                border-collapse: separate !important;
+            }
+
+            .auto-height{
+                height: auto !important;
+                max-height: 1000px !important;
+            }
+
+            .bg-none{
+                background: none !important;
+            }
+
+            .mob-title{
+                font-size: 24px !important;
+                line-height: 30px !important;
+            }
+
+            .mob-reset-height{
+                font-size: 25px !important;
+                line-height: 25px !important;
+                height: 25px !important;
+            }
+
+            .release-width{
+                width: auto !important;
+                max-width: auto !important;
+                min-width: auto !important;
+            }
+
+            .bg-pos{
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .banner-image{
+                display: none !important;
+            }
+
+            .banner-image-wrap{
+                height: 55px;
+                border-radius: 20px;
+                background-image: url('https://click.zoom.us/zoom-header-banner');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .shrink-icon{
+                width: 60px !important;
+                min-width: 60px !important;
+            }
+
+            .shrink-icon img{
+                height: 35px !important;
+                max-height: 35px !important;
+            }
+
+            .br-mob{
+                border-radius: 20px !important;
+            }
+
+            .mobile-background-color{
+                background-color: #0B5CFF !important;
+                border-radius: 20px !important;
+            }
+
+            .border-box{
+                box-sizing: border-box !important;
+            }
+
+            .h-10{
+                height: 10px !important;
+                font-size: 10px !important;
+                line-height: 10px !important;
+            }
+
+            .desktop-only{
+                display: none !important;
+                font-size: 0px !important;
+                line-height: 0px !important;
+                height: 0px !important;
+            }
+
+            .mobile-only{
+                display: block !important;
+                font-size: inherit !important;
+                line-height: inherit !important;
+                height: auto !important;
+            }
+            
+            .soc-height{
+             height: 32px !important;
+                max-height: 32px !important;
+            }
+        }
+    </style>
+    <!--[if (gte mso 9)|(IE)]><style type="text/css">table {border-collapse: collapse !important;}</style><![endif]-->
+    <!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+    <!--[if (gte mso 9)|(IE)]> <style> li { margin-left:27px !important; mso-special-format: bullet; } </style> <![endif]-->
+
+
+
+</head>
+
+<body style="Margin:0;min-width:100%;background-color:#F2F2F4;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding:0;width:100%;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Save 15% off your first year when you purchase 2 or more licenses</div>
+    <table bgcolor="#F2F2F4" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 100%; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; background-color:#F2F2F4;text-align: center;">
+        <tr>
+            <td style="padding: 0; text-align: center;" align="center">
+                <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background-color:#F2F2F4;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;">
+                    <div class="webkit" style="max-width:650px;">
+                        <!--[if (gte mso 9)|(IE)]><table width="650" align="center" style="border-collapse: collapse;border-spacing:0;font-family:Arial, sans-serif;color:#000000;width: 650px;"><tr><td width="650" style="padding:0;width: 650px;"><![endif]-->
+                        <table border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#F2F2F4" class="outer" style="border-collapse: collapse;border-spacing:0;font-family:Arial, sans-serif;color:#000000;Margin:0 auto;width:100%;max-width:650px;">
+                            <!-- === Start Spacer === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td style="padding: 0;font-size: 20px; line-height: 20px; height:20px;" class="mob-reset-height" bgcolor="#F2F2F4">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <!-- === End Spacer === -->
+                            <!-- === Start Pre-Header === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td align="center" valign="top" style="box-sizing: border-box; padding: 0; display: none; font-size:12px; font-family: Arial, sans-serif; font-weight: 400; line-height:16px; color: #000000; text-align: center;mso-hide: all;" class="mob-hide" bgcolor="#F2F2F4">
+                                    <div style="padding: 5px; mso-hide: all;">
+                                        <div style="display: none; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;">
+                                           &nbsp;
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- === End Pre-Header === -->
+                            <!-- === Start Pre-Header Whitespace (Do not edit) === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td style="padding: 0;display: none; max-height: 0px; overflow: hidden; mso-hide: all;" bgcolor="#F2F2F4">
+                                    <div style="display: none; max-height: 0px; overflow: hidden; mso-hide: all;">
+                                        &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279;
+ &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279;
+ &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279; &#847; &zwnj; &nbsp; &#8199; &#65279;
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- === End Pre-Header Whitespace (Do not edit) === -->
+                            <!-- === Start Single Logo === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td style="padding: 0;" class="px-40 pb-20">
+                                    <!-- === Start Here For Dynamic Content === -->
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;" class="mob-center">
+                                        <tr>
+                                            <th class="mob-100 mob-table mob-center px-0 py-0" width="135" style="width: 135px; max-width: 135px; padding: 0 0 20px 25px; font-weight: 400; text-align: left;">
+                                                <table width="110" cellspacing="0" cellpadding="0" border="0" style="width: 110px; min-width: 110px; border-collapse: collapse;" class="mob-100 mob-table mob-center">
+                                                    <tr>
+                                                        <td style="box-sizing: border-box; font-weight: 400; text-align: left;" class="mob-center">
+                                                            <!-- === Link === -->
+                                                            <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjFkZDY5NDE3LWU2MzUtNDY5NS1hOGI5LTg0OWQxNWQzOTc0NiIsImRla1ZlcnNpb24iOjEsIml2IjoiaUFLamdraEJoNXVuRCt3QStpZ09HQT09IiwiY2lwaGVyVGV4dCI6IlV2SWVBNWYvMzFJd013ak10NTYyYUxEbFJhTXh3WTd3NlVCVmlmTE9hVndFbzNpQzR0UllHd0VBaWpnSzRDbGt4dGhrU1NXUEhXdGk0VnpVVXhNNG5lUVF5a3p4ekNhSUFxT0NTRUdIbTZjUDdBRDZLQTRZIiwiYXV0aFRhZyI6ImEyTGhYTlJURXppZDVCREtUUEhNSmc9PSJ9" target="_blank">
+                                                                <!-- === Image === -->
+                                                                <img src="https://click.zoom.us/zoom-email-logo-blue" width="110" alt="Zoom" style="border-width:0;-ms-interpolation-mode:bicubic;width:110px;max-width:110px;height:auto;display:inline-block;margin: 0 auto;" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </th>
+                                            
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- === End Single Logo === -->
+                            <!-- === Start Header Image === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td class="px-15 full-width-image border-radius" style="padding:0; border-radius: 20px;">
+                                    <!-- === Start Here For Dynamic Content === -->
+                                    <!-- === Link === -->
+                                    <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjNjNjhhZDg3LTA1OWMtNDlkNy1iNTA3LWUyMDUwY2U4YjZlYyIsImRla1ZlcnNpb24iOjEsIml2IjoieE1wQTJWSjFtM285czhkTERMZzlFQT09IiwiY2lwaGVyVGV4dCI6IndWTUVJYXdXR3BWcXcwcXZEOWJzNmc4RFM3aHpuMTZIVzE5c0x0dkFZbUxCeXZXWnpuU2ZFY09DbUIyOEhHVHI5dk45VXFEaXd3UVdGY0xNakJOQThycmxiUnNGTERyRXlrRFpVbldiZWoyengwc011RDBRIiwiYXV0aFRhZyI6IkJCWVZ3c3lNRTBEeXV1VnRHd1VzT2c9PSJ9" target="_blank">
+                                        <!-- === Image === -->
+                                        <img src="https://click.zoom.com/l/84442/2025-05-13/c5nx54/84442/1747191039j54jtMYB/Add_Licenses_1.png" width="650" alt="" class="full-width-image border-radius" style="border-width: 0;-ms-interpolation-mode: bicubic;width: 100%;max-width: 650px;height: auto;display: block;border-radius: 20px;" />
+                                    </a>
+                                </td>
+                            </tr>
+                            <!-- === End Header Image === -->
+                            
+                            <!--[if !mso]><!---->
+                            <tr bgcolor="#F2F2F4">
+                                <td style="padding: 0;font-size: 20px; line-height: 20px; height:20px;" bgcolor="#F2F2F4">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <!--[endif]-->
+                            <!-- === End Spacer === -->
+
+                            <!-- === End Single Logo === -->
+                            <!-- === Start Body Text 9 (White BG) === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td bgcolor="#F2F2F4" class="px-15">
+                                    <!-- === Start Here For Dynamic Content === -->
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;">
+                                        <tbody>
+
+                                            <tr>
+                                                <td bgcolor="#ffffff" style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; color:#10134A; padding: 25px 25px 35px 25px; text-align: left; border-radius: 20px; background-color: #ffffff;" class="px-25 border-radius">
+                                                    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; display: inline-block; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="mob-100 mob-title mob-left mob-table" style="font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; color: #00053d; font-size: 30px; font-weight: 600; text-align: left; padding: 10px 0 0px 0; line-height: 36px;" colspan="2" valign="top">Give your team the licenses for success</td>
+                                                            </tr>
+                                                            <!-- === [Row] Title === -->
+                                                            <tr>
+                                                                <td style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size: 17px; line-height: 26px; color: #10134a; text-align: left; padding: 10px 0 0px 0;">Enable your employees to streamline communication, collaboration, and productivity in an AI-first platform, simplifying their workday. Upgrade to Zoom Workplace Pro annual and:</td>
+                                                            </tr>
+                                                            <!-- === [Row] Fancy Bullets === -->
+                                                            <tr>
+                                                                <td style="padding: 20px 0 5px 0;background-color: #FFFFFF" class="border-radius-small">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;direction: ltr; background-color: #FFFFFF;" dir="ltr" class="dir-ltr mob-100 mob-table pb-10">
+                                                                        <tr>
+                                                                            <!-- === Image column === -->
+                                                                            <th width="90" style="width: 70px; min-width: 90px; vertical-align: top;" class="mob-80 mob-table" valign="top">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="20" style="border-collapse: collapse;width: 20px;" class="mob-80 mob-table" align="center">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding: 0; text-align: center; display: inline-block; box-sizing: border-box; width:90px; max-width:90px;" width="90" class="pb-10 mob-100 mob-left mob-left" align="center">
+                                                                                                <!-- === Image === -->
+                                                                                                <img style="height: 85px; width: 75px; max-width: 75px; max-height: 85px; padding: 0px; vertical-align: top;" src="https://click.zoom.com/l/84442/2025-04-23/c5nf2n/84442/17454500154zAoEJma/Meetings.png" alt="" width="75" height="85" />
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <!-- === Spacer === -->
+                                                                            <th style="width: 1px; vertical-align: middle;" valign="middle" width="1" class="mob-hide">
+                                                                                <table style="border-collapse: collapse;width: 1px;" width="1" border="0" cellspacing="0" cellpadding="0" align="right">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding:0;font-size: 1px; line-height: 1px; height: 1px;">&nbsp;</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <!-- === Text Column === -->
+                                                                            <th width="495" style="width: 495px; min-width: 495px; vertical-align: middle; padding: 0;" class="mob-100 mob-table" valign="middle">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="415" style="border-collapse: collapse;width: 495px; min-width: 495px; vertical-align: middle; text-align: left;" class="mob-100 mob-table" valign="middle">
+                                                                                    <tbody>
+                                                                                        <!-- === Body text === -->
+                                                                                        <tr>
+                                                                                            <td style="vertical-align: middle; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:19px; line-height:27px; color: #10134A; text-align: left;" class="px-0" valign="middle"><strong>Host meetings</strong></td>
+                                                                                        </tr>
+                                                                                        <!-- === Body text === -->
+                                                                                        <tr>
+                                                                                            <td style="vertical-align: middle; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:16px; line-height:24px; color: #10134A; text-align: left;" class="px-0" valign="middle">across any device for up to 30 hours</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- === [Row] Fancy Bullets === -->
+                                                            <tr>
+                                                                <td style="padding: 0px 0 5px 0;background-color: #FFFFFF" class="border-radius-small">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;direction: ltr; background-color: #FFFFFF;" dir="ltr" class="dir-ltr mob-100 mob-table pb-10">
+                                                                        <tr>
+                                                                            <!-- === Image column === -->
+                                                                            <th width="90" style="width: 70px; min-width: 90px; vertical-align: top;" class="mob-80 mob-table" valign="top">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="20" style="border-collapse: collapse;width: 20px;" class="mob-80 mob-table" align="center">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding: 0; text-align: center; display: inline-block; box-sizing: border-box; width:90px; max-width:90px;" width="90" class="pb-10 mob-100 mob-left mob-left" align="center">
+                                                                                                <!-- === Image === -->
+                                                                                                <img style="height: 85px; width: 80px; max-width: 80px; max-height: 85px; padding: 0px; vertical-align: top;" src="https://click.zoom.com/l/84442/2025-05-13/c5nx7b/84442/1747192544KOzqpiyk/AIC.png" alt="" width="80" height="85" />
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <!-- === Spacer === -->
+                                                                            <th style="width: 1px; vertical-align: middle;" valign="middle" width="1" class="mob-hide">
+                                                                                <table style="border-collapse: collapse;width: 1px;" width="1" border="0" cellspacing="0" cellpadding="0" align="right">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding:0;font-size: 1px; line-height: 1px; height: 1px;">&nbsp;</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <!-- === Text Column === -->
+                                                                            <th width="495" style="width: 495px; min-width: 495px; vertical-align: middle; padding: 0;" class="mob-100 mob-table" valign="middle">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="415" style="border-collapse: collapse;width: 495px; min-width: 495px; vertical-align: middle; text-align: left;" class="mob-100 mob-table" valign="middle">
+                                                                                    <tbody>
+                                                                                        <!-- === Body text === -->
+                                                                                        <tr>
+                                                                                            <td style="vertical-align: middle; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:19px; line-height:27px; color: #10134A; text-align: left;" class="px-0" valign="middle"><strong>Get more done</strong></td>
+                                                                                        </tr>
+                                                                                        <!-- === Body text === -->
+                                                                                        <tr>
+                                                                                            <td style="vertical-align: middle; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:16px; line-height:24px; color: #10134A; text-align: left;" class="px-0" valign="middle">in and out of meetings with Zoom AI Companion*</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- === [Row] Fancy Bullets === -->
+                                                            <tr>
+                                                                <td style="padding: 0px 0 5px 0;background-color: #FFFFFF" class="border-radius-small">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;direction: ltr; background-color: #FFFFFF;" dir="ltr" class="dir-ltr mob-100 mob-table pb-10">
+                                                                        <tr>
+                                                                            <!-- === Image column === -->
+                                                                            <th width="90" style="width: 70px; min-width: 90px; vertical-align: top;" class="mob-80 mob-table" valign="top">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="20" style="border-collapse: collapse;width: 20px;" class="mob-80 mob-table" align="center">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding: 0; text-align: center; display: inline-block; box-sizing: border-box; width:90px; max-width:90px;" width="90" class="pb-10 mob-100 mob-left mob-left" align="center">
+                                                                                                <!-- === Image === -->
+                                                                                                <img style="height: 85px; width: 82px; max-width: 82px; max-height: 85px; padding: 0px; vertical-align: top;" src="https://click.zoom.com/l/84442/2025-04-23/c5nf2c/84442/1745450436nPfObT62/Cloud_Storage.png" alt="" width="82" height="85" />
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <!-- === Spacer === -->
+                                                                            <th style="width: 1px; vertical-align: middle;" valign="middle" width="1" class="mob-hide">
+                                                                                <table style="border-collapse: collapse;width: 1px;" width="1" border="0" cellspacing="0" cellpadding="0" align="right">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding:0;font-size: 1px; line-height: 1px; height: 1px;">&nbsp;</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <!-- === Text Column === -->
+                                                                            <th width="495" style="width: 495px; min-width: 495px; vertical-align: middle; padding: 0;" class="mob-100 mob-table" valign="middle">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="415" style="border-collapse: collapse;width: 495px; min-width: 495px; vertical-align: middle; text-align: left;" class="mob-100 mob-table" valign="middle">
+                                                                                    <tbody>
+                                                                                        <!-- === Body text === -->
+                                                                                        <tr>
+                                                                                            <td style="vertical-align: middle; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:19px; line-height:27px; color: #10134A; text-align: left;" class="px-0" valign="middle"><strong>Store meeting recordings</strong></td>
+                                                                                        </tr>
+                                                                                        <!-- === Body text === -->
+                                                                                        <tr>
+                                                                                            <td style="vertical-align: middle; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:16px; line-height:24px; color: #10134A; text-align: left;" class="px-0" valign="middle">with 10GB of Cloud Storage</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- === [Row] Fancy Bullets === -->
+                                                            <tr>
+                                                                <td style="padding: 0px 0 5px 0;background-color: #FFFFFF" class="border-radius-small">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;direction: ltr; background-color: #FFFFFF;" dir="ltr" class="dir-ltr mob-100 mob-table pb-10">
+                                                                        <tr>
+                                                                            <!-- === Image column === -->
+                                                                            <th width="90" style="width: 70px; min-width: 90px; vertical-align: top;" class="mob-80 mob-table" valign="top">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="20" style="border-collapse: collapse;width: 20px;" class="mob-80 mob-table" align="center">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding: 0; text-align: center; display: inline-block; box-sizing: border-box; width:90px; max-width:90px;" width="90" class="pb-10 mob-100 mob-left mob-left" align="center">
+                                                                                                <!-- === Image === -->
+                                                                                                <img style="height: 85px; width: 80px; max-width: 80px; max-height: 85px; padding: 0px; vertical-align: top;" src="https://click.zoom.com/l/84442/2025-04-23/c5nf28/84442/174545046130CjoJvo/Clips_Plus.png" alt="" width="80" height="85" />
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <!-- === Spacer === -->
+                                                                            <th style="width: 1px; vertical-align: middle;" valign="middle" width="1" class="mob-hide">
+                                                                                <table style="border-collapse: collapse;width: 1px;" width="1" border="0" cellspacing="0" cellpadding="0" align="right">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding:0;font-size: 1px; line-height: 1px; height: 1px;">&nbsp;</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <!-- === Text Column === -->
+                                                                            <th width="495" style="width: 495px; min-width: 495px; vertical-align: middle; padding: 0;" class="mob-100 mob-table" valign="middle">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="415" style="border-collapse: collapse;width: 495px; min-width: 495px; vertical-align: middle; text-align: left;" class="mob-100 mob-table" valign="middle">
+                                                                                    <tbody>
+                                                                                        <!-- === Body text === -->
+                                                                                        <tr>
+                                                                                            <td style="vertical-align: middle; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:19px; line-height:27px; color: #10134A; text-align: left;" class="px-0" valign="middle"><strong>Record and send short videos</strong></td>
+                                                                                        </tr>
+                                                                                        <!-- === Body text === -->
+                                                                                        <tr>
+                                                                                            <td style="vertical-align: middle; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:16px; line-height:24px; color: #10134A; text-align: left;" class="px-0" valign="middle">with Zoom Clips Plus</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- === [Row] Fancy Bullets === -->
+                                                            <tr>
+                                                                <td style="padding: 0px 0 5px 0;background-color: #FFFFFF" class="border-radius-small">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;direction: ltr; background-color: #FFFFFF;" dir="ltr" class="dir-ltr mob-100 mob-table pb-10">
+                                                                        <tr>
+                                                                            <!-- === Image column === -->
+                                                                            <th width="90" style="width: 70px; min-width: 90px; vertical-align: top;" class="mob-80 mob-table" valign="top">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="20" style="border-collapse: collapse;width: 20px;" class="mob-80 mob-table" align="center">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding: 0; text-align: center; display: inline-block; box-sizing: border-box; width:90px; max-width:90px;" width="90" class="pb-10 mob-100 mob-left mob-left" align="center">
+                                                                                                <!-- === Image === -->
+                                                                                                <img style="height: 85px; width: 80px; max-width: 80px; max-height: 85px; padding: 0px; vertical-align: top;" src="https://click.zoom.com/l/84442/2025-04-23/c5nf2g/84442/1745450057ZY8BMDFP/Docs.png" alt="" width="80" height="85" />
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <!-- === Spacer === -->
+                                                                            <th style="width: 1px; vertical-align: middle;" valign="middle" width="1" class="mob-hide">
+                                                                                <table style="border-collapse: collapse;width: 1px;" width="1" border="0" cellspacing="0" cellpadding="0" align="right">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td style="padding:0;font-size: 1px; line-height: 1px; height: 1px;">&nbsp;</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <!-- === Text Column === -->
+                                                                            <th width="495" style="width: 495px; min-width: 495px; vertical-align: middle; padding: 0;" class="mob-100 mob-table" valign="middle">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="415" style="border-collapse: collapse;width: 495px; min-width: 495px; vertical-align: middle; text-align: left;" class="mob-100 mob-table" valign="middle">
+                                                                                    <tbody>
+                                                                                        <!-- === Body text === -->
+                                                                                        <tr>
+                                                                                            <td style="vertical-align: middle; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:19px; line-height:27px; color: #10134A; text-align: left;" class="px-0" valign="middle"><strong>Transform meeting content</strong></td>
+                                                                                        </tr>
+                                                                                        <!-- === Body text === -->
+                                                                                        <tr>
+                                                                                            <td style="vertical-align: middle; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:16px; line-height:24px; color: #10134A; text-align: left;" class="px-0" valign="middle">into actionable documents with AI-first Zoom Docs</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- === [Row] Title === -->
+                                                            <tr>
+                                                                <td style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:16px; line-height:24px; color: #10134A; text-align: left;padding: 20px 0 15px 0;"><strong>Save 15% off your first year when you upgrade to Zoom Workplace Pro annual and purchase 2 or more licenses by March 31, 2026.</strong></td>
+                                                            </tr>
+                                                            <!-- === [Row] CTA === -->
+                                                            <tr>
+                                                                <td style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; text-align: left; padding: 10px 0 0 0;">
+                                                                    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; display: inline-block;font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td align="left" style="padding: 10px 30px 12px 30px;background-color: #0B5CFF;font-family: Inter, 'Helvetica Neue', Arial, sans-serif;font-weight: 600;font-size: 16px;line-height: 15px;color: #ffffff;text-align: left;border-radius: 100px;" class="border-radius-cta" bgcolor="#0B5CFF">
+                                                                                    <!-- === Link === -->
+                                                                                    <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjVlZWIyNTU3LTY2NTQtNDAwYS1iMWFiLWIzOGZiYTJjNDY4NyIsImRla1ZlcnNpb24iOjEsIml2IjoiWkZRLytFclViclA5bWVVU0lBdkN4QT09IiwiY2lwaGVyVGV4dCI6InpXa3RvTy9pZVBGbjVrRTNXR2NrUmc5MUlESkIxaUsrVkhMS01pVnF1OWs4bUNHVmxqMjNCb2RlNUZjWGY0MFV4azNNcWhnOVJNODhHdjRRenlZZUMweit1SERJMnF0a1ZELzRTdFJ1cy8yWjVSSWdDOExFIiwiYXV0aFRhZyI6Inp6d2EvaERQSmg0TFRQNjRjTWphcXc9PSJ9" target="_blank" style="font-size: 16px; line-height: 16px; color: #ffffff; text-decoration: none; font-weight: 600; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">Redeem now</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <!-- === Start Body Text 9 (White BG) === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td bgcolor="#F2F2F4" class="px-15">
+                                    <!-- === Start Here For Dynamic Content === -->
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;">
+                                        <tbody>
+                                            <tr>
+                                                <td bgcolor="none" style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; color:#10134A; padding: 20px 20px; text-align: left; background-color: transparent;" class="">
+                                                    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; display: inline-block; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+                                                        <tbody>
+                                                            
+                                                            <!-- === [Row] Body text === -->
+                                                            <tr>
+                                                                <td style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif;font-weight: 400;font-size: 13px;line-height: 18px;color: #B6B6C2;text-align: left;padding: 10px 0;">This offer is only available to customers purchasing Zoom Workplace Pro annual plan with 2 or more licenses. Maximum of 99 licenses per purchase. Offer must be redeemed online by 3/31/2026 at 11:59 PM PT and will be effective for one annual billing cycle. This offer is not available to customers with pre-existing discounts and cannot be combined, exchanged, or used in conjunction with any other offer. Federal, State and Local governments are not eligible for this promotion.<br /><br />*AI Companion may not be available for all regions and industry verticals.
+</td>
+                                                            </tr>
+                                                            
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- === End Body Text 9 (White BG) === -->
+                            
+                            <!-- === Start Social 1 (Bloom) === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td bgcolor="#F2F2F4" class="px-15">
+                                    <!-- === Start Here For Dynamic Content === -->
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;">
+                                        <tbody>
+                                            <tr>
+                                                <td bgcolor="#FFFFFF" style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif;font-weight: 400;color: #ffffff;padding: 14px 25px;text-align: left;border-radius: 20px;background-color: #FFFFFF;" class="px-25 border-radius">
+                                                    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; display: inline-block; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;">
+                                                        <tbody>
+                                                            <!-- === [Row] Social === -->
+                                                            <tr>
+                                                                <td width="600" style="width: 600px; min-width: 600px; vertical-align: top; box-sizing: border-box; padding: 0;" class="mob-100 mob-table" valign="top">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;width: 600px; min-width: 600px; vertical-align: top; text-align: left;" class="mob-100 mob-table" valign="top">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <!-- === Column 1 === -->
+                                                                                <th width="330" style="font-weight: 400; width: 330px; min-width: 330px; vertical-align: top; box-sizing: border-box;text-align: center; padding: 0;" align="center" class="mob-100 mob-table" valign="top">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="330" style="width: 330px; min-width: 330px; vertical-align: top; text-align: center;" align="center" class="mob-100 mob-table" valign="top">
+                                                                                        <tr>
+                                                                                            <!-- === Text === -->
+                                                                                            <td style="vertical-align: top;box-sizing: border-box;font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif;font-weight: 600;font-size: 20px;line-height: 23px;color: #0b5cff;text-align: left;padding: 6px 0 0 0;" valign="top" class="pt-0">Catch us on social</td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </th>
+                                                                                <!-- === Column 2 === -->
+                                                                                <th width="270" style="font-weight: 400; width: 270px; min-width: 270px; vertical-align: top; box-sizing: border-box;text-align: right; padding: 0;" align="center" class="mob-100 mob-table mob-left" valign="top">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="270" style="width: 270px; min-width: 270px; vertical-align: top; text-align: right;" align="center" class="mob-100 mob-table mob-left" valign="top">
+                                                                                        <tr>
+                                                                                            <!-- === Social Images === -->
+                                                                                            <td style="vertical-align: top; box-sizing: border-box; font-family: Montserrat, 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size:20px; line-height:14px; color: #0B5CFF; text-align: right; padding: 0;" valign="top" class="mob-left pt-15">
+                                                                                                <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6ImM5OTI4MDMzLWMzMzktNDhiMS04MzlkLWM5MGVjYTMxYmYyZCIsImRla1ZlcnNpb24iOjEsIml2IjoiNU9JaTRoYkFVQ0VpZWJFZmVOYVlNZz09IiwiY2lwaGVyVGV4dCI6Ik5ET1FoYS9IQXRJa0hyRzZhYS9YcWVqWUYzNmhIcFRCcU9XVnV3MGtOOXBITko0TDY4QUpnSENwYlh6bDgyaHMxSlQwcEl4VVpGcEFDOFlJVThxOWRabkJGOFFmRnpUazRpTGlGc0JRSVNKNXNSOTQxcGd5IiwiYXV0aFRhZyI6IldrQUx4Z2hUeXIxMW1jRVh4QjhYTkE9PSJ9" target="_blank" style="text-decoration: none;"><img src="https://click.zoom.com/l/84442/2024-07-10/c5ff3n/84442/1720615678CPzuB5Ia/social_linkedin_circle_white.png" height="35" alt="LinkedIn" style="border-width:0;-ms-interpolation-mode:bicubic;height:35px;max-height:35px!important;width:auto;display:inline-block;margin: 0 auto;" class="soc-height" /></a>
+                                                                                                <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjBiMDM3Y2UwLTJlNmQtNGJkOS1hODAyLTQ0ODM4ZmMwZjFjNCIsImRla1ZlcnNpb24iOjEsIml2IjoibWRlRVlvZ3RNM0ZIamNJeHpDcnV6QT09IiwiY2lwaGVyVGV4dCI6Im1uU2FxbmtzcFYwdnlhRWlmcUF0UnlGc1Z3YXMxWmxoK3NYdGlaRndwaE85MVpsamJRZndyemJHYVZybVUxRnorcW0yN2dqRGhJSHFublBpL2o4ZGw5WEswWFJ5SzVPWjE0UmlpQzB6Y1VlTndqSE1LdTdNIiwiYXV0aFRhZyI6ImdlcWVjK0wrUHgyWDFjclJkSElya3c9PSJ9" target="_blank" style="text-decoration: none;"><img src="https://click.zoom.com/l/84442/2024-07-10/c5ff3r/84442/1720615674fEZrFzEH/social_twitter_circle_white.png" height="35" alt="Twitter" style="border-width:0;-ms-interpolation-mode:bicubic;height:35px;max-height:35px!important;width:auto;display:inline-block;margin: 0 auto;" class="soc-height" /></a>
+                                                                                                <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjMzYmI5OGJiLTdmNDMtNGQ0MS05YmMxLTliZTFmMjc5NDNhMiIsImRla1ZlcnNpb24iOjEsIml2IjoiWjZlZ3JqY0tQMC8yZXI2dithek1VQT09IiwiY2lwaGVyVGV4dCI6IlpJK1hiMGphMXVXeUFIeUFENjNvK2Nqbkc3SGxtQVRLelBHRzRGZkRkSTF6MTBISEFoQjNzTTRMb2Q4K2VHN1pSejlPTDZ4djJ5TEVIdE1XMFFnTUdhRjZSZm5Hb3hobnA2Q3VOd28vVC9aNnZxLzVyTXhRIiwiYXV0aFRhZyI6IklzUWUweGJSQ0F3Wm9YcEYrY2FqR0E9PSJ9" target="_blank" style="text-decoration: none;"><img src="https://click.zoom.com/l/84442/2024-07-10/c5ff3k/84442/1720615682jefb03FW/social_instagram_circle_white.png" height="35" alt="Instagram" style="border-width:0;-ms-interpolation-mode:bicubic;height:35px;max-height:35px!important;width:auto;display:inline-block;margin: 0 auto;" class="soc-height" /></a>
+                                                                                                <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6ImExOWNiOWM3LWMyNGItNGE0Ni05MTEwLThhMWViMzRiMzNhNSIsImRla1ZlcnNpb24iOjEsIml2IjoiVHhDVjAvdkEzdmNZdkh6ZjJXcC9iQT09IiwiY2lwaGVyVGV4dCI6IllzV01qdk1CZ2l2eXhnRnp1U0RQblNCVFp3SkZ2ejRuT3c2dU5nNDM3SEw0SDlJbXJaSXdnRUllWlVwZ1RQNVNmemx6U1dxeG5CanpDb1NENVI2VDErUzVzMkpaZk14UEVKWFQrOERlOXhpOGZOL1phbjlzIiwiYXV0aFRhZyI6IkdQTUtoSVBsSHBQWDVMbXpZbGw4ekE9PSJ9" target="_blank" style="text-decoration: none;"><img src="https://click.zoom.com/l/84442/2024-07-10/c5ff3g/84442/1720615687ZVQhZVor/social_facebook_circle_white.png" height="35" alt="Facebook" style="border-width:0;-ms-interpolation-mode:bicubic;height:35px;max-height:35px!important;width:auto;display:inline-block;margin: 0 auto;" class="soc-height" /></a>
+                                                                                                <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6ImYwMzhmOTE5LWVmYjYtNDM2YS05ZjZhLTRmM2Y4ZmQ0N2I4YyIsImRla1ZlcnNpb24iOjEsIml2IjoiN3g1V0IvS056RWZIYmZZSjRrRlovUT09IiwiY2lwaGVyVGV4dCI6ImpUdHRjVW9HRllpMHQ3Q3hFTTlteEVvSUhwS1JoWUNSSzA4NHc1cTIvd0l6V3ZCN2RhN2ZJWlJCQjl5a01jcnJSWHhKMUN5MjRKVHl3dlNudnd1NE5WN0ZhZUh0b0FQdkhsWUg4bzNNUjhkdDlnbmlRVm45IiwiYXV0aFRhZyI6ImxQTEM5S2UvQzdnMVhzVnA0ZTJnQXc9PSJ9" target="_blank" style="text-decoration: none;"><img src="https://click.zoom.com/l/84442/2024-07-10/c5ff3v/84442/1720615669g0JoWWdz/social_youtube_circle_white.png" height="35" alt="Youtube" style="border-width:0;-ms-interpolation-mode:bicubic;height:35px;max-height:35px!important;width:auto;display:inline-block;margin: 0 auto;" class="soc-height" /></a>
+                                                                                                <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjE2OWNlNDQwLWUwMzYtNDJkMS04NTIwLWIzNjM4ZDYzZTNiOSIsImRla1ZlcnNpb24iOjEsIml2IjoiT2R3SnB1cC8zV1F0TmxlTnZWS3gzdz09IiwiY2lwaGVyVGV4dCI6ImJiMkVjZGVVYU5CcWxBc2cwNWlqQ1ZCcFR0K0pWZTBPMXFTbCtpd1pjL0l0SE1sRjBIK1BKQXhBVHhBRzB6cmxoVUtLU0J1cDVyVnh5b2pPT3hNRU9Vc3RsTUpLUnlnNTNBbW02bi9kWkMwMlY0MjlVckhmIiwiYXV0aFRhZyI6InRYSEtpTTQ3RXdRNVN5MlV3a3BIS0E9PSJ9" target="_blank" style="text-decoration: none;"><img src="https://click.zoom.com/l/84442/2024-07-10/c5ff3c/84442/1720615660bYzGZ0mL/social_blog_circle_white.png" height="35" alt="Blog" style="border-width:0;-ms-interpolation-mode:bicubic;height:35px;max-height:35px!important;width:auto;display:inline-block;margin: 0 auto;" class="soc-height" /></a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </th>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- === End Social 1 (Bloom) === -->
+                            <!-- === Start Spacer === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td style="padding: 0;font-size: 20px; line-height: 20px; height:20px;" bgcolor="#F2F2F4">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <!-- === End Spacer === -->
+                            <!-- === Start Footer 1 === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td bgcolor="#F2F2F4" class="px-15">
+                                    <!-- === Start Here For Dynamic Content === -->
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;">
+                                        <tbody>
+                                            <tr>
+                                                <td bgcolor="#F2F2F4" style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; color:#B6B6C2; padding: 15px 25px 0 25px; text-align: center;background-color: #F2F2F4;" class="pt-10 mob-left">
+                                                    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; display: inline-block; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;" class="mob-left">
+                                                        <tbody>
+                                                            <!-- === Footer text === -->
+                                                            <tr>
+                                                                <td style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:13px; line-height:18px; color: #B6B6C2; text-align: center;padding: 0;" class="mob-left" id="footerlinks">
+                                                                    Visit <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6Ijc4NmExZmE4LWU0N2QtNDg1YS1iMzMzLTk3NDkwNzE2YWY5OSIsImRla1ZlcnNpb24iOjEsIml2IjoiSnU1eTZHMXdMMVhKdUc5Mk9nYmduUT09IiwiY2lwaGVyVGV4dCI6Im9kRC9ML2IwbmRVWjRHUlV4ZjJvdEgycDNSdVMwMkZ1K3BYQkY2Q1ZuUHloZnRob2RmaTA5b0pXV0hmenZJQW1FNUxDbk02OEc5SjFrbWFKdDZHaWd2SUQrU0RWUFFvbTduTG9iWEF2VmNtNGIzWTZCdUNkIiwiYXV0aFRhZyI6IjBuV1Nab20zb2FLQzhnUDVJTlU5Q2c9PSJ9" target="_blank" style="color:#B6B6C2; text-decoration: underline;">zoom.us</a><br /><a href="tel:18887999666" target="blank" style="color: #B6B6C2; text-decoration: none;">1-888-799-9666</a><br />
+<a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjIxMjNlMWQ1LTc1NzMtNDQ3NS1hY2IwLTIxZGUzYzU0YzYxZCIsImRla1ZlcnNpb24iOjEsIml2IjoibEd1YjFlcEZvUzVMSkxPbGdTeGNxZz09IiwiY2lwaGVyVGV4dCI6IkM2bE5mV01VUkF2QVI2SmdoS0daUDVMRkp0S3BhTjZhL1lCbXhpN3IxZENsK1c2T2ZFOGtxb0l4enUwaS9ocmFURjQ5ekZTRzdLakhKOUdKc2VUaU54SWtORFEybnI2VWE1dlY2a1doTGtza3M2V0JMRnlxIiwiYXV0aFRhZyI6InFNY24wWW14NU9JM0VpUTBORGFldmc9PSJ9" target="blank" style="color: #B6B6C2; text-decoration: none;"> Zoom Video Communications, Inc<br>55 Almaden Blvd #600 San Jose, CA, 95113, US</a><br />
+&copy; 2026 Zoom Communications Inc. - All Rights Reserved.
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- === End Footer 1 === -->
+                            <!-- === Start Footer 2 === -->
+                            <tr bgcolor="#F2F2F4">
+                                <td bgcolor="#F2F2F4" class="px-15">
+                                    <!-- === Start Here For Dynamic Content === -->
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;">
+                                        <tbody>
+                                            <tr>
+                                                <td bgcolor="#F2F2F4" style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; color:#B6B6C2; padding: 15px 25px 25px 25px; text-align: center;background-color: #F2F2F4;" class="pt-10 mob-left">
+                                                    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; display: inline-block; font-family: Inter, 'Helvetica Neue', Arial, sans-serif;" class="mob-left">
+                                                        <tbody>
+                                                            <!-- === Footer text === -->
+                                                            <tr>
+                                                                <td style="font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:13px; line-height: 18px; color: #B6B6C2; text-align: center;padding: 0;" class="mob-left">
+                                                                    You're receiving this email because you signed up for a Zoom&nbsp;account. You can <a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjJlMTJiMzA0LTc0MTgtNGM1ZC05OGVlLWVmZGIwMGEyODRjMiIsImRla1ZlcnNpb24iOjEsIml2IjoiL1pVbDNkVG9yOXQ3b3ZldTIvRXo2Zz09IiwiY2lwaGVyVGV4dCI6IkNlbEliUkZGYTRRaGFEcGdTV08xSFZFUVllR1VRYjl2WktDaW5SWDlUZklZUS9meStlSHN3b0dia1ZpcmVrNWNOOXNienJYV2ZLNGwvLzVzNXJNWkRlT1VZME9KNnpUOWxTWGQxT2l2MjN1aTk2N2I4VFBxIiwiYXV0aFRhZyI6InJpWC8vbXptc3hrTjQ1UmpRNG5yTkE9PSJ9" style="color:#B6B6C2; text-decoration: underline;">update your preferences</a> at any&nbsp;time. If you wish to be removed from our email list,&nbsp;
+<a href="https://click.e.zoom.us/?qs=eyJkZWtJZCI6IjI4ZjlmMDc3LTc5ZjgtNDBiYi1hODY1LTBjY2RlMzAyZmZhMiIsImRla1ZlcnNpb24iOjEsIml2IjoiakdXeEsvT2R3OEpPSmpjMGF5VG1KQT09IiwiY2lwaGVyVGV4dCI6Img5ajRpZlpWczR1TTZDWmVyc0RzeWlCb0dOQW1uUXd2YjJEb0F5Yi8xQm1IUC9BVHcydXlnblJWdFVXaC9PaDR5QSsxV1VicjZBZzRsQnVnc3UzUnNQaDV0RGVTK1hhTVpiRXI4NTNEd2s0bU56UnJKT1lrIiwiYXV0aFRhZyI6IkNEaVVHNkN5N2RHdytIbTBONUw1ZGc9PSJ9" style="color:#B6B6C2; text-decoration: underline;">unsubscribe</a>.
+                                                                </td>
+                                                            </tr>
+                                                           
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- === End Footer 2 === -->
+                            <!-- === Start Spacer === -->
+                            <!--[if !mso]><!---->
+                            <tr bgcolor="#F2F2F4">
+                                <td style="padding: 0;font-size: 20px; line-height: 20px; height:20px;" bgcolor="#F2F2F4">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <!--[endif]-->
+                            <!-- === End Spacer === -->
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+                    </div>
+                </center>
+            </td>
+        </tr>
+    </table>
+    <!-- === Start Pixel to force mobile === -->
+    <table cellpadding="0" cellspacing="0" border="0" class="mob-hide" style="width: 650px; border-collapse: collapse;"         width="650" align="center">
+        <tr>
+            <td height="1" class="mob-hide" style="min-width:650px; font-size:0px;line-height:0px;">
+                <img height="1" width="650" src="https://click.zoom.us/partner-placeholder"       style="width: 650px; min-width: 650px; height: 1px; text-decoration: none; border: none; -ms-interpolation-mode: bicubic;"       alt="" role="presentation">
+
+            </td>
+        </tr>
+    </table>
+    <!-- === End Pixel to force mobile === -->
+<img src="https://click.e.zoom.us/open.aspx?A6BONFJATDQEBJBUGMTLE73FA4.110052&d=110052&bmt=0" width="1" height="1" alt="">
+
+</body>
+
+</html>
+
+--ER9jHqzWF1qw=_?:--
+

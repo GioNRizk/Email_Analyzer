@@ -1,0 +1,258 @@
+2026-03-05 08:49:25,800 [INFO] database � Connected to database successfully
+2026-03-05 08:49:25,842 [INFO] reputation � Processing 20 emails with 6 threat intel sources
+2026-03-05 08:49:25,842 [INFO] reputation � [1/20] email_1.eml � GulfTalent <candidatesupport@gulftalent.com>
+2026-03-05 08:49:30,635 [INFO] threat_intel �   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:49:30,635 [INFO] threat_intel �   DNSBL: ['bl.spamcop.net'] | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:49:35,039 [INFO] threat_intel �   URLhaus: clean | Domain Age: 8450 days (January 15, 2003)
+2026-03-05 08:49:35,039 [INFO] threat_intel �   SSL: Issuer: Let's Encrypt | Expires: Apr  8 07:51:32 2026 GMT
+2026-03-05 08:49:35,065 [INFO] reputation � [2/20] email_10.eml � Zoom <teamzoom@e.zoom.us>
+2026-03-05 08:49:39,704 [INFO] threat_intel �   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:49:39,704 [INFO] threat_intel �   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:49:42,641 [WARNING] threat_intel � RDAP failed for e.zoom.us: Expecting value: line 1 column 1 (char 0)
+2026-03-05 08:49:52,692 [WARNING] threat_intel � SSL check failed for e.zoom.us: timed out
+2026-03-05 08:49:52,692 [INFO] threat_intel �   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 08:49:52,692 [INFO] threat_intel �   SSL: unknown
+2026-03-05 08:49:52,703 [INFO] reputation � [3/20] email_2.eml � Coursera <Coursera@m.learn.coursera.org>
+2026-03-05 08:51:40,043 [INFO] database — Connected to database successfully
+2026-03-05 08:51:40,060 [INFO] reputation — Processing 20 emails with 6 threat intel sources
+2026-03-05 08:51:40,060 [INFO] reputation — [1/20] email_1.eml — GulfTalent <candidatesupport@gulftalent.com>
+2026-03-05 08:51:44,577 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:51:44,577 [INFO] threat_intel —   DNSBL: ['bl.spamcop.net'] | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:51:48,646 [INFO] threat_intel —   URLhaus: clean | Domain Age: 8450 days (January 15, 2003)
+2026-03-05 08:51:48,646 [INFO] threat_intel —   SSL: Issuer: Let's Encrypt | Expires: Apr  8 07:51:32 2026 GMT
+2026-03-05 08:51:48,647 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:51:48,648 [INFO] reputation — [2/20] email_10.eml — Zoom <teamzoom@e.zoom.us>
+2026-03-05 08:51:53,063 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:51:53,063 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:51:55,839 [WARNING] threat_intel — RDAP failed for e.zoom.us: Expecting value: line 1 column 1 (char 0)
+2026-03-05 08:52:05,884 [WARNING] threat_intel — SSL check failed for e.zoom.us: timed out
+2026-03-05 08:52:05,884 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 08:52:05,884 [INFO] threat_intel —   SSL: unknown
+2026-03-05 08:52:05,884 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:52:05,884 [INFO] reputation — [3/20] email_2.eml — Coursera <Coursera@m.learn.coursera.org>
+2026-03-05 08:52:10,488 [INFO] threat_intel —   AbuseIPDB: 1/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:52:10,498 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:52:14,985 [WARNING] threat_intel — SSL check failed for m.learn.coursera.org: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)
+2026-03-05 08:52:14,996 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 08:52:14,996 [INFO] threat_intel —   SSL: unknown
+2026-03-05 08:52:14,999 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:52:14,999 [INFO] reputation — [4/20] email_3.eml — Maroun Haykal <mhaykal@atriasolutions.com>
+2026-03-05 08:52:22,443 [INFO] threat_intel —   AbuseIPDB: 87/100 | OTX: 14 | GreyNoise: benign
+2026-03-05 08:52:22,444 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: none
+2026-03-05 08:52:26,178 [INFO] threat_intel —   URLhaus: clean | Domain Age: 8030 days (March 10, 2004)
+2026-03-05 08:52:26,178 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 26 22:17:49 2026 GMT
+2026-03-05 08:52:26,183 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:52:26,183 [INFO] reputation — [5/20] email_4.eml — LinkedIn <jobs-noreply@linkedin.com>
+2026-03-05 08:52:30,847 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:52:30,857 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:52:34,550 [INFO] threat_intel —   URLhaus: clean | Domain Age: 8524 days (November 02, 2002)
+2026-03-05 08:52:34,550 [INFO] threat_intel —   SSL: Issuer: DigiCert Inc | Expires: Aug 11 23:59:59 2026 GMT
+2026-03-05 08:52:34,557 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:52:34,557 [INFO] reputation — [6/20] email_5.eml — Pinterest <recommendations@discover.pinterest.com>
+2026-03-05 08:52:39,124 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:52:39,124 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:52:42,612 [WARNING] threat_intel — RDAP failed for discover.pinterest.com: Expecting value: line 1 column 1 (char 0)
+2026-03-05 08:52:42,689 [WARNING] threat_intel — SSL check failed for discover.pinterest.com: [Errno 11001] getaddrinfo failed
+2026-03-05 08:52:42,691 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 08:52:42,691 [INFO] threat_intel —   SSL: unknown
+2026-03-05 08:52:42,695 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:52:42,695 [INFO] reputation — [7/20] email_6.eml — GMATPoint <sayali@gmatpoint.com>
+2026-03-05 08:52:54,064 [WARNING] threat_intel — AlienVault OTX failed for 76.223.180.111: HTTPSConnectionPool(host='otx.alienvault.com', port=443): Read timed out. (read timeout=10)
+2026-03-05 08:52:57,321 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: -1 | GreyNoise: unknown
+2026-03-05 08:52:57,327 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:53:01,787 [INFO] threat_intel —   URLhaus: clean | Domain Age: 3151 days (July 19, 2017)
+2026-03-05 08:53:01,788 [INFO] threat_intel —   SSL: Issuer: Let's Encrypt | Expires: May 21 08:07:55 2026 GMT
+2026-03-05 08:53:01,795 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:53:01,796 [INFO] reputation — [8/20] email_7.eml — Medium Daily Digest <noreply@medium.com>
+2026-03-05 08:53:14,362 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:53:14,362 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:53:19,075 [INFO] threat_intel —   URLhaus: clean | Domain Age: 10144 days (May 27, 1998)
+2026-03-05 08:53:19,075 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 12 20:40:01 2026 GMT
+2026-03-05 08:53:19,080 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:53:19,080 [INFO] reputation — [9/20] email_8.eml — LinkedIn <groups-noreply@linkedin.com>
+2026-03-05 08:53:19,081 [WARNING] threat_intel —   No IP found in email headers
+2026-03-05 08:53:23,272 [INFO] threat_intel —   URLhaus: clean | Domain Age: 8524 days (November 02, 2002)
+2026-03-05 08:53:23,272 [INFO] threat_intel —   SSL: Issuer: DigiCert Inc | Expires: Aug 11 23:59:59 2026 GMT
+2026-03-05 08:53:23,275 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:53:23,276 [INFO] reputation — [10/20] email_9.eml — LinkedIn <jobs-listings@linkedin.com>
+2026-03-05 08:53:23,277 [WARNING] threat_intel —   No IP found in email headers
+2026-03-05 08:53:28,215 [INFO] threat_intel —   URLhaus: clean | Domain Age: 8524 days (November 02, 2002)
+2026-03-05 08:53:28,216 [INFO] threat_intel —   SSL: Issuer: DigiCert Inc | Expires: Aug 11 23:59:59 2026 GMT
+2026-03-05 08:53:28,220 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:53:28,220 [INFO] reputation — [11/20] sample-1.eml — BANCO DO BRADESCO LIVELO <banco.bradesco@atendimento.com.br>
+2026-03-05 08:53:33,489 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:53:33,489 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:53:38,189 [WARNING] threat_intel — SSL check failed for atendimento.com.br: [Errno 11002] getaddrinfo failed
+2026-03-05 08:53:38,189 [INFO] threat_intel —   URLhaus: clean | Domain Age: 2723 days (September 20, 2018)
+2026-03-05 08:53:38,190 [INFO] threat_intel —   SSL: unknown
+2026-03-05 08:53:38,195 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:53:38,195 [INFO] reputation — [12/20] sample-10.eml — "Microsoft account team", _ <no-reply@access-accsecurity.com>
+2026-03-05 08:53:45,875 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:53:45,875 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:53:49,644 [WARNING] threat_intel — RDAP failed for access-accsecurity.com: Expecting value: line 1 column 1 (char 0)
+2026-03-05 08:53:49,882 [WARNING] threat_intel — SSL check failed for access-accsecurity.com: [Errno 11001] getaddrinfo failed
+2026-03-05 08:53:49,883 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 08:53:49,883 [INFO] threat_intel —   SSL: unknown
+2026-03-05 08:53:49,888 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:53:49,889 [INFO] reputation — [13/20] sample-2.eml — MashreqAlerts <postmaster@digitalmashreq.mg.tdi.tc>
+2026-03-05 08:53:56,401 [INFO] threat_intel —   AbuseIPDB: 23/100 | OTX: 1 | GreyNoise: unknown
+2026-03-05 08:53:56,402 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:53:59,550 [WARNING] threat_intel — RDAP failed for digitalmashreq.mg.tdi.tc: Expecting value: line 1 column 1 (char 0)
+2026-03-05 08:53:59,701 [WARNING] threat_intel — SSL check failed for digitalmashreq.mg.tdi.tc: [Errno 11001] getaddrinfo failed
+2026-03-05 08:53:59,701 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 08:53:59,702 [INFO] threat_intel —   SSL: unknown
+2026-03-05 08:53:59,707 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:53:59,708 [INFO] reputation — [14/20] sample-3.eml — Nora Alex <noraalex01@gmail.com>
+2026-03-05 08:54:05,302 [INFO] threat_intel —   AbuseIPDB: 69/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:54:05,302 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:54:09,913 [INFO] threat_intel —   URLhaus: clean | Domain Age: 11162 days (August 13, 1995)
+2026-03-05 08:54:09,913 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 27 08:37:55 2026 GMT
+2026-03-05 08:54:09,919 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:54:09,919 [INFO] reputation — [15/20] sample-4.eml — Manpower Norge <nyhetsbrev.manpowergroup@manpowergroup.no>
+2026-03-05 08:54:15,435 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:54:15,435 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:54:19,357 [INFO] threat_intel —   URLhaus: clean | Domain Age: 5426 days (April 27, 2011)
+2026-03-05 08:54:19,358 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 12 08:33:27 2026 GMT
+2026-03-05 08:54:19,363 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:54:19,363 [INFO] reputation — [16/20] sample-5.eml — phishing@pot
+2026-03-05 08:54:24,049 [INFO] threat_intel —   AbuseIPDB: 41/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:54:24,049 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:54:27,044 [WARNING] threat_intel — RDAP failed for pot: Expecting value: line 1 column 1 (char 0)
+2026-03-05 08:54:29,377 [WARNING] threat_intel — SSL check failed for pot: [Errno 11001] getaddrinfo failed
+2026-03-05 08:54:29,379 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 08:54:29,379 [INFO] threat_intel —   SSL: unknown
+2026-03-05 08:54:29,383 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:54:29,383 [INFO] reputation — [17/20] sample-6.eml — Kundenservice, jehd <service@stayfriends.de>
+2026-03-05 08:54:34,714 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:54:34,714 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:54:37,531 [WARNING] threat_intel — RDAP failed for stayfriends.de: Expecting value: line 1 column 1 (char 0)
+2026-03-05 08:54:38,087 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 08:54:38,087 [INFO] threat_intel —   SSL: Issuer: Let's Encrypt | Expires: May  9 22:47:14 2026 GMT
+2026-03-05 08:54:38,092 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:54:38,092 [INFO] reputation — [18/20] sample-7.eml — Google Notifications <notify-noreply@google.com>
+2026-03-05 08:54:43,020 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 1 | GreyNoise: unknown
+2026-03-05 08:54:43,020 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:54:46,574 [INFO] threat_intel —   URLhaus: clean | Domain Age: 10398 days (September 15, 1997)
+2026-03-05 08:54:46,574 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 27 08:36:37 2026 GMT
+2026-03-05 08:54:46,579 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:54:46,579 [INFO] reputation — [19/20] sample-8.eml — FTXinsurance <noreplye@promotix.com>
+2026-03-05 08:54:51,737 [INFO] threat_intel —   AbuseIPDB: 20/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 08:54:51,742 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:54:56,766 [INFO] threat_intel —   URLhaus: clean | Domain Age: 8762 days (March 09, 2002)
+2026-03-05 08:54:56,766 [INFO] threat_intel —   SSL: Issuer: Sectigo Limited | Expires: Dec  2 23:59:59 2026 GMT
+2026-03-05 08:54:56,766 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:54:56,766 [INFO] reputation — [20/20] sample-9.eml — C o i n b a s e <noreply@firesonic.ca>
+2026-03-05 08:55:02,050 [INFO] threat_intel —   AbuseIPDB: 29/100 | OTX: 2 | GreyNoise: unknown
+2026-03-05 08:55:02,050 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 08:55:06,701 [INFO] threat_intel —   URLhaus: clean | Domain Age: 1060 days (April 10, 2023)
+2026-03-05 08:55:06,701 [INFO] threat_intel —   SSL: Issuer: Let's Encrypt | Expires: Apr 26 17:23:17 2026 GMT
+2026-03-05 08:55:06,719 [INFO] reputation —   ✅ Saved to database
+2026-03-05 08:55:06,720 [INFO] database — Database connection closed
+2026-03-05 08:55:06,721 [INFO] reputation — ✅ Reputation checks complete!
+2026-03-05 09:10:19,927 [INFO] database — Connected to database successfully
+2026-03-05 09:10:19,946 [INFO] reputation — Processing 15 emails with 6 threat intel sources
+2026-03-05 09:10:19,947 [INFO] reputation — [1/15] email_10.eml — Zoom <teamzoom@e.zoom.us>
+2026-03-05 09:10:25,571 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:10:25,574 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:10:29,765 [WARNING] threat_intel — RDAP failed for e.zoom.us: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:10:39,841 [WARNING] threat_intel — SSL check failed for e.zoom.us: timed out
+2026-03-05 09:10:39,841 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:10:39,841 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:10:39,848 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:10:39,848 [INFO] reputation — [2/15] email_2.eml — Coursera <Coursera@m.learn.coursera.org>
+2026-03-05 09:10:44,722 [INFO] threat_intel —   AbuseIPDB: 1/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:10:44,722 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:10:49,479 [WARNING] threat_intel — SSL check failed for m.learn.coursera.org: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)
+2026-03-05 09:10:49,489 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:10:49,489 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:10:49,489 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:10:49,489 [INFO] reputation — [3/15] email_5.eml — Pinterest <recommendations@discover.pinterest.com>
+2026-03-05 09:10:54,439 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:10:54,439 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:10:58,160 [WARNING] threat_intel — RDAP failed for discover.pinterest.com: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:10:58,254 [WARNING] threat_intel — SSL check failed for discover.pinterest.com: [Errno 11001] getaddrinfo failed
+2026-03-05 09:10:58,254 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:10:58,264 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:10:58,264 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:10:58,264 [INFO] reputation — [4/15] email_6.eml — GMATPoint <sayali@gmatpoint.com>
+2026-03-05 09:11:03,533 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:11:03,533 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:11:08,264 [INFO] threat_intel —   URLhaus: clean | Domain Age: 3151 days (July 19, 2017)
+2026-03-05 09:11:08,264 [INFO] threat_intel —   SSL: Issuer: Let's Encrypt | Expires: May 21 08:07:55 2026 GMT
+2026-03-05 09:11:08,264 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:11:08,264 [INFO] reputation — [5/15] email_7.eml — Medium Daily Digest <noreply@medium.com>
+2026-03-05 09:11:13,724 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:11:13,724 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:11:24,474 [INFO] threat_intel —   URLhaus: clean | Domain Age: 10144 days (May 27, 1998)
+2026-03-05 09:11:24,474 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 12 20:40:01 2026 GMT
+2026-03-05 09:11:24,474 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:11:24,474 [INFO] reputation — [6/15] sample-1.eml — BANCO DO BRADESCO LIVELO <banco.bradesco@atendimento.com.br>
+2026-03-05 09:11:31,387 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:11:31,388 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:11:37,464 [WARNING] threat_intel — SSL check failed for atendimento.com.br: [Errno 11002] getaddrinfo failed
+2026-03-05 09:11:37,466 [INFO] threat_intel —   URLhaus: clean | Domain Age: 2723 days (September 20, 2018)
+2026-03-05 09:11:37,466 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:11:37,467 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:11:37,468 [INFO] reputation — [7/15] sample-10.eml — "Microsoft account team", _ <no-reply@access-accsecurity.com>
+2026-03-05 09:11:44,633 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:11:44,633 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:11:50,039 [WARNING] threat_intel — RDAP failed for access-accsecurity.com: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:11:50,468 [WARNING] threat_intel — SSL check failed for access-accsecurity.com: [Errno 11001] getaddrinfo failed
+2026-03-05 09:11:50,475 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:11:50,475 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:11:50,475 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:11:50,480 [INFO] reputation — [8/15] sample-2.eml — MashreqAlerts <postmaster@digitalmashreq.mg.tdi.tc>
+2026-03-05 09:11:57,644 [INFO] threat_intel —   AbuseIPDB: 23/100 | OTX: 1 | GreyNoise: unknown
+2026-03-05 09:11:57,645 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:12:00,547 [WARNING] threat_intel — RDAP failed for digitalmashreq.mg.tdi.tc: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:12:00,717 [WARNING] threat_intel — SSL check failed for digitalmashreq.mg.tdi.tc: [Errno 11001] getaddrinfo failed
+2026-03-05 09:12:00,718 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:12:00,719 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:12:00,720 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:12:00,720 [INFO] reputation — [9/15] sample-3.eml — Nora Alex <noraalex01@gmail.com>
+2026-03-05 09:12:06,066 [INFO] threat_intel —   AbuseIPDB: 69/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:12:06,067 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:12:11,159 [INFO] threat_intel —   URLhaus: clean | Domain Age: 11162 days (August 13, 1995)
+2026-03-05 09:12:11,159 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 27 08:37:55 2026 GMT
+2026-03-05 09:12:11,159 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:12:11,159 [INFO] reputation — [10/15] sample-4.eml — Manpower Norge <nyhetsbrev.manpowergroup@manpowergroup.no>
+2026-03-05 09:12:18,165 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:12:18,165 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:12:26,217 [INFO] threat_intel —   URLhaus: clean | Domain Age: 5426 days (April 27, 2011)
+2026-03-05 09:12:26,217 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 12 08:33:27 2026 GMT
+2026-03-05 09:12:26,217 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:12:26,227 [INFO] reputation — [11/15] sample-5.eml — phishing@pot
+2026-03-05 09:12:34,025 [INFO] threat_intel —   AbuseIPDB: 41/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:12:34,025 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:12:37,446 [WARNING] threat_intel — RDAP failed for pot: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:12:39,781 [WARNING] threat_intel — SSL check failed for pot: [Errno 11001] getaddrinfo failed
+2026-03-05 09:12:39,781 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:12:39,781 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:12:39,781 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:12:39,781 [INFO] reputation — [12/15] sample-6.eml — Kundenservice, jehd <service@stayfriends.de>
+2026-03-05 09:12:44,698 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:12:44,698 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:12:47,573 [WARNING] threat_intel — RDAP failed for stayfriends.de: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:12:48,203 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:12:48,203 [INFO] threat_intel —   SSL: Issuer: Let's Encrypt | Expires: May  9 22:47:14 2026 GMT
+2026-03-05 09:12:48,203 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:12:48,203 [INFO] reputation — [13/15] sample-7.eml — Google Notifications <notify-noreply@google.com>
+2026-03-05 09:12:53,432 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 1 | GreyNoise: unknown
+2026-03-05 09:12:53,432 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:12:57,212 [INFO] threat_intel —   URLhaus: clean | Domain Age: 10398 days (September 15, 1997)
+2026-03-05 09:12:57,212 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 27 08:36:37 2026 GMT
+2026-03-05 09:12:57,212 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:12:57,212 [INFO] reputation — [14/15] sample-8.eml — FTXinsurance <noreplye@promotix.com>
+2026-03-05 09:13:01,708 [INFO] threat_intel —   AbuseIPDB: 20/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:13:01,708 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:13:05,629 [INFO] threat_intel —   URLhaus: clean | Domain Age: 8762 days (March 09, 2002)
+2026-03-05 09:13:05,629 [INFO] threat_intel —   SSL: Issuer: Sectigo Limited | Expires: Dec  2 23:59:59 2026 GMT
+2026-03-05 09:13:05,629 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:13:05,629 [INFO] reputation — [15/15] sample-9.eml — C o i n b a s e <noreply@firesonic.ca>
+2026-03-05 09:13:10,443 [INFO] threat_intel —   AbuseIPDB: 29/100 | OTX: 2 | GreyNoise: unknown
+2026-03-05 09:13:10,444 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:13:15,077 [INFO] threat_intel —   URLhaus: clean | Domain Age: 1060 days (April 10, 2023)
+2026-03-05 09:13:15,077 [INFO] threat_intel —   SSL: Issuer: Let's Encrypt | Expires: Apr 26 17:23:17 2026 GMT
+2026-03-05 09:13:15,077 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:13:15,087 [INFO] database — Database connection closed
+2026-03-05 09:13:15,088 [INFO] reputation — ✅ Reputation checks complete!

@@ -1,0 +1,1540 @@
+Delivered-To: gio.rizk023@gmail.com
+Received: by 2002:ac9:1d89:0:b0:61f:3207:f67f with SMTP id u9csp1685197och;
+        Mon, 2 Mar 2026 03:47:03 -0800 (PST)
+X-Received: by 2002:a05:690c:c22a:b0:796:45d4:9e55 with SMTP id 00721157ae682-798859d09bemr97479737b3.15.1772452023310;
+        Mon, 02 Mar 2026 03:47:03 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1772452023; cv=none;
+        d=google.com; s=arc-20240605;
+        b=knKZrUccZ7Rkr9620HWWv5XjZdqK0WmkMvclJB6n4HTcjTcscMKZ6Y5LjVRi0nuwD2
+         +SaGp4Lm5smmptJ2x1+z2Cai3JkNSq1Dquq+SYWji3BEj1dN3kBlKxw6soG1s97uJ9D1
+         d11cxtcLBc2ApUk6Gkss/iBpwYP7iQWDELQtnPGKwPPwXyrrFgLGsSK/3CNbUEy3VICW
+         QyzaUiM7Zoe/aE1YiIeLUpVv2J23qFU/5d8UEwmZGmKlKi45tsI/5SW29IMoutdNLbXy
+         UPp1knFRXB8JC/eqEfztTiQJ5RNGz3kSkySBshYzvqBirhQ+SDkmSZrOyn+dd+njQlSQ
+         TsxA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:subject:list-unsubscribe-post:from:mime-version
+         :date:message-id:to:content-transfer-encoding:dkim-signature;
+        bh=NwcLZFm6CCkt5y4quf3pMWrBhvMjEiZH/Mud0UOAeZg=;
+        fh=7Cpmm8I5nMJZchyi2v7Ya+ZV7qZMS9CCT3zANJ3ZE6Y=;
+        b=A1WNvttqIsFl99pmjKdwWevOV99HVXpAIWcyLC/ZbMZclJguxgNjk1MKcZp3wpFS2S
+         AfrzR/r7dYHpNTRVgl+F/1eHk9OyC/5brZRfnxWUNmUhYKWGI5b1ae/nqu/Og/ovu1p5
+         +4qzPs4hqLUJSl0wdYEeJxXRQOwC3QVL/xpaW88Zg4f2ChwwbiNiEyINzGdbrK9hFJ1x
+         fwABl/NW2nABpka48kw3oaOHA7aitwzHR6XdAXGpr/ZT9nzr6J4Z+klTbQOkKQDEHoyX
+         NEmREuTEwxZ7g+NSNzbtqDD/9nsGoOHTyycM7OREIP5LmlW785hGmf1yRPaAjlXIhVfH
+         ZNxA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@m.learn.coursera.org header.s=scph0823 header.b=hMbR5zeN;
+       spf=pass (google.com: domain of msprvs1=205213qmnvxke=bounces-266693-993@m.learn.coursera.org designates 137.22.225.138 as permitted sender) smtp.mailfrom="msprvs1=205213QMNvXkE=bounces-266693-993@m.learn.coursera.org";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=coursera.org
+Return-Path: <msprvs1=205213QMNvXkE=bounces-266693-993@m.learn.coursera.org>
+Received: from qiegkhf6.m.learn.coursera.org (qiegkhf6.m.learn.coursera.org. [137.22.225.138])
+        by mx.google.com with ESMTPS id 00721157ae682-79876ce9de5si117642797b3.198.2026.03.02.03.47.02
+        for <gio.rizk023@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 02 Mar 2026 03:47:03 -0800 (PST)
+Received-SPF: pass (google.com: domain of msprvs1=205213qmnvxke=bounces-266693-993@m.learn.coursera.org designates 137.22.225.138 as permitted sender) client-ip=137.22.225.138;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@m.learn.coursera.org header.s=scph0823 header.b=hMbR5zeN;
+       spf=pass (google.com: domain of msprvs1=205213qmnvxke=bounces-266693-993@m.learn.coursera.org designates 137.22.225.138 as permitted sender) smtp.mailfrom="msprvs1=205213QMNvXkE=bounces-266693-993@m.learn.coursera.org";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=coursera.org
+Return-Path: <msprvs1=205213QMNvXkE=bounces-266693-993@m.learn.coursera.org>
+X-MSFBL: kEPx4Sjgw86bokT9gp5RGG5L7DTU7uhCOEI1LGQf1Wc=|eyJyIjoiZ2lvLnJpems
+	wMjNAZ21haWwuY29tIiwidGVuYW50X2lkIjoic3BjIiwibWVzc2FnZV9pZCI6IjY
+	5YTFiNDc4YTU2OWU0OTY1MGEzIiwic3ViYWNjb3VudF9pZCI6Ijk5MyIsImN1c3R
+	vbWVyX2lkIjoiMjY2NjkzIn0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=m.learn.coursera.org; s=scph0823; t=1772452020;
+	i=@m.learn.coursera.org;
+	bh=NwcLZFm6CCkt5y4quf3pMWrBhvMjEiZH/Mud0UOAeZg=;
+	h=Content-Type:To:Message-ID:Date:From:List-Unsubscribe-Post:
+	 Subject:List-Unsubscribe:From:To:Cc:Subject;
+	b=hMbR5zeNnQUdp07YJheikPlwIbe2VJ3BgJ8IXBS4IskyldDCVevYQyWIWPhjEZtVn
+	 3+g2etxrVdji6I8V/n04XaC7F93aXMdgoN99QSMkjecaxXJswOr8Uw31oFv+zGG3jn
+	 3j7ah5cePvcLa6p5Xk1/yEj3z8E0yBfOvRKp0BlQ=
+Received: from [10.90.6.136] ([10.90.6.136])
+	by i-07ee24c5e7f5f33a4.mta1vrest.sd.prd.sparkpost (ecelerity 5.2.0.75190 r(msys-ecelerity:tags/5.2.0.2)) with REST
+	id 3A/05-16295-4B875A96; Mon, 02 Mar 2026 11:47:00 +0000
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+To: gio.rizk023@gmail.com
+Message-ID: <3A.05.16295.4B875A96@i-07ee24c5e7f5f33a4.mta1vrest.sd.prd.sparkpost>
+Date: Mon, 02 Mar 2026 11:47:00 +0000
+MIME-Version: 1.0
+From: "Coursera" <Coursera@m.learn.coursera.org>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Subject:   Ready: Google UX Design    
+List-Unsubscribe: <https://05.emailinboundprocessing.com/enc_user/list_unsubscribe?d=%241%24fnpqiE4k0nSWT2uu9KDMbw%3D%3D%24F9NndJE8NBJuKIwvnNhGNFyH9P7%2F4XFxIH37Zjas8F4CB1eupIdVyVeq%2BB9u%0AnfxEyfAia61GXygbeiE9TxjRXIoYgUZhS5xBMvuUn%2BN5W%2Bv6mKS3M2OJkrAN%0A73TwcWyD2J0vOdjAZ0NYOxhmXKRuOu0oV3qMIs2FvW6VtwfC8oBTyY0X3MuT%0ASxkxN0OstPjbUzBuE09%2FtBtkqLAWWqJXXfMLXJLK5HwM3oRsPGiM60yBAp2b%0AFrg5dYxHuMZMKLXhunm%2Bv1ZslTAeSWeMbofZz6ObDMF%2FhikExBDPvLXj4g6k%0ACRqrRcbRwea3EmT%2FoFZOUanHSbnv5f8fFMezvPoPRMkjxk1EQV8CnbropnPO%0A2WdWeSEBIFbgBLdGkHHbMO3A&1=1>,<mailto:4_pjejpypduvtyvlm1ldv2v21bqr9ubwwje5iw8q10jx0sp6nbgka1m8@unsubscribe-05.emailinboundprocessing.com?subject=Unsubscribe%20pnrcgsq2dwe4lhpl39imy0nx7lwm8eabm36nhh0tnwovcfd&body=DO_NOT_DELETE-27qni9pabcu5jhzkhluu2erv5lk4vyw0b0kadikzr8qsq85c7xndls2qhfts7z1hqgmsax40wu72yu8dg3opist-DO_NOT_DELETE>
+
+<!DOCTYPE html>=0A<html      lang=3D"en" xmlns:v=3D"urn:schemas-microsoft-c=
+om:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" style=3D"width:=
+ 100% !important; scroll-behavior: smooth; -webkit-font-smoothing: antialia=
+sed; -moz-osx-font-smoothing: grayscale; height: 100% !important; color-sch=
+eme: light dark; supported-color-schemes: light dark; margin: 0 auto; paddi=
+ng: 0;">=0A<head>=0A<meta http-equiv=3D"Content-Type" content=3D"text/html;=
+ charset=3DUTF-8">=0A<style>body {=0A-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%;=0A}=0A#backgroundTable {=0Awidth: 100% !important;=0A=
+}=0Abody {=0Awidth: 100% !important;=0A}=0A.ExternalClass {=0Aline-height: =
+100%;=0A}=0Aimg {=0Aline-height: 100%;=0A}=0Aa:hover {=0Atext-decoration: n=
+one !important;=0A}=0Abody {=0Aheight: 100% !important; margin: 0 auto !imp=
+ortant; padding: 0 !important;=0A}=0Abody {=0Afont-family: Helvetica,Arial,=
+sans-serif;=0A}=0A#backgroundTable {=0Abackground: #fff;=0A}=0Abody {=0Abac=
+kground: #fff;=0A}=0A#backgroundTable {=0Aline-height: 100% !important; mar=
+gin: 0; padding: 0;=0A}=0Aimg {=0Aborder: 0; height: auto; outline: 0; text=
+-decoration: none; -ms-interpolation-mode: bicubic;=0A}=0Aa:visited {=0Acol=
+or: #0056d2;=0A}=0A.ExternalClass {=0Awidth: 100%;=0A}=0A.ReadMsgBody {=0Aw=
+idth: 100%;=0A}=0A[data-ogsc] a:visited {=0Acolor: #889AEB !important;=0A}=
+=0A[data-ogsc] .utility-links a:visited {=0Acolor: #ffffff !important;=0A}=
+=0A@media only screen and (max-width: 699px) {=0A  .h1 {=0A    letter-spaci=
+ng: -0.05em;=0A  }=0A  .h2 {=0A    letter-spacing: -0.05em;=0A  }=0A  h1 {=
+=0A    letter-spacing: -0.05em;=0A  }=0A  h2 {=0A    letter-spacing: -0.05e=
+m;=0A  }=0A  .full-width {=0A    width: 100% !important;=0A  }=0A  .mobile-=
+only {=0A    width: 100% !important;=0A  }=0A  .w-100 {=0A    width: 100% !=
+important;=0A  }=0A  .webinar-bluebar td table {=0A    width: 100% !importa=
+nt;=0A  }=0A  table.container {=0A    width: 100% !important;=0A  }=0A  tab=
+le.webinar-bluebar {=0A    width: 100% !important;=0A  }=0A  .desktop-only =
+{=0A    display: none !important;=0A  }=0A  .hide {=0A    display: none !im=
+portant;=0A  }=0A  .center {=0A    float: none !important;=0A  }=0A  table.=
+full-width {=0A    float: none !important;=0A  }=0A  .mobile-only {=0A    t=
+ext-align: left;=0A  }=0A  .center {=0A    text-align: center;=0A  }=0A  .t=
+ext-center {=0A    text-align: center;=0A  }=0A  .h1 {=0A    font-size: 33p=
+x !important; line-height: 42px !important; margin: 0 0 16px;=0A  }=0A  h1 =
+{=0A    font-size: 33px !important; line-height: 42px !important; margin: 0=
+ 0 16px;=0A  }=0A  .h2 {=0A    font-size: 28px !important; line-height: 100=
+% !important;=0A  }=0A  h2 {=0A    font-size: 28px !important; line-height:=
+ 100% !important;=0A  }=0A  .h3 {=0A    font-size: 18px !important; line-he=
+ight: 28px !important; letter-spacing: -0.03em;=0A  }=0A  h3 {=0A    font-s=
+ize: 18px !important; line-height: 28px !important; letter-spacing: -0.03em=
+;=0A  }=0A  .card p {=0A    font-size: 15px; font-weight: 400;=0A  }=0A  ol=
+ {=0A    font-size: 15px; font-weight: 400;=0A  }=0A  p {=0A    font-size: =
+15px; font-weight: 400;=0A  }=0A  ul {=0A    font-size: 15px; font-weight: =
+400;=0A  }=0A  p {=0A    line-height: 22px !important;=0A  }=0A  .card p {=
+=0A    line-height: 22px;=0A  }=0A  ol {=0A    line-height: 22px;=0A  }=0A =
+ ul {=0A    line-height: 22px;=0A  }=0A  .institution p {=0A    margin: 0 0=
+ 4px;=0A  }=0A  table.full-width {=0A    display: block !important; margin:=
+ auto !important;=0A  }=0A  table.full-width + table.full-width {=0A    mar=
+gin-top: 20px !important;=0A  }=0A  td.full-width {=0A    display: inline-b=
+lock !important;=0A  }=0A  th.full-width {=0A    display: inline-block !imp=
+ortant;=0A  }=0A  .height-auto {=0A    height: auto !important;=0A  }=0A  i=
+mg.full-width {=0A    height: auto !important;=0A  }=0A  .content {=0A    p=
+adding: 0 7.5% !important;=0A  }=0A  .logo {=0A    height: 16px !important;=
+ width: auto !important;=0A  }=0A  .footer a {=0A    white-space: normal !i=
+mportant;=0A  }=0A  .p-0 {=0A    padding: 0 !important;=0A  }=0A  .p-reset =
+{=0A    padding: 0 !important;=0A  }=0A  .p-lg {=0A    padding-left: 24px !=
+important; padding-right: 24px !important;=0A  }=0A  .p-y-0 {=0A    padding=
+-bottom: 0 !important; padding-top: 0 !important;=0A  }=0A  .ptb-0 {=0A    =
+padding-bottom: 0 !important; padding-top: 0 !important;=0A  }=0A  .p-x-0 {=
+=0A    padding-left: 0 !important; padding-right: 0 !important;=0A  }=0A  .=
+plr-0 {=0A    padding-left: 0 !important; padding-right: 0 !important;=0A  =
+}=0A  .pt-lg {=0A    padding-top: 16px !important;=0A  }=0A  .bdrt {=0A    =
+border-top: 1px solid #000;=0A  }=0A  .hide {=0A    font-size: 0; line-heig=
+ht: 0; max-height: 0; mso-hide: all; overflow: hidden; width: 0;=0A  }=0A  =
+.show {=0A    display: block !important; margin: 0; max-height: inherit !i=
+mportant; overflow: visible !important; padding: 0; width: auto !important;=
+=0A  }=0A  .btn a {=0A    border-radius: 6px !important; font-size: 14px !i=
+mportant; line-height: 40px !important; min-width: 76px !important;=0A  }=
+=0A  .btn-app-store {=0A    padding: 0 0 32px !important;=0A  }=0A  .card .=
+feat-image {=0A    width: 224px;=0A  }=0A  .horizontal-card h2 {=0A    font=
+-size: 16px !important; line-height: 19px !important; letter-spacing: -0.09=
+px !important;=0A  }=0A  .reduced-margin {=0A    font-size: 38px !important=
+;=0A  }=0A  .simple-text h1 {=0A    font-size: 38px !important;=0A  }=0A  .=
+horizontal-card .spacer {=0A    width: 12px !important; display: none;=0A  =
+}=0A  .horizontal-card-content {=0A    display: inline-block !important; wi=
+dth: 100% !important;=0A  }=0A  .horizontal-card-img {=0A    display: inlin=
+e-block !important; width: 100% !important;=0A  }=0A  .horizontal-card-img =
+{=0A    padding-bottom: 16px !important; padding-right: 0 !important;=0A  }=
+=0A  .horizontal-card-img img {=0A    width: 64px !important;=0A  }=0A  .ho=
+rizontal-testimonial-img {=0A    width: 66px !important;=0A  }=0A  .feature=
+-banner-image-img {=0A    display: block !important; width: 100% !important=
+;=0A  }=0A  .feature-banner-below-image-content {=0A    display: block !imp=
+ortant; padding: 32px 24px 16px !important; clear: both;=0A  }=0A  .feature=
+-banner-image-content {=0A    display: block !important; padding: 32px 24px=
+ 16px !important; clear: both;=0A  }=0A  .callout_block_image {=0A    displ=
+ay: block; clear: both;=0A  }=0A  .half_and_half_image {=0A    display: blo=
+ck; clear: both;=0A  }=0A  .half_and_half_image_mkt {=0A    display: block;=
+ clear: both;=0A  }=0A  .half_and_half_text {=0A    display: block; clear: =
+both;=0A  }=0A  .mobile_stack_horizontal_card th {=0A    display: block; cl=
+ear: both;=0A  }=0A  .recs-card {=0A    width: 64px !important; padding: 35=
+px 31px 0 0 !important;=0A  }=0A  .recs-card img {=0A    width: 64px !impor=
+tant; height: 64px !important;=0A  }=0A  .simple-text h1 {=0A    margin-bot=
+tom: 32px !important; line-height: 38px !important;=0A  }=0A  .simple-text =
+h3 {=0A    margin-top: 32px !important; font-size: 20px !important; line-he=
+ight: 24px !important;=0A  }=0A  .half_and_half_image {=0A    padding: 0 0 =
+24px !important;=0A  }=0A  .half_and_half_image_mkt {=0A    padding: 0 0 6p=
+x !important;=0A  }=0A  .callout_block_image {=0A    padding: 0 0 16px !imp=
+ortant;=0A  }=0A  .mobile-only {=0A    display: table !important;=0A  }=0A =
+ .mobile_stack_horizontal_card img {=0A    width: 120px !important; height:=
+ auto !important;=0A  }=0A  .mobile_stack_horizontal_card_medium img {=0A  =
+  width: 170px !important; height: auto !important;=0A  }=0A  .webinar-blue=
+bar td {=0A    display: block !important; padding-left: 0 !important; paddi=
+ng-right: 0 !important; font-size: 14px !important;=0A  }=0A  .webinar-blue=
+bar-divider {=0A    padding-bottom: 20px !important;=0A  }=0A  .webinar-blu=
+ebar-divider td {=0A    border-left: none !important; border-bottom: 1px so=
+lid #1f1f1f !important;=0A  }=0A  .nudge-component-icon-column {=0A    widt=
+h: 100% !important; display: block !important; text-align: left;=0A  }=0A  =
+.nudge-component-text-column {=0A    width: 85% !important; display: block=
+ !important; padding-right: 32px; margin-right: 32px;=0A  }=0A  .bottom-ima=
+ge {=0A    width: 100%; height: auto; margin-bottom: 30px;=0A  }=0A  .stack=
+ed-content {=0A    display: block !important; width: 100% !important;=0A  }=
+=0A  .bottom-half {=0A    display: block; clear: both; padding: 0 !importan=
+t;=0A  }=0A  .bottom-image {=0A    width: 100%; height: auto; margin-bottom=
+: 30px;=0A  }=0A  .bottom-arrow {=0A    padding-bottom: 30px;=0A  }=0A  .re=
+cs-card {=0A    width: 64 !important; padding: 35px 16px 0 0 !important;=0A=
+  }=0A  .recs-card img {=0A    width: 64 !important; height: 64 !important;=
+=0A  }=0A}=0A@media (prefers-color-scheme: dark ) {=0A  .dark-img {=0A    d=
+isplay: table-cell !important; float: none !important; line-height: inherit=
+ !important; margin-top: 0px !important; max-height: inherit !important; ma=
+x-width: inherit !important; overflow: visible !important; visibility: inhe=
+rit !important;=0A  }=0A  .light-img {=0A    display: none !important; mso-=
+hide: all;=0A  }=0A  .darkmode {=0A    background-color: #202123 !important=
+;=0A  }=0A  body {=0A    background-color: #202123 !important;=0A  }=0A  #b=
+ackgroundTable {=0A    background-color: #202123 !important;=0A  }=0A  #bod=
+y {=0A    background-color: #202123 !important;=0A  }=0A  .body {=0A    bac=
+kground-color: #202123 !important;=0A  }=0A  .darkmode {=0A    background-c=
+olor: #5B6780 !important;=0A  }=0A  #backgroundTable_skinny {=0A    backgro=
+und-color: #5B6780 !important;=0A  }=0A  #backgroundTable_feature_banner {=
+=0A    background-color: #5B6780 !important;=0A  }=0A  #backgroundTable_pol=
+l {=0A    background-color: #5B6780 !important;=0A  }=0A  * {=0A    color: =
+#ffffff !important;=0A  }=0A  h1 {=0A    color: #ffffff !important;=0A  }=
+=0A  h2 {=0A    color: #ffffff !important;=0A  }=0A  p {=0A    color: #ffff=
+ff !important;=0A  }=0A  span {=0A    color: #ffffff !important;=0A  }=0A  =
+b {=0A    color: #ffffff !important;=0A  }=0A  address {=0A    color: #ffff=
+ff !important;=0A  }=0A  a {=0A    color: #889AEB !important;=0A  }=0A  a:v=
+isited {=0A    color: #889AEB !important;=0A  }=0A  a strong {=0A    color:=
+ #889AEB !important;=0A  }=0A  .utility-links a {=0A    color: #ffffff !imp=
+ortant;=0A  }=0A  .utility-links a:visited {=0A    color: #ffffff !importan=
+t;=0A  }=0A  .utility-links a strong {=0A    color: #ffffff !important;=0A =
+ }=0A  .btn a {=0A    background: #889AEB !important; color: #202123 !impor=
+tant;=0A  }=0A  .btn a strong {=0A    background: #889AEB !important; color=
+: #202123 !important;=0A  }=0A  .btn-link a {=0A    background: transparent=
+ !important; color: #889AEB !important;=0A  }=0A  .btn-link a strong {=0A  =
+  background: transparent !important; color: #889AEB !important;=0A  }=0A  =
+.btn-outline a {=0A    background: transparent !important; border: 2px sol=
+id #889AEB !important; color: #889AEB !important;=0A  }=0A  .btn-outline a =
+strong {=0A    background: transparent !important; border: 2px solid #889AE=
+B !important; color: #889AEB !important;=0A  }=0A  a .logo {=0A    color: #=
+0056D2 !important;=0A  }=0A  .btn-outline-transparent a {=0A    background-=
+color: #ffffff !important; border: 2px solid #ffffff !important; color: #88=
+9AEB !important;=0A  }=0A  .black-text-summary {=0A    color: #000 !importa=
+nt;=0A  }=0A  .v-space-summary {=0A    background-color: #202123 !important=
+;=0A  }=0A}=0A@media (prefers-color-scheme: dark) {=0A  .darkmode .btn-outl=
+ine-transparent a {=0A    background-color: #ffffff !important; border: 2px=
+ solid #ffffff !important; color: #889AEB !important;=0A  }=0A}=0A@media on=
+ly screen and (min-device-width: 320px) and (max-device-width: 374px) {=0A =
+ u ~ div .email-container {=0A    min-width: 320px !important;=0A  }=0A}=0A=
+@media only screen and (min-device-width: 375px) and (max-device-width: 413=
+px) {=0A  u ~ div .email-container {=0A    min-width: 375px !important;=0A =
+ }=0A}=0A@media only screen and (min-device-width: 414px) {=0A  u ~ div .em=
+ail-container {=0A    min-width: 414px !important;=0A  }=0A}=0A</style>=0A<=
+/head>=0A<body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%; width: 100% !important; height: 100% !important; font-family: Helv=
+etica,Arial,sans-serif; margin: 0 auto; padding: 0;" bgcolor=3D"#fff">=0D=
+=0A<div style=3D"color:transparent;visibility:hidden;opacity:0;font-size:0p=
+x;border:0;max-height:1px;width:1px;margin:0px;padding:0px;border-width:0px=
+!important;display:none!important;line-height:0px!important;"><img border=
+=3D"0" width=3D"1" height=3D"1" src=3D"https://link.coursera.org/q/_QWXbPGq=
+F9Garvh-NB9Avg~~/AAQRxRA~/zY2PCkjI0vLKwvOwiK0AC6-lBfdpelQEDWJZxNjCkg8xuqGd9=
+igUTLv6cj9JUASgwW7bEnFAtgbspYC0_bqDtw~~" alt=3D""/></div>=0D=0A=0A<div styl=
+e=3D"display:none !important;visibility:hidden;mso-hide:all;font-size:1px;c=
+olor:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflo=
+w:hidden;">=C2=A0=0A=0AReady to learn something new=3F =0A </div>=0A<div st=
+yle=3D"display:none !important;visibility:hidden;mso-hide:all;font-size:1px=
+;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overf=
+low:hidden;">=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =
+=EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=
+=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=
+=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =
+=EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=
+=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=
+=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =
+=EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=
+=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=
+=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =
+=EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=
+=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=
+=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=
+=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=
+=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=
+=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =
+=CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=
+=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =
+=C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=
+=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =
+=EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=
+=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =
+=E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=
+=BB=BF =CD=8F =E2=80=8C =C2=A0 =E2=80=87 =EF=BB=BF =CD=8F =E2=80=8C =C2=A0 =
+=E2=80=87 =EF=BB=BF </div>=0A<p style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%; font-size: 18px; font-weight: 400; letter-spacing=
+: -.02em; line-height: 28px; margin: 0 0 32px;">=0A=0A=0A=0A=0A</p>=0A  =0A=
+    =0A  <meta charset=3D"UTF-8">=0A<meta name=3D"viewport" content=3D"widt=
+h=3Ddevice-width, initial-scale=3D1.0">=0A<meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3Dutf-8">=0A<meta http-equiv=3D"X-UA-Compati=
+ble" content=3D"IE=3Dedge">=0A<meta name=3D"x-apple-disable-message-reforma=
+tting">=0A<meta name=3D"format-detection" content=3D"telephone=3Dno,address=
+=3Dno,email=3Dno,date=3Dno,url=3Dno">=0A<meta name=3D"color-scheme" content=
+=3D"light dark">=0A<meta name=3D"supported-color-schemes" content=3D"light =
+dark">=0A    <title> | Coursera</title>=0A    =0A    <!--[if mso]>=0A <styl=
+e>=0A  body, table, td, th, h1, h2, h3, div, span, strong, b, i, p, ul, ol,=
+ li, a { font-family: Helvetica, sans-serif !important;}=0A  sup { font-siz=
+e: 100% !important; }=0A    .nudge-component-icon-column {=0A      padding-=
+left: 12px !important;=0A      padding-right: 32px !important;=0A    }=0A  =
+ .nudge-component-text-column {=0A      padding-bottom: 32px !important;=0A=
+      padding-right: 12px !important;=0A    }  =0A    .mobile-only {=0A    =
+  display: none !important;=0A    }=0A </style>=0A <xml>=0A  <o:OfficeDocum=
+entSettings>=0A   <o:AllowPNG/>=0A   <o:PixelsPerInch>96</o:PixelsPerInch>=
+=0A  </o:OfficeDocumentSettings>=0A </xml>=0A<![endif]-->=0A    =0A=0A=0A  =
+<center>=0A    <table role=3D"presentation" aria-hidden=3D"true" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center" width=3D"100%" clas=
+s=3D"yahoo" id=3D"backgroundTable" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+border-collapse: collapse; width: 100% !important; line-height: 100% !impor=
+tant; border-spacing: 0; table-layout: fixed !important; margin: 0; padding=
+: 0; border-width: 0;" bgcolor=3D"#fff">=0A      <tbody>=0A        <tr styl=
+e=3D"display: none; font-size: 1px; height: 0; line-height: 1px; max-height=
+: 0px; overflow: hidden; border-collapse: collapse;">=0A          =0A      =
+    =0A          =0A<div style=3D"display: none; max-height: 0px; overflow:=
+ hidden;"> =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C=
+ &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =
+=C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nb=
+sp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F=
+ =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD=
+ =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87=
+ =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =
+=E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C =
+&nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=
+=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C=
+ &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =
+=C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nb=
+sp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F=
+ =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD=
+ =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87=
+ =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =
+=E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C =
+&nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=
+=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C=
+ &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =
+=C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nb=
+sp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F=
+ =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD=
+ =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87=
+ =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =
+=E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C =
+&nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=
+=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C=
+ &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =
+=C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nb=
+sp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F=
+ =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD=
+ =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87=
+ =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =
+=E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C =
+&nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87 =C2=AD =CD=8F =E2=80=8C &nbsp; =E2=80=87 =C2=AD </d=
+iv>=0A        </tr>=0A        <tr style=3D"border-collapse: collapse;">=0A =
+         <td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-=
+collapse: collapse;">=0A            <table role=3D"presentation" aria-hidde=
+n=3D"true" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center=
+" width=3D"700" class=3D"container" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+ border-collapse: collapse; border-spacing: 0; border-width: 0;">=0A       =
+       <tbody>=0A              <tr style=3D"border-collapse: collapse;"> <t=
+d height=3D"84" valign=3D"middle" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; b=
+order-collapse: collapse;">  <center><a href=3D"https://link.coursera.org/f=
+/a/L4m2clR2QQeyJkJrfqLrKg~~/AAQRxRA~/9fEtsNuhHerQmuToWcqFodXufgWfDnFhhQJ8PU=
+XQr4HCkuiOdpoR8tRmCkfCTzXv-zWZHkxOuxxxVtXKcbnLNJHZir69PgE6vOcL23dyS9ZVjgUAo=
+Z9RMTEKWvFS_FEa08iJ1IYvLNHddebntlPLxUBGls4lyFyOML6_6u2m3lVZf8C1gdYz083ByF3l=
+qAnmtTlMnDMUEw4y0_y8pdCB7OFeTK71mv4OMlzXmAOa_8QTO7JBMZNtqfwutXDK0VMEJ26fzsX=
+HCCc3pv8qWrN5X6qz7-0Fjqx-JY9SWcyMlxM2oNCcHtcuywOGGRsJj4XOXEr0vuH3Mhcfg2WKc5=
+dmKQ~~" target=3D"_blank" style=3D"text-decoration: none; -webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%; color: #0056d2;"><img src=3D"htt=
+ps://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://cour=
+sera-misc.s3.amazonaws.com/mailspin/prod/04_19_2022_19_16_21_logo-coursera.=
+png" alt=3D"Coursera" border=3D"0" height=3D"20" class=3D"logo" style=3D"di=
+splay: block; font-size: 34px; font-weight: 600; height: auto; line-height:=
+ 20px; max-width: 142px; text-transform: lowercase; width: auto; outline: 0=
+; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto; b=
+order-style: none; border-width: 0;"></a></center> </td></tr>=0A           =
+       =0A                =0A                =0A                =0A        =
+         =0A<!-- Start of Skinny Banner --> <tr style=3D"border-collapse: c=
+ollapse;">  <td class=3D"detected-link" style=3D"min-height: 48px; -webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; border-collapse: collapse; color: inherit; font-fami=
+ly: inherit; font-size: inherit; font-weight: inherit; line-height: inherit=
+; text-decoration: none; padding: 12px 24px;" align=3D"center" bgcolor=3D"#=
+E3EEFF">             <div style=3D"display: inline-block;">      <span alig=
+n=3D"center" style=3D"font-weight: normal; font-family: 'Helvetica', Arial,=
+ sans-serif; text-align: center; font-size: 15px; line-height: 24px; color:=
+ #0F1114 !important;">                                   Unlock 10,000+ cou=
+rses risk-free for 7 days*.                                      </span>   =
+   <a href=3D"https://link.coursera.org/f/a/GW7A1Pw-y-R7c0E4hsCTdA~~/AAQRxR=
+A~/X9-6hqB2XQxil2ODc5xR_n2Ec9TSck5pDLwMc6ZHNGOySIUdNzOhj7aqaibCvcN9HEscHNjL=
+d8cODIeEHNQclL2vlk5PXtgWmJT2vMQvH-Jzv2mW7pFymPkzWgAJYXoHiaNoib9NgsrKga5SJso=
+d4OO5-8MTwZWc4yWqKhZR18i-I-R92M55m1MUdn6zE5225TDwJ5unfNs6LDOpMX5gKpD8Q6udbB=
+0-_PlIaAxGx29McdotHAglkNHg1J-rqHephq8bdjuai5i7xsQ8kFmopprEg5igJBj_cE0iRyU33=
+ONTHtKrGrNYjcGTDkfFYuGj6mWzIUsBJQkRs9fK2CMI6jhFh0S5-jd7xBRa-NxMn4k~" style=
+=3D"text-decoration: underline; color: #0056D2; font-weight: normal; font-f=
+amily: 'Helvetica', Arial, sans-serif; text-align: center; font-size: 15px;=
+ line-height: 24px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%;">Start&nbsp;free&nbsp;trial</a></div>                                 =
+             </td></tr>          <tr style=3D"border-collapse: collapse;"><=
+td style=3D"font-size: 12px; line-height: 12px; -webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; border-collapse: collapse; padding: 0px;">&nbsp;</td></tr>   <!-- End o=
+f Skinny Banner --> =0A                <tr style=3D"border-collapse: collap=
+se;">=0A                  <td class=3D"content" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; border-collapse: collapse; padding: 10px 52px 0;">=0A         =
+           <table role=3D"presentation" aria-hidden=3D"true" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" align=3D"center" width=3D"100%" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: =
+0; border-width: 0;">=0A                      <tbody>=0A                   =
+     <tr style=3D"border-collapse: collapse;">=0A                          =
+<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;">=0A=
+                            <table bgcolor=3D"#ffffff" role=3D"presentation=
+" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" class=3D"=
+body" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; bo=
+rder-spacing: 0; border-width: 0;">=0A                              <tbody>=
+=0A                                <tr style=3D"border-collapse: collapse;"=
+>=0A                                  <td class=3D"detected-link" style=3D"=
+padding-top: 12px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse=
+; color: inherit; font-family: inherit; font-size: inherit; font-weight: in=
+herit; line-height: inherit; text-decoration: none;">=0A                   =
+                 =0A                                    =0A                =
+                    =0A                                    =0A             =
+                        =0A            <h1 style=3D"mso-line-height-rule: e=
+xactly; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; lett=
+er-spacing: -.03em; font-size: 43px; line-height: 52px; margin: 24 0 24px;"=
+>Recommendations for you</h1>                                              =
+   <p align=3D"left" dir=3D"ltr" style=3D"font-size: 18px; font-weight: 'no=
+rmal'; font-family: 'Helvetica', Arial, sans-serif; -webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%; letter-spacing: -.02em; line-height: 2=
+8px; margin: 0 0 32px;">                                                   =
+  You=E2=80=99re set to take on new challenges. Find the recommended course=
+s made for you.                                                        </p>=
+                                =0A                                    =0A<=
+hr style=3D"background-color: #E5E7E8; clear: both; color: #E5E7E8; height:=
+ 1px; margin: 64px 0; border-width: 0;">=0A=0A=0A=0A                       =
+             <h2 style=3D"font-size: 36px; line-height: 36px; letter-spacin=
+g: -0.03em; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; =
+margin: 0 0 13px;">=0A<b style=3D"font-weight: 600;">Specializations & Cour=
+ses</b> </h2>=0A                                    =0A                    =
+                =0A                                    =0A=0A              =
+                          =0A                                        <table=
+ dir=3D"ltr" border=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit-=
+text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; border=
+-width: 0;">=0A                =0A                    =0A                  =
+  =0A                =0A                    <tbody>=0A                     =
+   <tr style=3D"border-collapse: collapse;">=0A                           =
+=0A                            <td class=3D"recs-card" rowspan=3D"2" valign=
+=3D"top" style=3D"width: 106px; -webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; padding: 35px 31px 0 0;">=0A                                =
+<a href=3D"https://link.coursera.org/f/a/YBJHvqzWSJJDBWDrFTOlVg~~/AAQRxRA~/=
+ZV7NeYWrG7O-heKb5uemt8a6lyc1AbW5xYeh-GpPQ01RSV0u_K-yMJimUqKRv5eP7GbcOjIap4x=
+nu6LcHHjYFepG7o4heJeUGLVWoWz0C8yvhQbbCoIfQ14oK6uQ6jo961vjK24ZHd7tA4LJdEgLnJ=
+9LOi0LnkiuG8EY0Q7myECaZq-dVSPwsCUxgIgLu58IfhN7t_g1qniHpiX6c0qpyHr3epnN8ItG5=
+G9KHCtpjUY1rHdHkXZW3go9PQDHfi-UA1NQCgagaAU0_Q710ip4dfKeUJkDpxEVfFnb88Rozoix=
+Hys-4kaQD0b4rS71OzDIe8sDXQubho_Eskn_yakbyb0B1-B3V-LbTfH0PyaAWbwHDHupr9kItWm=
+c38Gtonz0h-dWWt-Z3XL_USw8iYFj-G39qDRFmqPwibhf_5tK0OY~" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%; color: inherit; font-famil=
+y: inherit; font-size: inherit; font-weight: inherit; line-height: inherit;=
+ text-decoration: none;">=0A                              =0A              =
+                      <img width=3D"106" src=3D"https://d3njjcbhbojbot.clou=
+dfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.ne=
+t/92/186748b86e4dd58f3b5e3d83ebe2bd/Google-UX-Design.jpg=3Fmask=3Dcorners&a=
+mp;w=3D212&amp;h=3D212&amp;fit=3Dcrop&amp;crop=3Dentropy&amp;corner-radius=
+=3D6,6,6,6&amp;border=3D1,D9D9D9" alt=3D"Icon" style=3D"display: block; wid=
+th: 106px; line-height: 100%; height: auto; outline: 0; text-decoration: no=
+ne; -ms-interpolation-mode: bicubic; border-style: none; border-width: 0;">=
+=0A                                </a>=0A                            </td>=
+=0A                            =0A                            <td align=3D"=
+left" valign=3D"top" style=3D"font-family: 'Helvetica', Arial, sans-serif; =
+line-height: 0px; color: #000000; font-size: 14px; -webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; border-collapse: collapse; padding: 28px 0 0;">=0A                  =
+              <!--[if true]>=0A                                    <table r=
+ole=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=
+=3D"width: auto; height: 21px;">=0A                                        =
+<tr valign=3D"middle">=0A                                            <td st=
+yle=3D"font-family: Helvetica, sans-serif; font-size:14px; line-height:21px=
+; color:#000000; padding-bottom: 6px;">=0A                                 =
+           <![endif]-->=0A                                =0A              =
+                      =0A                                    =0A           =
+                         <div style=3D"float: left; display: inline-block; =
+line-height: 21px; padding-bottom: 6px;">Professional Certificate=0A       =
+                             </div>=0A                                    =
+=0A                                <!--[if true]>=0A                       =
+                     </td>=0A                                            <t=
+d style=3D"font-family: Helvetica, sans-serif; font-size:14px; line-height:=
+21px; color:#000000; padding-bottom: 6px;">=0A                             =
+               <![endif]-->=0A                                =0A          =
+                      =0A                                    =0A           =
+                     <div style=3D"float: left; display: inline-block; line=
+-height: 21px; padding-bottom: 6px;">&nbsp;&nbsp;=C2=B7&nbsp;&nbsp;8 course=
+s</div>=0A                                    =0A                          =
+      =0A                                <!--[if true]>=0A                 =
+                           </td>=0A                                        =
+    <td style=3D"font-family: Helvetica, sans-serif; font-size:14px; line-h=
+eight:21px; color:#000000; padding-bottom: 6px;">=0A                       =
+                     <![endif]-->=0A                                =0A    =
+                                =0A                                    =0A =
+                                   <div style=3D"float: left; display: inli=
+ne-block; line-height: 21px; padding-bottom: 6px;">=0A                     =
+                   &nbsp;&nbsp;=C2=B7&nbsp;&nbsp;Offers degree credit</div>=
+=0A                                =0A                                <!--[=
+if true]>=0A                                            </td>=0A           =
+                                 <td style=3D"font-family: Helvetica, sans-=
+serif; font-size:14px; line-height:21px; color:#000000; padding-bottom: 6px=
+;">=0A                                            <![endif]-->=0A          =
+                      <!--[if true]>=0A                                    =
+        </td>=0A                                            <td style=3D"fo=
+nt-family: Helvetica, sans-serif; font-size:14px; line-height:21px; color:#=
+000000; padding-bottom: 6px;">=0A                                          =
+  <![endif]-->=0A                                <!--[if true]>=0A         =
+                                   </td>=0A                                =
+        </tr>=0A                                    </table>=0A            =
+                        <![endif]-->=0A                                <tab=
+le border=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; border-collapse: collapse; border-spacing: 0; border-width: 0;=
+">=0A                                    <tr style=3D"border-collapse: coll=
+apse;">=0A                                        <td valign=3D"top" style=
+=3D"font-family: 'Helvetica', Arial, sans-serif; font-size: 14px; line-heig=
+ht: 16px; color: #636363; -webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: c=
+ollapse; padding: 6px 0 18px;">=0A                                         =
+       Google=0A                                            <br><br>=0A    =
+                                        <a href=3D"https://link.coursera.or=
+g/f/a/sGOv3cLsoqgiNDetc9vz_w~~/AAQRxRA~/ZV7NeYWrG7O-heKb5uemt8a6lyc1AbW5xYe=
+h-GpPQ01RSV0u_K-yMJimUqKRv5eP7GbcOjIap4xnu6LcHHjYFepG7o4heJeUGLVWoWz0C8wSP2=
+u5Sv82NyWLTI7p9gNxQr30XCZABazXMe5h2rN2mG_dLpivCa7T_Rncucc1XC-rccvtaHhUUjrHc=
+IVvAWsBMkqRoWUmkgcfQmQAYRO6IXF9KowBDsOsePsoU8Rm9dZ85CSJqVpTpi6G6RzZlflkxB7-=
+ueLdsu8VhhIbUOebXSECO0JU5jM6mSVhSR9WQ76-GlR_ztYRw5cOpPLaNctCFeJ6GIYwMuyna6j=
+2YIh574cnP3DfXiNWuwglyB2tZP2xiOhEveJMvJoYk2pL002W0bxev_LXScudQa84oKObwwt1rH=
+a1TYlwuJzpDpsdj_0~" style=3D"text-decoration: none; -webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%; color: inherit; font-family: inherit; =
+font-size: inherit; font-weight: inherit; line-height: inherit;">=0A       =
+                                         <h3 style=3D"font-size: 24px; line=
+-height: 26.4px; color: #000000; font-weight: 600; letter-spacing: -.03em; =
+margin: 0 0 16px;">Google UX Design</h3>=0A                                =
+                <strong style=3D"color: #0056D2; font-weight: 700; font-fam=
+ily: 'Helvetica', Arial, sans-serif; font-size: 16px; line-height: 24px;">E=
+nroll</strong>=0A                                                &nbsp; <im=
+g src=3D"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/=
+https://coursera-misc.s3.amazonaws.com/mailspin/prod/04_25_2022_06_53_48_ar=
+row.png" height=3D"14" width=3D"14" alt=3D"" style=3D"line-height: 100%; he=
+ight: auto; outline: 0; text-decoration: none; -ms-interpolation-mode: bicu=
+bic; border-style: none; border-width: 0;">=0A                             =
+             =0A                                            </a>=0A        =
+        =0A                =0A                                            <=
+!--[if mso]>=0A                                </v:roundrect>=0A           =
+                     <![endif]-->=0A                =0A                    =
+                    </td>=0A                                    </tr>=0A   =
+                             </table>=0A                            </td>=
+=0A                        </tr>=0A                    </tbody>=0A         =
+ =0A        =0A      </table>=0A    =0A  =0A  =0A  =0A  =0A=0A  =0A    =0A =
+   =0A      =0A                =0A                <table dir=3D"ltr" border=
+=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; border-collapse: collapse; border-spacing: 0; border-width: 0;">=0A    =
+            =0A                    =0A                    =0A              =
+  =0A                    <tbody>=0A                        <tr style=3D"bor=
+der-collapse: collapse;">=0A                           =0A                 =
+           <td class=3D"recs-card" rowspan=3D"2" valign=3D"top" style=3D"wi=
+dth: 106px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; paddi=
+ng: 35px 31px 0 0;">=0A                                <a href=3D"https://l=
+ink.coursera.org/f/a/kt6LG4l0AFBq7op18rrTgg~~/AAQRxRA~/9AWGjCvA3-jOQLVf2upF=
+YGt4do2xpdhQ9IgbTIj4Bdj0d0VKfSyPOi0bsz9JFokKNfm1M1H7WDHOjmYvW0PQq-Jk2NEH5pS=
+PRyglD7YTVxztgpK3uySm0dSaTh89O2xDSgWnqWT1AW75x9lUxRJSLFesGLgO9LFZW-DlhdMX06=
+Mk0JoT50HonjusdiWFYTDS11n6JUzTw36HbmVWLgWmrcVVtNcGkDtJ_mQB5KU8bRJIqS6kjRPmZ=
+6oMM5XtUZuynn2tchpdm5Ht6DiBz8XX0iE3BWZpdJajJLBleDHTIS4vj_j0gJW_rp4FbtFZC-lH=
+0V4WG-j2R-BCCi-Ut5uM3hVlRdPFUBwQIIff3R89M2m3cZeJObZ5vyBiBky3Asw8" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: inherit;=
+ font-family: inherit; font-size: inherit; font-weight: inherit; line-heigh=
+t: inherit; text-decoration: none;">=0A                              =0A   =
+                                 <img width=3D"106" src=3D"https://d3njjcbh=
+bojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/=
+coursera-course-photos/88/95d1ba5b2d48fab009356787a26dff/SquareLogo.png=3Fm=
+ask=3Dcorners&amp;w=3D212&amp;h=3D212&amp;fit=3Dcrop&amp;crop=3Dentropy&amp=
+;corner-radius=3D6,6,6,6&amp;border=3D1,D9D9D9" alt=3D"Icon" style=3D"displ=
+ay: block; width: 106px; line-height: 100%; height: auto; outline: 0; text-=
+decoration: none; -ms-interpolation-mode: bicubic; border-style: none; bord=
+er-width: 0;">=0A                                </a>=0A                   =
+         </td>=0A                            =0A                           =
+ <td align=3D"left" valign=3D"top" style=3D"font-family: 'Helvetica', Arial=
+, sans-serif; line-height: 0px; color: #000000; font-size: 14px; -webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt; border-collapse: collapse; padding: 28px 0 0;">=0A    =
+                            <!--[if true]>=0A                              =
+      <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0" style=3D"width: auto; height: 21px;">=0A                          =
+              <tr valign=3D"middle">=0A                                    =
+        <td style=3D"font-family: Helvetica, sans-serif; font-size:14px; li=
+ne-height:21px; color:#000000; padding-bottom: 6px;">=0A                   =
+                         <![endif]-->=0A                                =0A=
+                                <!--[if true]>=0A                          =
+                  </td>=0A                                            <td s=
+tyle=3D"font-family: Helvetica, sans-serif; font-size:14px; line-height:21p=
+x; color:#000000; padding-bottom: 6px;">=0A                                =
+            <![endif]-->=0A                                =0A             =
+                   =0A                                    =0A              =
+                          =0A                                    =0A       =
+                         =0A                                <!--[if true]>=
+=0A                                            </td>=0A                    =
+                        <td style=3D"font-family: Helvetica, sans-serif; fo=
+nt-size:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A   =
+                                         <![endif]-->=0A                   =
+             =0A                                <!--[if true]>=0A          =
+                                  </td>=0A                                 =
+           <td style=3D"font-family: Helvetica, sans-serif; font-size:14px;=
+ line-height:21px; color:#000000; padding-bottom: 6px;">=0A                =
+                            <![endif]-->=0A                                =
+<!--[if true]>=0A                                            </td>=0A      =
+                                      <td style=3D"font-family: Helvetica, =
+sans-serif; font-size:14px; line-height:21px; color:#000000; padding-bottom=
+: 6px;">=0A                                            <![endif]-->=0A     =
+                           <!--[if true]>=0A                               =
+             </td>=0A                                        </tr>=0A      =
+                              </table>=0A                                  =
+  <![endif]-->=0A                                <table border=3D"0" align=
+=3D"center" width=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-c=
+ollapse: collapse; border-spacing: 0; border-width: 0;">=0A                =
+                    <tr style=3D"border-collapse: collapse;">=0A           =
+                             <td valign=3D"top" style=3D"font-family: 'Helv=
+etica', Arial, sans-serif; font-size: 14px; line-height: 16px; color: #6363=
+63; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-l=
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 6px =
+0 18px;">=0A                                                Vanderbilt Univ=
+ersity=0A                                            <br><br>=0A           =
+                                 <a href=3D"https://link.coursera.org/f/a/o=
+i60Bl9MGOC4drCH2mY2Ow~~/AAQRxRA~/9AWGjCvA3-jOQLVf2upFYGt4do2xpdhQ9IgbTIj4Bd=
+j0d0VKfSyPOi0bsz9JFokKR-A_lUYZkA-dsr36j1sNC--3t2I1HC41s5QN7ndJclemh_qY2MHay=
+hv1fly_T7tg0_FOhe3jACTt9VVI7JhSZyoRuDtLJ89Ba1yJ3aK3Mg-v9ZOdMUNTm91_qut6zogi=
+0pw4nvB6uGCwNPyY_qq6OaNVFrgGN9yjHu6jjjeTmYYqkWjQntlsl8iVMmbseWSowQgEmgewGVN=
+Z4fZtspypN8bFOV8VLJIvwt5lVIpKL9x8CUMCMCwMJr3KL5-BpmFAiokC-VaMl39aPLJbMXlPx8=
+RSartNKE8lbtFZXemXGrxkCdM8vJFUbaSscgZKiQ_r" style=3D"text-decoration: none;=
+ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: inherit=
+; font-family: inherit; font-size: inherit; font-weight: inherit; line-heig=
+ht: inherit;">=0A                                                <h3 style=
+=3D"font-size: 24px; line-height: 26.4px; color: #000000; font-weight: 600;=
+ letter-spacing: -.03em; margin: 0 0 16px;">Introduction to Programming wit=
+h MATLAB</h3>=0A                                                <strong sty=
+le=3D"color: #0056D2; font-weight: 700; font-family: 'Helvetica', Arial, sa=
+ns-serif; font-size: 16px; line-height: 24px;">Enroll</strong>=0A          =
+                                      &nbsp; <img src=3D"https://d3njjcbhbo=
+jbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-misc.s3.am=
+azonaws.com/mailspin/prod/04_25_2022_06_53_48_arrow.png" height=3D"14" widt=
+h=3D"14" alt=3D"" style=3D"line-height: 100%; height: auto; outline: 0; tex=
+t-decoration: none; -ms-interpolation-mode: bicubic; border-style: none; bo=
+rder-width: 0;">=0A                                          =0A           =
+                                 </a>=0A                =0A                =
+=0A                                            <!--[if mso]>=0A            =
+                    </v:roundrect>=0A                                <![end=
+if]-->=0A                =0A                                        </td>=
+=0A                                    </tr>=0A                            =
+    </table>=0A                            </td>=0A                        =
+</tr>=0A                    </tbody>=0A          =0A        =0A      </tabl=
+e>=0A    =0A  =0A  =0A  =0A  =0A=0A  =0A    =0A    =0A      =0A            =
+    =0A                <table dir=3D"ltr" border=3D"0" align=3D"center" wid=
+th=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collap=
+se; border-spacing: 0; border-width: 0;">=0A                =0A            =
+        =0A                    =0A                =0A                    <t=
+body>=0A                        <tr style=3D"border-collapse: collapse;">=
+=0A                           =0A                            <td class=3D"r=
+ecs-card" rowspan=3D"2" valign=3D"top" style=3D"width: 106px; -webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-t=
+able-rspace: 0pt; border-collapse: collapse; padding: 35px 31px 0 0;">=0A  =
+                              <a href=3D"https://link.coursera.org/f/a/3qXi=
+39n1w55c4NXc0xkP5Q~~/AAQRxRA~/Yw83FUrIjZVySAllvkojqCJfZW98ZxULdkXVIjHao17Mv=
+kOu55wOdMtgNuYa98Kbs5_-qg8YyIjqiiofVlseeXX_js-PI_Fu6g8NXpWfx2d7knLKVL3H8ZPH=
+vG2vKpAXSEhU5081qx4oBdgIWHkH0evdCNuTSvrtsJ6YOSFeOBzwEldJwNWmO9N9fKoG8vbhfsL=
+ysqCdUxfjIsaOJnAzucCJgcGkazOPHNVKTLbd1C6rvVMM0a2lJhncxLk22ARC6Zd3dS5975OwQn=
+5Pt0vKd2rswHfSGxvMD4miadE959X9NekN9wbAw5W40hKXx-N6eWSrR0drFUtKStCPmkh_hEakg=
+yO2XTJsSfJXoG_WXa6EEVyskI0WnOV3mGo873j7nctF0BBDFnKO89xsyWyLKPphU1uTCkS8jeuL=
+cADvZP8~" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%; color: inherit; font-family: inherit; font-size: inherit; font-weight: =
+inherit; line-height: inherit; text-decoration: none;">=0A                 =
+             =0A                                    <img width=3D"106" src=
+=3D"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https=
+://d15cw65ipctsrr.cloudfront.net/d0/5cd67b2229417190ca4099a154ced4/Google-I=
+T-Support.jpg=3Fmask=3Dcorners&amp;w=3D212&amp;h=3D212&amp;fit=3Dcrop&amp;c=
+rop=3Dentropy&amp;corner-radius=3D6,6,6,6&amp;border=3D1,D9D9D9" alt=3D"Ico=
+n" style=3D"display: block; width: 106px; line-height: 100%; height: auto; =
+outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; border-=
+style: none; border-width: 0;">=0A                                </a>=0A  =
+                          </td>=0A                            =0A          =
+                  <td align=3D"left" valign=3D"top" style=3D"font-family: '=
+Helvetica', Arial, sans-serif; line-height: 0px; color: #000000; font-size:=
+ 14px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 2=
+8px 0 0;">=0A                                <!--[if true]>=0A             =
+                       <table role=3D"presentation" cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0" style=3D"width: auto; height: 21px;">=0A         =
+                               <tr valign=3D"middle">=0A                   =
+                         <td style=3D"font-family: Helvetica, sans-serif; f=
+ont-size:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A  =
+                                          <![endif]-->=0A                  =
+              =0A                                    =0A                   =
+                 =0A                                    <div style=3D"float=
+: left; display: inline-block; line-height: 21px; padding-bottom: 6px;">Pro=
+fessional Certificate=0A                                    </div>=0A      =
+                              =0A                                <!--[if tr=
+ue]>=0A                                            </td>=0A                =
+                            <td style=3D"font-family: Helvetica, sans-serif=
+; font-size:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=
+=0A                                            <![endif]-->=0A             =
+                   =0A                                =0A                  =
+                  =0A                                <div style=3D"float: l=
+eft; display: inline-block; line-height: 21px; padding-bottom: 6px;">&nbsp;=
+&nbsp;=C2=B7&nbsp;&nbsp;6 courses</div>=0A                                 =
+   =0A                                =0A                                <!=
+--[if true]>=0A                                            </td>=0A        =
+                                    <td style=3D"font-family: Helvetica, sa=
+ns-serif; font-size:14px; line-height:21px; color:#000000; padding-bottom: =
+6px;">=0A                                            <![endif]-->=0A       =
+                         =0A                                    =0A        =
+                            =0A                                    <div sty=
+le=3D"float: left; display: inline-block; line-height: 21px; padding-bottom=
+: 6px;">=0A                                        &nbsp;&nbsp;=C2=B7&nbsp;=
+&nbsp;Offers degree credit</div>=0A                                =0A     =
+                           <!--[if true]>=0A                               =
+             </td>=0A                                            <td style=
+=3D"font-family: Helvetica, sans-serif; font-size:14px; line-height:21px; c=
+olor:#000000; padding-bottom: 6px;">=0A                                    =
+        <![endif]-->=0A                                <!--[if true]>=0A   =
+                                         </td>=0A                          =
+                  <td style=3D"font-family: Helvetica, sans-serif; font-siz=
+e:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A         =
+                                   <![endif]-->=0A                         =
+       <!--[if true]>=0A                                            </td>=
+=0A                                        </tr>=0A                        =
+            </table>=0A                                    <![endif]-->=0A =
+                               <table border=3D"0" align=3D"center" width=
+=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse=
+; border-spacing: 0; border-width: 0;">=0A                                 =
+   <tr style=3D"border-collapse: collapse;">=0A                            =
+            <td valign=3D"top" style=3D"font-family: 'Helvetica', Arial, sa=
+ns-serif; font-size: 14px; line-height: 16px; color: #636363; -webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-t=
+able-rspace: 0pt; border-collapse: collapse; padding: 6px 0 18px;">=0A     =
+                                           Google=0A                       =
+                     <br><br>=0A                                           =
+ <a href=3D"https://link.coursera.org/f/a/6h0ktOu8U1BHGeJmjfdMdw~~/AAQRxRA~=
+/Yw83FUrIjZVySAllvkojqCJfZW98ZxULdkXVIjHao17MvkOu55wOdMtgNuYa98Kbs5_-qg8YyI=
+jqiiofVlseeXX_js-PI_Fu6g8NXpWfx2e3QcwbBMbix6WEJfMVQ2EtTGmUicSWN2-AoO0mTB58K=
+MCMhI9UOt7LdYQetVs43vnjvzXet2CF4nJQKMutIRFtzi4bJGOSgPqbiBL81wp4mhOfiy2VBYTz=
+Jpji4PYeDm6LuILnwvXx6LkjmX-4MIChsJYmIWsLEITUx7TzXL1G5e3Pl4ZyoVRMtFwN8-P8W9m=
+DM__O0MK5ooD2HXsRUkfYVgRcNbNnS9U5Ywqx8MipstYf2AUWlaNAC81ZoxZaV3nDv2u_ZvlMP0=
+n1jN_MaJbwJSZN-LxV0g-Kxm4YUo4DTzfvLBctxGxUzEzyG7vDjp0~" style=3D"text-decor=
+ation: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; co=
+lor: inherit; font-family: inherit; font-size: inherit; font-weight: inheri=
+t; line-height: inherit;">=0A                                              =
+  <h3 style=3D"font-size: 24px; line-height: 26.4px; color: #000000; font-w=
+eight: 600; letter-spacing: -.03em; margin: 0 0 16px;">Google IT Support</h=
+3>=0A                                                <strong style=3D"color=
+: #0056D2; font-weight: 700; font-family: 'Helvetica', Arial, sans-serif; f=
+ont-size: 16px; line-height: 24px;">Enroll</strong>=0A                     =
+                           &nbsp; <img src=3D"https://d3njjcbhbojbot.cloudf=
+ront.net/api/utilities/v1/imageproxy/https://coursera-misc.s3.amazonaws.com=
+/mailspin/prod/04_25_2022_06_53_48_arrow.png" height=3D"14" width=3D"14" al=
+t=3D"" style=3D"line-height: 100%; height: auto; outline: 0; text-decoratio=
+n: none; -ms-interpolation-mode: bicubic; border-style: none; border-width:=
+ 0;">=0A                                          =0A                      =
+                      </a>=0A                =0A                =0A        =
+                                    <!--[if mso]>=0A                       =
+         </v:roundrect>=0A                                <![endif]-->=0A  =
+              =0A                                        </td>=0A          =
+                          </tr>=0A                                </table>=
+=0A                            </td>=0A                        </tr>=0A    =
+                </tbody>=0A          =0A        =0A      </table>=0A    =0A=
+  =0A  =0A  =0A  =0A=0A  =0A    =0A    =0A      =0A                =0A     =
+           <table dir=3D"ltr" border=3D"0" align=3D"center" width=3D"100%" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-s=
+pacing: 0; border-width: 0;">=0A                =0A                    =0A =
+                   =0A                =0A                    <tbody>=0A    =
+                    <tr style=3D"border-collapse: collapse;">=0A           =
+                =0A                            <td class=3D"recs-card" rows=
+pan=3D"2" valign=3D"top" style=3D"width: 106px; -webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; border-collapse: collapse; padding: 35px 31px 0 0;">=0A                =
+                <a href=3D"https://link.coursera.org/f/a/8BIR-kekkjMWiuRMJy=
+2cpg~~/AAQRxRA~/YBeBylHUz6vAAUVI4WA2wXlpYNlC03DgKLc0w6nuUDI60IvDNvEknN5_LnM=
+2OYeahL7SFA3CPnjYotlzfEvr-nwcmbKfdEwYZhf3ahggt29_jDZf3_9RimSC-YG0UXyP4--2vh=
+PrueCo7Iy5wuOGtn9DsX0g2h4AbDOGWRKWrjBlSgCgM5gy4gG8vp7c1VoTB0BPCILbHWPdXfeiP=
+3DUoRxulTdnAz80pH6HCf5DG170Ib0VjR6WrnSfIBjTBmR_rOP0KJkbuzAOQiFA6hw7lmqr4l11=
+VdvhX7bIHM70SVxgyEO-KkmwF7lo03tlcXwBkx8qYLMNRgHBCrKQ5v7e0Pm1RvZ49oCz2Ozkhzl=
+2NCHTup4gUviqJ8iZueQXm0u_FhPpUFEFth98X7wufnxHgA4blg2FQ32kyNLUtWlTqow~" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: inh=
+erit; font-family: inherit; font-size: inherit; font-weight: inherit; line-=
+height: inherit; text-decoration: none;">=0A                              =
+=0A                                    <img width=3D"106" src=3D"https://d3=
+njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaw=
+s.com/coursera-course-photos/17/6c132ca5c44fbdbd30fdab2504779c/coursera3.jp=
+g=3Fmask=3Dcorners&amp;w=3D212&amp;h=3D212&amp;fit=3Dcrop&amp;crop=3Dentrop=
+y&amp;corner-radius=3D6,6,6,6&amp;border=3D1,D9D9D9" alt=3D"Icon" style=3D"=
+display: block; width: 106px; line-height: 100%; height: auto; outline: 0; =
+text-decoration: none; -ms-interpolation-mode: bicubic; border-style: none;=
+ border-width: 0;">=0A                                </a>=0A              =
+              </td>=0A                            =0A                      =
+      <td align=3D"left" valign=3D"top" style=3D"font-family: 'Helvetica', =
+Arial, sans-serif; line-height: 0px; color: #000000; font-size: 14px; -webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0p=
+t; mso-table-rspace: 0pt; border-collapse: collapse; padding: 28px 0 0;">=
+=0A                                <!--[if true]>=0A                       =
+             <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" style=3D"width: auto; height: 21px;">=0A                   =
+                     <tr valign=3D"middle">=0A                             =
+               <td style=3D"font-family: Helvetica, sans-serif; font-size:1=
+4px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A            =
+                                <![endif]-->=0A                            =
+    =0A                                <!--[if true]>=0A                   =
+                         </td>=0A                                          =
+  <td style=3D"font-family: Helvetica, sans-serif; font-size:14px; line-hei=
+ght:21px; color:#000000; padding-bottom: 6px;">=0A                         =
+                   <![endif]-->=0A                                =0A      =
+                          =0A                                    =0A       =
+                                 =0A                                    =0A=
+                                =0A                                <!--[if =
+true]>=0A                                            </td>=0A              =
+                              <td style=3D"font-family: Helvetica, sans-ser=
+if; font-size:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=
+=0A                                            <![endif]-->=0A             =
+                   =0A                                <!--[if true]>=0A    =
+                                        </td>=0A                           =
+                 <td style=3D"font-family: Helvetica, sans-serif; font-size=
+:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A          =
+                                  <![endif]-->=0A                          =
+      <!--[if true]>=0A                                            </td>=0A=
+                                            <td style=3D"font-family: Helve=
+tica, sans-serif; font-size:14px; line-height:21px; color:#000000; padding-=
+bottom: 6px;">=0A                                            <![endif]-->=
+=0A                                <!--[if true]>=0A                       =
+                     </td>=0A                                        </tr>=
+=0A                                    </table>=0A                         =
+           <![endif]-->=0A                                <table border=3D"=
+0" align=3D"center" width=3D"100%" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+border-collapse: collapse; border-spacing: 0; border-width: 0;">=0A        =
+                            <tr style=3D"border-collapse: collapse;">=0A   =
+                                     <td valign=3D"top" style=3D"font-famil=
+y: 'Helvetica', Arial, sans-serif; font-size: 14px; line-height: 16px; colo=
+r: #636363; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; paddi=
+ng: 6px 0 18px;">=0A                                                Google=
+=0A                                            <br><br>=0A                 =
+                           <a href=3D"https://link.coursera.org/f/a/lkEJ7Kp=
+nKHlS-LXP3_CVbw~~/AAQRxRA~/YBeBylHUz6vAAUVI4WA2wXlpYNlC03DgKLc0w6nuUDI60IvD=
+NvEknN5_LnM2OYeahL7SFA3CPnjYotlzfEvr-nwcmbKfdEwYZhf3ahggt2_ksNlPmUCpE8v22aF=
+dwJWrGoan_LYo_kyhmasaMB0bbBapNQrkTD4Yw559TMpSjJMc6lGmL6ldcuAI1uYpfXe_SYNw8K=
+LOzKO8wBz77zCqyPJpYG_JD_fm_G5YuOmxehb37FSu3BA_x6dUjwgevEltAnYTttG9k77P0M_6L=
+HixAMT4wqXwNlccqDuUqpEoCf-R2xrqTy0uy-Oha23syGyxdgu546RVTYv1zKzt_Ld7542Unh_e=
+_ATdtfS4azgOom4inGYT4TbwuuOaPzhxVKXbb7HxEtUoi08B20SmRcwyImn-EKZb-kvF_bZxm0a=
+UVe4~" style=3D"text-decoration: none; -webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%; color: inherit; font-family: inherit; font-size: in=
+herit; font-weight: inherit; line-height: inherit;">=0A                    =
+                            <h3 style=3D"font-size: 24px; line-height: 26.4=
+px; color: #000000; font-weight: 600; letter-spacing: -.03em; margin: 0 0 1=
+6px;">Foundations of User Experience (UX) Design</h3>=0A                   =
+                             <strong style=3D"color: #0056D2; font-weight: =
+700; font-family: 'Helvetica', Arial, sans-serif; font-size: 16px; line-hei=
+ght: 24px;">Enroll</strong>=0A                                             =
+   &nbsp; <img src=3D"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v=
+1/imageproxy/https://coursera-misc.s3.amazonaws.com/mailspin/prod/04_25_202=
+2_06_53_48_arrow.png" height=3D"14" width=3D"14" alt=3D"" style=3D"line-hei=
+ght: 100%; height: auto; outline: 0; text-decoration: none; -ms-interpolati=
+on-mode: bicubic; border-style: none; border-width: 0;">=0A                =
+                          =0A                                            </=
+a>=0A                =0A                =0A                                =
+            <!--[if mso]>=0A                                </v:roundrect>=
+=0A                                <![endif]-->=0A                =0A      =
+                                  </td>=0A                                 =
+   </tr>=0A                                </table>=0A                     =
+       </td>=0A                        </tr>=0A                    </tbody>=
+=0A          =0A        =0A      </table>=0A    =0A  =0A  =0A  =0A  =0A=0A =
+ =0A    =0A    =0A      =0A                =0A                <table dir=3D=
+"ltr" border=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-tab=
+le-rspace: 0pt; border-collapse: collapse; border-spacing: 0; border-width:=
+ 0;">=0A                =0A                    =0A                    =0A  =
+              =0A                    <tbody>=0A                        <tr =
+style=3D"border-collapse: collapse;">=0A                           =0A     =
+                       <td class=3D"recs-card" rowspan=3D"2" valign=3D"top"=
+ style=3D"width: 106px; -webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: col=
+lapse; padding: 35px 31px 0 0;">=0A                                <a href=
+=3D"https://link.coursera.org/f/a/qodM5jHp19kdjusqni1BxQ~~/AAQRxRA~/xrKvxUI=
+gPmk-qCmRwF5r30b845eJsD-AZRSC9Vop4URbWvUtlgqnYdr4MGKp47O37l2xR_X44ZdixbP3V0=
+FTwyZTym-Qeh9N9azwqDIN2fnvDQM7FV4EqxiNlo3XBMjxDHayjjYVVex0tJtDYkUcv311VpSRX=
+LRADyMYpJ2LpdcTrXMriglBZ8wZ9L6hILOSk_zDQwKBt-CbP59urBCy5REUpeV1NI-TH1zj-LQP=
+H3k02_nDP0NTX1nhxeMvuovB1b0sCFtnV_qYOMpt1MTIiFoyKqE7CPP7SXdhBwbq69upChBQhcX=
+ZJ4_0QuS_LIGvxVKL0VqX1_WKbVBIhg2YNFmhQMasgN0gGZ5sOU8JnObq2BpyZVic6bsJvO4_uE=
+HBSQ2LxKYHR0Ot8MPx7UaKqACmTTKkzszNMgfXCTZpV9ji1a87VxFsdBzuXhZIX4RP" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: inhe=
+rit; font-family: inherit; font-size: inherit; font-weight: inherit; line-h=
+eight: inherit; text-decoration: none;">=0A                              =
+=0A                                    <img width=3D"106" src=3D"https://d3=
+njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipct=
+srr.cloudfront.net/13/0fd570acab11e8ba08098278a954d1/Specialization-Logo-C-=
+Sharp-Only.png=3Fmask=3Dcorners&amp;w=3D212&amp;h=3D212&amp;fit=3Dcrop&amp;=
+crop=3Dentropy&amp;corner-radius=3D6,6,6,6&amp;border=3D1,D9D9D9" alt=3D"Ic=
+on" style=3D"display: block; width: 106px; line-height: 100%; height: auto;=
+ outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; border=
+-style: none; border-width: 0;">=0A                                </a>=0A =
+                           </td>=0A                            =0A         =
+                   <td align=3D"left" valign=3D"top" style=3D"font-family: =
+'Helvetica', Arial, sans-serif; line-height: 0px; color: #000000; font-size=
+: 14px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: =
+28px 0 0;">=0A                                <!--[if true]>=0A            =
+                        <table role=3D"presentation" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"width: auto; height: 21px;">=0A        =
+                                <tr valign=3D"middle">=0A                  =
+                          <td style=3D"font-family: Helvetica, sans-serif; =
+font-size:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A =
+                                           <![endif]-->=0A                 =
+               =0A                                    =0A                  =
+                  =0A                                    <div style=3D"floa=
+t: left; display: inline-block; line-height: 21px; padding-bottom: 6px;">Sp=
+ecialization=0A                                    </div>=0A               =
+                     =0A                                <!--[if true]>=0A  =
+                                          </td>=0A                         =
+                   <td style=3D"font-family: Helvetica, sans-serif; font-si=
+ze:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A        =
+                                    <![endif]-->=0A                        =
+        =0A                                =0A                             =
+       =0A                                <div style=3D"float: left; displa=
+y: inline-block; line-height: 21px; padding-bottom: 6px;">&nbsp;&nbsp;=C2=
+=B7&nbsp;&nbsp;4 courses</div>=0A                                    =0A   =
+                             =0A                                <!--[if tru=
+e]>=0A                                            </td>=0A                 =
+                           <td style=3D"font-family: Helvetica, sans-serif;=
+ font-size:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A=
+                                            <![endif]-->=0A                =
+                =0A                                <!--[if true]>=0A       =
+                                     </td>=0A                              =
+              <td style=3D"font-family: Helvetica, sans-serif; font-size:14=
+px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A             =
+                               <![endif]-->=0A                             =
+   <!--[if true]>=0A                                            </td>=0A   =
+                                         <td style=3D"font-family: Helvetic=
+a, sans-serif; font-size:14px; line-height:21px; color:#000000; padding-bot=
+tom: 6px;">=0A                                            <![endif]-->=0A  =
+                              <!--[if true]>=0A                            =
+                </td>=0A                                        </tr>=0A   =
+                                 </table>=0A                               =
+     <![endif]-->=0A                                <table border=3D"0" ali=
+gn=3D"center" width=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border=
+-collapse: collapse; border-spacing: 0; border-width: 0;">=0A              =
+                      <tr style=3D"border-collapse: collapse;">=0A         =
+                               <td valign=3D"top" style=3D"font-family: 'He=
+lvetica', Arial, sans-serif; font-size: 14px; line-height: 16px; color: #63=
+6363; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 6p=
+x 0 18px;">=0A                                                University of=
+ Colorado System=0A                                            <br><br>=0A =
+                                           <a href=3D"https://link.coursera=
+.org/f/a/pL1gHOYxrB-pqyjto3HL9Q~~/AAQRxRA~/xrKvxUIgPmk-qCmRwF5r30b845eJsD-=
+AZRSC9Vop4URbWvUtlgqnYdr4MGKp47O37l2xR_X44ZdixbP3V0FTwyZTym-Qeh9N9azwqDIN2f=
+mtynfYnEtGHEmUFSU50WK9qtM-54j6IOTTMP_B5Eb5anYf3h1OVGkLhx5ADlA5ujl9fcImfX-Uv=
+n-ZvW_yqjj6qRcqmrZpjYNodAaASSe9YjBjggypyFaOWGiiA7asxSDxo-ipH47i6INIudV98WyX=
+jji_4ToX2nHcDdjoOXwYhX1HXeJTOcM47g7xOTcQblJTo3bdXbqR_n85Un1m8mkEDKR1wTbHaBv=
+QNlqWWYkbb3yxmqKI4j5j0t4f7Uu05AEILsoe0QJVcbwBlpN64xznmZXFyCVK9M_LAS3_Z1TegE=
+2Jv9QoNYe5LJLvC7UTuZDORa3TmmNy1HxnGwzboypX" style=3D"text-decoration: none;=
+ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: inherit=
+; font-family: inherit; font-size: inherit; font-weight: inherit; line-heig=
+ht: inherit;">=0A                                                <h3 style=
+=3D"font-size: 24px; line-height: 26.4px; color: #000000; font-weight: 600;=
+ letter-spacing: -.03em; margin: 0 0 16px;">C# Programming for Unity Game D=
+evelopment</h3>=0A                                                <strong s=
+tyle=3D"color: #0056D2; font-weight: 700; font-family: 'Helvetica', Arial, =
+sans-serif; font-size: 16px; line-height: 24px;">Enroll</strong>=0A        =
+                                        &nbsp; <img src=3D"https://d3njjcbh=
+bojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-misc.s3.=
+amazonaws.com/mailspin/prod/04_25_2022_06_53_48_arrow.png" height=3D"14" wi=
+dth=3D"14" alt=3D"" style=3D"line-height: 100%; height: auto; outline: 0; t=
+ext-decoration: none; -ms-interpolation-mode: bicubic; border-style: none; =
+border-width: 0;">=0A                                          =0A         =
+                                   </a>=0A                =0A              =
+  =0A                                            <!--[if mso]>=0A          =
+                      </v:roundrect>=0A                                <![e=
+ndif]-->=0A                =0A                                        </td>=
+=0A                                    </tr>=0A                            =
+    </table>=0A                            </td>=0A                        =
+</tr>=0A                    </tbody>=0A          =0A        =0A      </tabl=
+e>=0A    =0A  =0A  =0A  =0A  =0A=0A  =0A    =0A    =0A      =0A            =
+    =0A                <table dir=3D"ltr" border=3D"0" align=3D"center" wid=
+th=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collap=
+se; border-spacing: 0; border-width: 0;">=0A                =0A            =
+        =0A                    =0A                =0A                    <t=
+body>=0A                        <tr style=3D"border-collapse: collapse;">=
+=0A                           =0A                            <td class=3D"r=
+ecs-card" rowspan=3D"2" valign=3D"top" style=3D"width: 106px; -webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-t=
+able-rspace: 0pt; border-collapse: collapse; padding: 35px 31px 0 0;">=0A  =
+                              <a href=3D"https://link.coursera.org/f/a/G1R8=
+nOpz6Vm0jZ1GbzGBUg~~/AAQRxRA~/MpY4CU44fvkgEfYdwFGjJPHDOkCkOeC1VdlVOTE63mnPj=
+k9nkiy8HBaLT0-JBq-YNA1i8rSB52aLhYPu2r883klJalT5LCsqMFhuHhHLzEQvm9_5vksZDoEZ=
+b5FD_L8oBu4Z975JymV3VsZnMZZmEQNcyN9IZ02WeXU4AiNA4wlT4qHWv0YRH7fgnJHdXWM7IOt=
+od--fO5rGi5DT7ayZDx_tnJBSLPb0HJpPYDpV5PcgQPVgjkASE_Gj6Hoi-JTGjoxceOt3FlaVuD=
+YboFhxgLviHnf_cKpPJrVT6-ahtrR4YCMTTdd-b6a4OSnSsHY2bjoVHFUhgbpspgqkUrGUQpFlP=
+tj8vDIUNP3N9GyqtYHOOJZjXOtBo7wU4sqHcw2hz-gl4RtC5tEcW03Uuav6lzU1vwRitNHQP_Op=
+6urkfNc~" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%; color: inherit; font-family: inherit; font-size: inherit; font-weight: =
+inherit; line-height: inherit; text-decoration: none;">=0A                 =
+             =0A                                    <img width=3D"106" src=
+=3D"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https=
+://s3.amazonaws.com/coursera-course-photos/13/b9e5aed0a3442c8fcb88da8b63c12=
+f/Beg-Part-1-Logo.png=3Fmask=3Dcorners&amp;w=3D212&amp;h=3D212&amp;fit=3Dcr=
+op&amp;crop=3Dentropy&amp;corner-radius=3D6,6,6,6&amp;border=3D1,D9D9D9" al=
+t=3D"Icon" style=3D"display: block; width: 106px; line-height: 100%; height=
+: auto; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;=
+ border-style: none; border-width: 0;">=0A                                <=
+/a>=0A                            </td>=0A                            =0A  =
+                          <td align=3D"left" valign=3D"top" style=3D"font-f=
+amily: 'Helvetica', Arial, sans-serif; line-height: 0px; color: #000000; fo=
+nt-size: 14px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; pa=
+dding: 28px 0 0;">=0A                                <!--[if true]>=0A     =
+                               <table role=3D"presentation" cellpadding=3D"=
+0" cellspacing=3D"0" border=3D"0" style=3D"width: auto; height: 21px;">=0A =
+                                       <tr valign=3D"middle">=0A           =
+                                 <td style=3D"font-family: Helvetica, sans-=
+serif; font-size:14px; line-height:21px; color:#000000; padding-bottom: 6px=
+;">=0A                                            <![endif]-->=0A          =
+                      =0A                                <!--[if true]>=0A =
+                                           </td>=0A                        =
+                    <td style=3D"font-family: Helvetica, sans-serif; font-s=
+ize:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A       =
+                                     <![endif]-->=0A                       =
+         =0A                                =0A                            =
+        =0A                                        =0A                     =
+               =0A                                =0A                      =
+          <!--[if true]>=0A                                            </td=
+>=0A                                            <td style=3D"font-family: H=
+elvetica, sans-serif; font-size:14px; line-height:21px; color:#000000; padd=
+ing-bottom: 6px;">=0A                                            <![endif]-=
+->=0A                                =0A                                <!-=
+-[if true]>=0A                                            </td>=0A         =
+                                   <td style=3D"font-family: Helvetica, san=
+s-serif; font-size:14px; line-height:21px; color:#000000; padding-bottom: 6=
+px;">=0A                                            <![endif]-->=0A        =
+                        <!--[if true]>=0A                                  =
+          </td>=0A                                            <td style=3D"=
+font-family: Helvetica, sans-serif; font-size:14px; line-height:21px; color=
+:#000000; padding-bottom: 6px;">=0A                                        =
+    <![endif]-->=0A                                <!--[if true]>=0A       =
+                                     </td>=0A                              =
+          </tr>=0A                                    </table>=0A          =
+                          <![endif]-->=0A                                <t=
+able border=3D"0" align=3D"center" width=3D"100%" style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-tabl=
+e-rspace: 0pt; border-collapse: collapse; border-spacing: 0; border-width: =
+0;">=0A                                    <tr style=3D"border-collapse: co=
+llapse;">=0A                                        <td valign=3D"top" styl=
+e=3D"font-family: 'Helvetica', Arial, sans-serif; font-size: 14px; line-hei=
+ght: 16px; color: #636363; -webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: =
+collapse; padding: 6px 0 18px;">=0A                                        =
+        University of Colorado System=0A                                   =
+         <br><br>=0A                                            <a href=3D"=
+https://link.coursera.org/f/a/X9xtafhLeyNLcsxB6wj-yg~~/AAQRxRA~/MpY4CU44fvk=
+gEfYdwFGjJPHDOkCkOeC1VdlVOTE63mnPjk9nkiy8HBaLT0-JBq-YNA1i8rSB52aLhYPu2r883p=
+5mzHCKzhoVbb6Lk2boMlofjpgf9bj41pqW0_CpdTP2l0Hu2lvUUCpEk0w0Q2Y4wX-D7jDgrRCIG=
+gDA8oQeX7mlmUCq6TlNcMG_SW2WocZsY2gxFir2hETpx6f7jVFN8iJpYEr3hvRVIGOPZ8D4sgy0=
+Atw2R-GNFh6NczOvnslkn6wdU4YDczM1VEwv__MwfNLtqAKG8zmZwxmyHqPQjFMawVdOufwxFxT=
+myEM4PRhjtV71m9up36XK31Bb0OOlPdI5dcbYab_HC6ylRWM1SQc5EuRviwfCKDhx3xf3oTzo-7=
+4USXm5FUEmVxVqv6CQh_pB-XwiTIXxnC3dPqbuOu8~" style=3D"text-decoration: none;=
+ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: inherit=
+; font-family: inherit; font-size: inherit; font-weight: inherit; line-heig=
+ht: inherit;">=0A                                                <h3 style=
+=3D"font-size: 24px; line-height: 26.4px; color: #000000; font-weight: 600;=
+ letter-spacing: -.03em; margin: 0 0 16px;">Introduction to C# Programming =
+and Unity</h3>=0A                                                <strong st=
+yle=3D"color: #0056D2; font-weight: 700; font-family: 'Helvetica', Arial, s=
+ans-serif; font-size: 16px; line-height: 24px;">Enroll</strong>=0A         =
+                                       &nbsp; <img src=3D"https://d3njjcbhb=
+ojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-misc.s3.a=
+mazonaws.com/mailspin/prod/04_25_2022_06_53_48_arrow.png" height=3D"14" wid=
+th=3D"14" alt=3D"" style=3D"line-height: 100%; height: auto; outline: 0; te=
+xt-decoration: none; -ms-interpolation-mode: bicubic; border-style: none; b=
+order-width: 0;">=0A                                          =0A          =
+                                  </a>=0A                =0A               =
+ =0A                                            <!--[if mso]>=0A           =
+                     </v:roundrect>=0A                                <![en=
+dif]-->=0A                =0A                                        </td>=
+=0A                                    </tr>=0A                            =
+    </table>=0A                            </td>=0A                        =
+</tr>=0A                    </tbody>=0A          =0A        =0A      </tabl=
+e>=0A    =0A  =0A  =0A  =0A  =0A=0A  =0A    =0A    =0A      =0A            =
+    =0A                <table dir=3D"ltr" border=3D"0" align=3D"center" wid=
+th=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collap=
+se; border-spacing: 0; border-width: 0;">=0A                =0A            =
+        =0A                    =0A                =0A                    <t=
+body>=0A                        <tr style=3D"border-collapse: collapse;">=
+=0A                           =0A                            <td class=3D"r=
+ecs-card" rowspan=3D"2" valign=3D"top" style=3D"width: 106px; -webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-t=
+able-rspace: 0pt; border-collapse: collapse; padding: 35px 31px 0 0;">=0A  =
+                              <a href=3D"https://link.coursera.org/f/a/Fc2V=
+aQQeN8C7mYMyO6xbzA~~/AAQRxRA~/MpY4CU44fvkgEfYdwFGjJPHDOkCkOeC1VdlVOTE63mm9j=
+0UKh5EYWoY0wqzptgIkVq3KUsd-KJxDpq5V6WRH0yezl7TlkheLdqUDmyhmvySxjOnnr-3wCfr_=
+WApp0BX6b8CZBDadh7iDb2VmIrCzg4UxPvpvr0r2qPJedvFBeCmPwc-kG2cD0TibihQy6IACY_D=
+-uLb7L7V-IInY2_A9NqnOhzLdzFIHLozLHfDNtd9rpY6MQJFXUWNOtTQ2C4ko4EgnP3CsuAz88Y=
+Xj8XfbVLXqr8-HZTFrg7cdPiJccx7B24BPiAPqzz3CGeXqCLN02SM6gPCSDwehmHozgVkPhKPTi=
+uWenqrZG5WfjtMhFaco7C-SE-UOurbZqPLjfx2T2DciRgz8jx5_MJvcQ7xROBEeh52A0L4j33JA=
+G7tseHk~" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%; color: inherit; font-family: inherit; font-size: inherit; font-weight: =
+inherit; line-height: inherit; text-decoration: none;">=0A                 =
+             =0A                                    <img width=3D"106" src=
+=3D"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https=
+://d15cw65ipctsrr.cloudfront.net/59/34139541944d36bdca7e0b5cd9872e/ASH00879=
+-copy.jpg=3Fmask=3Dcorners&amp;w=3D212&amp;h=3D212&amp;fit=3Dcrop&amp;crop=
+=3Dentropy&amp;corner-radius=3D6,6,6,6&amp;border=3D1,D9D9D9" alt=3D"Icon" =
+style=3D"display: block; width: 106px; line-height: 100%; height: auto; out=
+line: 0; text-decoration: none; -ms-interpolation-mode: bicubic; border-sty=
+le: none; border-width: 0;">=0A                                </a>=0A     =
+                       </td>=0A                            =0A             =
+               <td align=3D"left" valign=3D"top" style=3D"font-family: 'Hel=
+vetica', Arial, sans-serif; line-height: 0px; color: #000000; font-size: 14=
+px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-l=
+space: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 28px=
+ 0 0;">=0A                                <!--[if true]>=0A                =
+                    <table role=3D"presentation" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0" style=3D"width: auto; height: 21px;">=0A            =
+                            <tr valign=3D"middle">=0A                      =
+                      <td style=3D"font-family: Helvetica, sans-serif; font=
+-size:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A     =
+                                       <![endif]-->=0A                     =
+           =0A                                    =0A                      =
+              =0A                                    <div style=3D"float: l=
+eft; display: inline-block; line-height: 21px; padding-bottom: 6px;">Specia=
+lization=0A                                    </div>=0A                   =
+                 =0A                                <!--[if true]>=0A      =
+                                      </td>=0A                             =
+               <td style=3D"font-family: Helvetica, sans-serif; font-size:1=
+4px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A            =
+                                <![endif]-->=0A                            =
+    =0A                                =0A                                 =
+   =0A                                <div style=3D"float: left; display: i=
+nline-block; line-height: 21px; padding-bottom: 6px;">&nbsp;&nbsp;=C2=B7&nb=
+sp;&nbsp;5 courses</div>=0A                                    =0A         =
+                       =0A                                <!--[if true]>=0A=
+                                            </td>=0A                       =
+                     <td style=3D"font-family: Helvetica, sans-serif; font-=
+size:14px; line-height:21px; color:#000000; padding-bottom: 6px;">=0A      =
+                                      <![endif]-->=0A                      =
+          =0A                                <!--[if true]>=0A             =
+                               </td>=0A                                    =
+        <td style=3D"font-family: Helvetica, sans-serif; font-size:14px; li=
+ne-height:21px; color:#000000; padding-bottom: 6px;">=0A                   =
+                         <![endif]-->=0A                                <!-=
+-[if true]>=0A                                            </td>=0A         =
+                                   <td style=3D"font-family: Helvetica, san=
+s-serif; font-size:14px; line-height:21px; color:#000000; padding-bottom: 6=
+px;">=0A                                            <![endif]-->=0A        =
+                        <!--[if true]>=0A                                  =
+          </td>=0A                                        </tr>=0A         =
+                           </table>=0A                                    <=
+![endif]-->=0A                                <table border=3D"0" align=3D"=
+center" width=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-colla=
+pse: collapse; border-spacing: 0; border-width: 0;">=0A                    =
+                <tr style=3D"border-collapse: collapse;">=0A               =
+                         <td valign=3D"top" style=3D"font-family: 'Helvetic=
+a', Arial, sans-serif; font-size: 14px; line-height: 16px; color: #636363; =
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 6px 0 18=
+px;">=0A                                                Google=0A          =
+                                  <br><br>=0A                              =
+              <a href=3D"https://link.coursera.org/f/a/Xk3K0mWHZkButE2LZhVm=
+9Q~~/AAQRxRA~/MpY4CU44fvkgEfYdwFGjJPHDOkCkOeC1VdlVOTE63mm9j0UKh5EYWoY0wqzpt=
+gIkVq3KUsd-KJxDpq5V6WRH02R4PUjdtCVqSCrvDoXzaKjtfpt_whcqSL8c28sZ5KDWLvBH-fvv=
+3_xNHZHehr5jrBHkFcW4hmoCvYLd8ZEX5Xi-5diZtIYmbP0rIue9GhK-hE3-WSgvZJ-CIe5sOYX=
+SHJj_goY8kZQ4GuyyXG7Yrm5b3D9b1QSLJspk0QjzYO9sG_SNXxO247e_D9ro_VXp15gsEWZvC3=
+EACRRvpGw_mqsp449iUdd2Np7OmflNKMcLxJvj0qkW-39YfVmtslpV-Zzp7-jq0MbBavjxkX3lN=
+ZDzkVrqHtSiwhQlpJ_DYHjY9xa_JTtoOQfm3fBnE076s32qUGlSVWq1N4nE00D8UgQ~" style=
+=3D"text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; color: inherit; font-family: inherit; font-size: inherit; font-=
+weight: inherit; line-height: inherit;">=0A                                =
+                <h3 style=3D"font-size: 24px; line-height: 26.4px; color: #=
+000000; font-weight: 600; letter-spacing: -.03em; margin: 0 0 16px;">Google=
+ AI Essentials</h3>=0A                                                <stro=
+ng style=3D"color: #0056D2; font-weight: 700; font-family: 'Helvetica', Ari=
+al, sans-serif; font-size: 16px; line-height: 24px;">Enroll</strong>=0A    =
+                                            &nbsp; <img src=3D"https://d3nj=
+jcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-misc=
+.s3.amazonaws.com/mailspin/prod/04_25_2022_06_53_48_arrow.png" height=3D"1=
+4" width=3D"14" alt=3D"" style=3D"line-height: 100%; height: auto; outline:=
+ 0; text-decoration: none; -ms-interpolation-mode: bicubic; border-style: n=
+one; border-width: 0;">=0A                                          =0A    =
+                                        </a>=0A                =0A         =
+       =0A                                            <!--[if mso]>=0A     =
+                           </v:roundrect>=0A                               =
+ <![endif]-->=0A                =0A                                        =
+</td>=0A                                    </tr>=0A                       =
+         </table>=0A                            </td>=0A                   =
+     </tr>=0A                    </tbody>=0A          =0A        =0A      <=
+/table>=0A                                      <table style=3D"height: 40p=
+x; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-ls=
+pace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing=
+: 0; border-width: 0;">=0A                                        <tr style=
+=3D"border-collapse: collapse;">=0A                                        =
+  <td style=3D"height: 40px; line-height: 40px; -webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; border-collapse: collapse;">&nbsp;</td>=0A                             =
+           </tr>=0A                                      </table>=0A       =
+                               =0A                                      <!-=
+- reference 916 --> =0A=0A=0A=0A=0A=0A=0A=0A=0A   =0A=0A=0A=0A    <!-- STAR=
+T CTA -->=0A    =0A    <div class=3D"btn" style=3D"margin: 0;">=0A<!--[if m=
+so]>=0A        <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns=
+:w=3D"urn:schemas-microsoft-com:office:word"  href=3D"https://link.coursera=
+.org/f/a/NdPj2U0NH-S2oQsnN8v-8w~~/AAQRxRA~/CzgRRWFOv8k1lxOaXwjuEiscbZ0nC_Z=
+ss2hQImOitYPshQBMR4TvY2yQKIihNO2LfwGXjIISmc5aoFjIRNkE9WBelOOZ4jC-osegtoT0dT=
+v5DkgnHVhX_BUuerAB9TLw" style=3D"height: 48px; v-text-anchor: middle; mso-w=
+rap-style:none; mso-position-horizontal: center" arcsize=3D"17%" stroke=3D"=
+f" fillcolor=3D"#0056D2">=0A        <w:anchorlock/>=0A        <center>=0A  =
+      <![endif]-->=0A        =0A                        =0A                =
+=0A            =0A                <a href=3D"https://link.coursera.org/f/a/=
+VEz3jXu91EBrJoUF2W56hw~~/AAQRxRA~/wsGl-cOxL51issT3D71Rl23pJTV7RuxiI4EkIs2Qj=
+FY7piyDkRYmvFjcyc9jJKUG74tNPk3lX5W4mmlVH42n-Io0dAozHpPjAssVWduhGbhrYunW4KkY=
+RbFgDx9t0tWe7JVKPt5mj1KV3utQHrN6bh4uU0LIRmcY7y3FOw7Zry7L9oqt9COkGJVwUGeuRmH=
+SYSavwk2oXUcnJIk9mNMWFZd6y2sWXLn7qm_Subn_3CxO3_VPvtwBi6ALJQLI4k8IZjLcneiKUi=
+Kij2yBH2-TR3Km-ixOhtb-b8q6MItnbV2ruuR6iPpgW8uP0iXBtUND1tUvVZziVDl6bqglo4GHw=
+xCw0FfTSrzsDU5Ux36Q1gw~" target=3D"_blank" style=3D"background-color: #0056=
+D2; border-radius: 8px; color: #ffffff; display: inline-block; font-size: 1=
+4px; font-weight: 700; line-height: 48px; text-align: center; text-decorati=
+on: none; min-width: 97px; font-family: Helvetica, Arial, sans-serif; -webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%; padding: 0 32px;">Se=
+e Catalog</a>=0A         =0A        <!--[if mso]>=0A        </center>=0A   =
+     </v:roundrect>=0A        <![endif]-->=0A    </div>=0A    =0A    <!-- E=
+ND CTA -->=0A=0A=0A=0A=0A                                    =0A=0A        =
+                          </td>=0A                                </tr>=0A =
+                 =0A                               =0A=0A=0A               =
+               </tbody>=0A                            </table>=0A          =
+                </td>=0A                        </tr>=0A                   =
+      =0A                                  <!-- Penn Emails --><!-- Transac=
+tional vs Non Transactional --><!-- coursera_purpose: "business","teams","c=
+ampus","government", and blank -->  <!-- Languages  -->             <!-- EN=
+D translations--><!-- Config Section --><!-- End of Config Section -->     =
+       <!-- legal footer -->            <tr style=3D"border-collapse: colla=
+pse;">             <td class=3D"footer detected-link" style=3D"color: #6363=
+63; font-size: 14px; font-weight: 400; line-height: 21px; font-family: Helv=
+etica, Arial, sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: c=
+ollapse; text-decoration: none; margin: 0 0 16px; padding: 0;">            =
+   <hr style=3D"background-color: #E5E7E8; clear: both; color: #E5E7E8; hei=
+ght: 1px; margin: 64px 0; border-width: 0;">                              <=
+!-- citation_disclaimer_1-->                             <p style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-size: 13px; font=
+-weight: 400; letter-spacing: -.02em; line-height: 21px; color: #636363; ma=
+rgin: 0 0 48px;">                                     Coursera Plus free tr=
+ials are limited to one per user. Once a trial has been used, it cannot be =
+activated again, but you can still get started by subscribing. Cannot be us=
+ed in conjunction with other offers. If you do not cancel during the free t=
+rial period, you will be charged $59 USD or equivalent in local currency (p=
+lus applicable taxes) after the 7-day free trial and monthly thereafter, un=
+less canceled. Cancel anytime in account settings.                         =
+                   </p>                                            <!-- //c=
+itation_disclaimer_1-->              <table role=3D"presentation" aria-hidd=
+en=3D"true" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left"=
+ width=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: co=
+llapse; border-spacing: 0; border-width: 0;">               <thead>        =
+        <tr style=3D"border-collapse: collapse;">                 <th width=
+=3D"318" class=3D"utility-links full-width" style=3D"color: #636363; font-s=
+ize: 16px; font-weight: 600; line-height: 19px; font-family: Helvetica, Ari=
+al, sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; m=
+argin: 0 0 16px; padding: 0 0 32px;" align=3D"left" valign=3D"top">        =
+          <p style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%; font-size: 16px; font-weight: 600; letter-spacing: -.03em; line-heig=
+ht: 19px; color: #636363; margin: 0 0 16px;"><a href=3D"https://link.course=
+ra.org/f/a/T138hStY93r_YrSd-jZM4g~~/AAQRxRA~/9UnOjyAlhXjiXyLB7xEGrNw31mu1j7=
+D66Rm2_sGXvByCKI67vVK7tlBPwuveINqX3c3KkBDZVor3xGxJGyM_4wRSOJJdyQb-D-d7FyzMj=
+BbNlGqjfRj-oU0NKbjU6ylewAOfRV_OgYVc9TJJ9J3TTUQK_SKt0xQcaXIia2MveWLkt7xRBw5B=
+uKlw5xrI65JS5Wc-yDodSHMs6VDZ1qtFdqIW_5sWYFYwaEOLGJCZgPk62BciZoWE32WdK9GLy1v=
+uObFHuFo4-scFBd8qsyqWz-BWBkT8A8GujurFDANDKGCSNmTKgOSbwjjL4kGYJ2yZYk_QX5LDSQ=
+x2wS3v-plY7gWUO-176K9pIATMWU42W8U~" target=3D"_blank" style=3D"color: #6363=
+63; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family=
+: inherit; font-size: inherit; font-weight: inherit; line-height: inherit; =
+text-decoration: none;"><strong style=3D"color: #636363; font-weight: 600;"=
+>Help</strong></a></p>                  <!-- business line-->              =
+    <p style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;=
+ font-size: 16px; font-weight: 600; letter-spacing: -.03em; line-height: 19=
+px; color: #636363; margin: 0 0 16px;"><a href=3D"=3Flid=3D1w2agq68grbq&utm=
+_medium=3Demail&utm_campaign=3DWeeklyRecs_-_2023_Redesign_LM_FreeTrial_Bann=
+er_2&bxid=3D664f5ea1213bbc004fbc7f28&utm_source=3Dmarketing&utm_term=3Dreco=
+mmendations" target=3D"_blank" style=3D"color: #636363; -webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%; font-family: inherit; font-size: i=
+nherit; font-weight: inherit; line-height: inherit; text-decoration: none;"=
+><strong style=3D"color: #636363; font-weight: 600;"></strong></a></p>     =
+             <!-- settings -->                  <!-- unsubscribe -->       =
+           <p style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%; font-size: 16px; font-weight: 600; letter-spacing: -.03em; line-hei=
+ght: 19px; color: #636363; margin: 0 0 16px;"><a href=3D"https://link.cours=
+era.org/f/a/_s7k1Nr3AAlTB0Qq71SxuQ~~/AAQRxRA~/xlcHT7Y8TDYNR-WLPt3ZVJ0ns1C1Y=
+H-npAz9AwCa8tLdIGShrHdbrnvHFZevcALyAFrszhAJJUk3izrOlw3rjR2cJIHIij-iYxgZwjvh=
+VwpqKE4mJWO1rUx4n4oWD2EAsju_Dp_KnolBkg5qOMr2mQuRq03upSF8enqElNTDawNGpsL8clA=
+vIKzQgJtKOewNdjE0kU7fm4y4V8zraU2uSw33iJkTiWkChdvhZGM1_0k98XfEz1VbgIzoXHvcKv=
+nDN4I_xaLmFEmikr4yxMtcNS26zEC_S2ZGEdunSpnUvdOCD3PHpIVRkN5Oakp9AAPAoTrMOiY7H=
+3m6Jp-uzV_Jo0UXtXpopi2yKUy9dTxPV7YfMnVuTB-K1-p5VAXQk6Ic1HMnVOv1RnQ4TH7TeU4d=
+DJVJgHRrDVHeADl1ToMLW7Io1QzIajiNp-htYbPKMDwAHx4wsGVRMOmxgVVk9wypWQSQijjET7z=
+kANr7tS3fRKkQdjURVf-bdgJ9slcNj2RDefFs_xaqqXq-3qP50uMCHZkd4eP_AE3s6bxdFa85gU=
+T0b7fGLWwS0fTB5Z51c8sQyx8QLS8cS5leBSlRibQ9w875JnvTSDmkG5YUv-NoJDMNATxCzVA6b=
+yd2Zlu6ce2C-JJj6NW5UhxhyOL_e4zSNyAfy8jmHQC8SbEM4EUFHlGGljhRNn9tPuh6x2DVxo4_=
+0d9jN6t-qTMKAZyK4pRODzG2N0xSApHhI_fYT6WBFx450ssx8ElU1fg3kB5Nvc4uY51-uApQSuH=
+ptbTC2g1foqRSNEsPrG55OpmpcjM2HFEJRe89kRCgeHp7McLHW1ccOQcjnk_xxfLHuDxZs4HvUQ=
+jOJJK9vRd4aEgzun2NRWMMgPyOTokbahICy1ASlDIg2d9yDwakmeEyyhG0iWsY8DyMCV9awP4rB=
+pGECIMI7w-S9zaJ3KgdHNX3QbtjJn9fkPEGF36RxS2uj7zwBjU3QpPdsKOJm5fiPoYVcqXSkEBi=
+GLnHLD1Yzy-sReaI024zVxjAZ0jGOVWKBcIZUP4bdKkKd9GChfCH-W8jARUGtvFRC9kZeb0vpeE=
+1ID-6r6ImqJ5vvZom4i2NS29EDVmpo9AXZIN27RErm-psqTQBlR7s7fgyULdbyXpuECbqJfnmII=
+CzR8zT9EhFnoSb1NIWdV9E7XKocrdfq53q9KTAIYJLiQxU3GRFN06nXwJDr7pobjtUj7MgQlJPa=
+ysaJ9e1nmFkJy0FpKVtxmCrIZnBg5aTueAAWjLGdUrf-Uesg8vXIPTZfz_5xPL8hIWad_jjqX_6=
+mN4baoW5euxRyDRKuCfol929LvPtE3RFAluB5b_lVXxB2vK7xcD78jR8i94_GWSEu3F3x2X7bjA=
+VYxGaGL5g66-Hsb3OESIyzS17FQAQwPUyKCaP0P9_Asc4ZvM4kg~~" target=3D"_blank" st=
+yle=3D"color: #636363; -webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%; font-family: inherit; font-size: inherit; font-weight: inherit; lin=
+e-height: inherit; text-decoration: none;"><strong style=3D"color: #636363;=
+ font-weight: 600;">Unsubscribe</strong></a></p>                  <p style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-size: =
+16px; font-weight: 600; letter-spacing: -.03em; line-height: 19px; color: #=
+636363; margin: 0 0 16px;"><a href=3D"https://link.coursera.org/f/a/43QoVB0=
+qUETOksS2ZZfeYA~~/AAQRxRA~/GCP_fP-vQyHZK4HzC5vHnNfLcOVnsv9uroAZ9J_oRosmVW3Y=
+cgRO0Vu52aNuqqdTaKdKeKJDmEN0bPUC2mzMiAP47-JfgRgLGsBE9_7xVm6DuuV1GvXCj2O0nia=
+U9fbjIdldPNGBVxWdjmxkQNkfxAIaOs3hh3NWvdCqms4xb3NkxzjuVzD-wHpju74mCYK_IJbtjx=
+TUKOPJyq72-Vr86dIb9KFt6-5v81X_YbfU4PgG01G-0pR7izn-rli6bwl3jD0igFZOI__GQe2-E=
+yt67DHfvl-qeZ4kISwsjKy3ebZ3vnJIC8GAO0UpxkcsVxbGop2kS6Dy3BVp-xTd5Men6Ho3W2Nw=
+u7gVJES4Wilh98Y~" target=3D"_blank" style=3D"color: #636363; -webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%; font-family: inherit; font-si=
+ze: inherit; font-weight: inherit; line-height: inherit; text-decoration: n=
+one;"><strong style=3D"color: #636363; font-weight: 600;">Privacy&nbsp;Noti=
+ce</strong></a></p>                 </th>                 <th class=3D"full=
+-width" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; =
+font-weight: 400;" align=3D"left">                  <table role=3D"presenta=
+tion" aria-hidden=3D"true" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ align=3D"left" width=3D"174" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; borde=
+r-collapse: collapse; border-spacing: 0; border-width: 0;">                =
+    <!-- apps -->                   <tr style=3D"border-collapse: collapse;=
+">                    <td style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-co=
+llapse: collapse; padding: 0 0 32px;">                     <a href=3D"https=
+://link.coursera.org/f/a/GREhCBP-vyfKm4c_SeLIcg~~/AAQRxRA~/X9-6hqB2XQxil2OD=
+c5xR_neuyjnSAp5dfFSJzZ8DsnUGqAi67MPGx7Jyn3WtIIw23IuihNP7UPqTTo_qQpMwkF-8l6W=
+CPu2njl3619Gec92dClDHY__KFXZXEO4Xpv7ZFaOGMjOt2hDIx3k-jiQC06Efbutn9i9C7QOAIY=
+47GFRq3jpOQ58cL5INQ-keZTLLbdiFHkUlXi9Of2EU5HVV6EQYoPxXYaJ1ANMP4MNt2N3u6q2J0=
+rPXm45f3cGsjm08jNebyjrFVc5aFk6iK-mKZrs-LKk82d_Jp87-21qLjfWonCUL57IMpgLh6DuX=
+sAffYqXwRYAiU48EPQUInHcEHmwYt_rMi0-Kj4gbRSh5iCg~" target=3D"_blank" style=
+=3D"text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; color: #636363; font-family: inherit; font-size: inherit; font-=
+weight: inherit; line-height: inherit;"><img src=3D"https://d3njjcbhbojbot.=
+cloudfront.net/api/utilities/v1/imageproxy/https://coursera-misc.s3.amazona=
+ws.com/mailspin/prod/09_23_2022_00_50_40_google-play-badge-EN.png=3Ftrim=3D=
+color&h=3D80&w=3D270&fit=3Dscale" alt=3D"Get it on Google Play" border=3D"0=
+" height=3D"40" width=3D"135" class=3D"" style=3D"display: block; line-heig=
+ht: 100%; height: auto; outline: 0; text-decoration: none; -ms-interpolatio=
+n-mode: bicubic; border-style: none; border-width: 0;"></a>                =
+      <br>                     <a href=3D"https://link.coursera.org/f/a/5No=
+CZTG6LVAR7zluvfV-9g~~/AAQRxRA~/X9-6hqB2XQxil2ODc5xR_neuyjnSAp5dfFSJzZ8DsnUG=
+qAi67MPGx7Jyn3WtIIw2yyIreM6JFdSyqPNOgzsve9MCySVgtPcjfFn-pBkmi1010raIrwf0hSN=
+WJNEpMFW-Lu3fDlce70AdsyCb2D-7EjyFAxzWStkSmdp-qSzfLey9Jxy37UvL0W8lUmaJB8_hcV=
+uNiO70_6HEFTCvMbVechFhR1ZGMMjO0nUmc9jvZba1F2hNk4GuWnLkpBAXRX9UBwNmyBhEzu2WD=
+gvSgNmi6oOjDgu51FRDoSV2YoDGtmCGKSZDL-kx4-C7GKDK6xJ-F3ZiHWezANUwrTXPp-5CS7Kt=
+qU5-Yb8jxNCtjpdoDfo~" target=3D"_blank" style=3D"text-decoration: none; -we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #636363; fo=
+nt-family: inherit; font-size: inherit; font-weight: inherit; line-height: =
+inherit;"><img src=3D"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v=
+1/imageproxy/https://coursera-misc.s3.amazonaws.com/mailspin/prod/04_25_202=
+2_04_36_29_btn-app-store.png" alt=3D"Download on the App Store" border=3D"0=
+" height=3D"40" width=3D"135" class=3D"" style=3D"display: block; line-heig=
+ht: 100%; height: auto; outline: 0; text-decoration: none; -ms-interpolatio=
+n-mode: bicubic; border-style: none; border-width: 0;"></a>                =
+    </td>                   </tr>                    <!-- Social Icons --> =
+                  <tr style=3D"border-collapse: collapse;">                =
+    <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; =
+padding: 0 0 48px;">                     <div class=3D"sr-only" style=3D"cl=
+ip: rect(0,0,0,0) !important; height: 1px !important; max-height: 1px; mso-=
+hide: all; overflow: hidden !important; position: absolute !important; whit=
+e-space: nowrap !important; width: 1px !important; margin: -1px; padding: 0=
+; border-width: 0;">Follow</div>                     <table role=3D"present=
+ation" aria-hidden=3D"true" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" align=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse:=
+ collapse; border-spacing: 0; border-width: 0;">                      <tr s=
+tyle=3D"border-collapse: collapse;">                       <td style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: =
+0pt; mso-table-rspace: 0pt; border-collapse: collapse; padding: 0 18px 0 0;=
+">                         <a style=3D"font-size: 1px; -webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%; color: #636363; font-family: inheri=
+t; font-weight: inherit; line-height: inherit; text-decoration: none;" href=
+=3D"https://link.coursera.org/f/a/_acphceFzwBkcYq_pfGqIQ~~/AAQRxRA~/tJhrYDE=
+KhKZm7G1Cldhrg509Q1NDHZBnw8MuKerJPyktrwFsLdhuYy69h8NTZKPv1bZWtHjg4Mem3z6yxA=
+HdZ7xflFE54fXWiwDGhf0LRgrzcqgjlvPPJkW60bGhT2PG_UqgGwOkEr48s9x6u8aGuRJ78RU5M=
+d8qFkwfVy0r-CMerx1s811c6zhbeiHV1iVzQcLkqRf-_VNea2KlgrB52rvIQczHy2LtwjblkpE-=
+RMYxYKiDt2AWUxExQiqLFYNdXNR_Hvrtn3MFqywLuGxlzeYyhH9xHyalUEJLEoQvEWMMM3S9eLm=
+6o24WTfLwuQV1O8xhAPwigDGLgHFHTSFpB8-3fLLEUZ2Y7OPGaStvfRg~">                =
+           <img src=3D"https://d3njjcbhbojbot.cloudfront.net/api/utilities/=
+v1/imageproxy/https://coursera-misc.s3.amazonaws.com/mailspin/prod/04_25_20=
+22_04_37_07_ico-facebook.png" height=3D"30" width=3D"30" alt=3D"Facebook" s=
+tyle=3D"line-height: 100%; height: auto; outline: 0; text-decoration: none;=
+ -ms-interpolation-mode: bicubic; border-style: none; border-width: 0;"></a=
+></td>                       <td style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; bo=
+rder-collapse: collapse; padding: 0 18px 0 0;">                         <a =
+style=3D"font-size: 1px; -webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%; color: #636363; font-family: inherit; font-weight: inherit; line-=
+height: inherit; text-decoration: none;" href=3D"https://link.coursera.org/=
+f/a/OZptxVX4DshEYYg5i94_1A~~/AAQRxRA~/FCJV52v6oFMaAegca1nhfvwCrbxpYTGM-gYvG=
+6HGQpXkh_UUFIOJiiR-RgcGne_N27XZM59F4RHxnuA1gj1MqPEtcJvzkrUiWEYGvyz86-sx6bzL=
+wG4bL8xVjwuhLAZ5ugifvq0EvZFok3ysubBSGbCqbWPPhjdNsHyRdyrjQ6JS_CXA-uvVxfdO9MY=
+KQOniKENBK5ASBGIL3O6ri2LHdZMB0WdVLr01TnnQvSKzJsg8b3UL8LDHml7sLdzBsKY8sStcPo=
+j7CKguDNZkm-6mbZJS3WfeJHQ3OZIJcpjHL53sttddDRTh_3rbk4yjpWGmff1DS8rw5WAeVBRRt=
+hsI7CiaKnWcAJZN0oeZ8uIiZYk~">                           <img src=3D"https:/=
+/d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera=
+-misc.s3.amazonaws.com/mailspin/prod/04_25_2022_04_37_38_ico-linkedin.png" =
+height=3D"30" width=3D"30" alt=3D"LinkedIn" style=3D"line-height: 100%; hei=
+ght: auto; outline: 0; text-decoration: none; -ms-interpolation-mode: bicub=
+ic; border-style: none; border-width: 0;"></a></td>                       <=
+td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; paddi=
+ng: 0 18px 0 0;">                         <a style=3D"font-size: 1px; -webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #636363; font=
+-family: inherit; font-weight: inherit; line-height: inherit; text-decorati=
+on: none;" href=3D"https://link.coursera.org/f/a/0nO4HSiYetzJL9JwjLPQ9A~~/A=
+AQRxRA~/JsEwqVBqzO03DdIh4FRQmcLBjZOgORne8dgJxVTuS-hEYO90cMetG5pm4WOTPW1DK85=
+gpUTsUqY97dILpP4YkHv-RHk2_buvpGpjJI4N0Tq5cEhpUDimlI_azDm2q03Lp-8zv93JQCmt-f=
+X3zUx2ZDaq8L9Nfs52v6RaoD-rw82v2d6fh_7DUGv4NPsCTkuqt1Sb_qWjCVOcbhlHOsQNBoS5p=
+vTs1Bb3UiIJW9HFIGeAQFHm9PXTn9DkbVbQPWgESeveaj9_RStUk5rUEPIjWs8FO0uYeZoeQOMn=
+onQPKiRxQt0JvDxNSbJyznkE2aZTQpkF97SBFY7tFzZcd4kpQisanIuhii98fhBCodOXNEA~"> =
+                          <img src=3D"https://d3njjcbhbojbot.cloudfront.net=
+/api/utilities/v1/imageproxy/https://coursera-misc.s3.amazonaws.com/mailspi=
+n/prod/04_25_2022_04_37_51_ico-instagram.png" height=3D"30" width=3D"30" al=
+t=3D"Instagram" style=3D"line-height: 100%; height: auto; outline: 0; text-=
+decoration: none; -ms-interpolation-mode: bicubic; border-style: none; bord=
+er-width: 0;"></a></td>                       <td style=3D"-webkit-text-siz=
+e-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-tabl=
+e-rspace: 0pt; border-collapse: collapse; padding: 0;">                    =
+     <a style=3D"font-size: 1px; -webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%; color: #636363; font-family: inherit; font-weight: inheri=
+t; line-height: inherit; text-decoration: none;" href=3D"https://link.cours=
+era.org/f/a/9tTVRb1_XKLdKHHqPGfdGA~~/AAQRxRA~/9UnOjyAlhXjiXyLB7xEGrEU8ntKou=
+Jz4RyXECIMUrYIYKFuOcsCxXIKej8K7nk749ZUeqOJwQKYLF2wn32XTMgw-J08yz-j1mzgKD3Y4=
+-nG7P9sRjH6BYYL5yFTkPRpz_d9WLocKyRQzTgzJFDb70ZNnfU6FEdulDRM2w1qEqm332zVPX6K=
+XjOcGL_HGNfgxeDyYggc19TXWx8b9D-P1LZJOBQNztz9Fjp-1gLQHpRhdI83yNjeMaE5xOD_30q=
+7rmGp28iixs24A8K9n8RATpNLY_x9a4Uq4SMeCUDODDIr73t3AmY_-21mkDF8M_iZOGitG4qyyq=
+DDOVlKNfDXsRY2o2ByuiqRhT4TP5Jg1Qig~">                           <img src=3D=
+"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://=
+coursera-misc.s3.amazonaws.com/mailspin/prod/03_30_2023_18_59_36_icon-tik-t=
+ok.png" height=3D"30" width=3D"30" alt=3D"TikTok" style=3D"line-height: 100=
+%; height: auto; outline: 0; text-decoration: none; -ms-interpolation-mode:=
+ bicubic; border-style: none; border-width: 0;"></a></td>                  =
+    </tr>                     </table>                    </td>            =
+       </tr>                  </table>                 </th>               =
+ </tr>               </thead>              </table>              <p style=
+=3D"font-family: Helvetica, Arial, sans-serif; -webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%; font-size: 13px; font-weight: 400; letter-s=
+pacing: -.02em; line-height: 21px; color: #636363; margin: 0 0 16px;"> Cour=
+sera Inc. All rights reserved. Coursera and the Coursera logo are registere=
+d trademarks of Coursera, Inc. All other trademarks are property of their r=
+espective owners. Log in to manage all your notification preferences in    =
+             <!-- settings -->                <a href=3D"https://link.cours=
+era.org/f/a/wtm04rJg9FPAXBzqU_5ojw~~/AAQRxRA~/8G-rhOaFRSzEVo0aJSP_NXb70WJjB=
+Jk3PO8cqZLGTm4mSaXBgAAX29tj34ofnUxk94noHrfVfIb1vj4OgZ9099X-fqSmo_sBASr3p1FF=
+dTuccev9xwk_WMhfDVUQQePLkXjHjg86U6bKo39AI6H-DVi60vVky-xV1wx6pB-COpO10ANAtZM=
+CJzxrfqBlmGH6VKrPHjsVdK_2T0edT2YEGbk2V851QKh6V1u7qcOdmxtnORGMrFwygNGL6t1_uw=
+g4Tg0F3Dt9qVuvAZCmgAu1jHvUC959C7JCTG3vFjGOt3CcFt1Mzu9yezZ0OqPNtbyEcbq2w79Or=
+3F-_DeufQU-yPJoA0Wp4QOkbmdGWFnBVO1R62WP5-6KV6tvuBM5TNgS" target=3D"_blank" =
+style=3D"color: #636363; -webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%; font-family: inherit; font-size: inherit; font-weight: inherit; l=
+ine-height: inherit; text-decoration: none;"><span style=3D"color: #636363;=
+ text-decoration: underline;">Email&nbsp;Settings</span>.</a>              =
+  <br><br>Coursera | 2440 W El Camino Real 5th floor, Mountain View, CA 940=
+40 USA<!-- settings end -->               </p>             </td>           =
+ </tr>            <!-- legal --> =0A                      </tbody>=0A      =
+              </table>=0A                  </td>=0A                </tr>=0A=
+              </tbody>=0A            </table>=0A          </td>=0A        <=
+/tr>=0A      </tbody>=0A    </table>=0A  </center>=0A  =0A  =0A=0A</body>=
+=0A</html>
+

@@ -1,0 +1,186 @@
+Delivered-To: gio.rizk023@gmail.com
+Received: by 2002:ac9:1d89:0:b0:61f:3207:f67f with SMTP id u9csp1686433och;
+        Mon, 2 Mar 2026 03:49:51 -0800 (PST)
+X-Received: by 2002:a05:690e:d4d:b0:64c:9c10:c09 with SMTP id 956f58d0204a3-64cc220ffd3mr9781415d50.51.1772452191786;
+        Mon, 02 Mar 2026 03:49:51 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1772452191; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=KpN7Ef8I/rrboprEN8t+pTg/fTjZ23WHjPh5KvbbXd0Gi/1ionihs9XWClPZaCbLDy
+         d6LWaFpLmmRYUTWHBS+nXKcX0t9YSfsBxOUZHut+UaYpruYrY3nSPIo2jRb0PkRBUnHt
+         4ILpXp/+P4qQheeXMNpSmJwgVXfRU/Uc+rXVxemZHhnn5el1Wa1GhXSg5dVJuoyuwWn5
+         VrbL9D6pAJ1ByejWt/kkqJABmUP35SPi6ob2TvdVusTvBn5UvLkHNFKNQaRQBjfGR4PE
+         f4BxXPEq1CzPk2JBiMEw6y8ZWGBjoLKSh1KEp1Qk+ZU4rEftS9MZR9bdEHh41c/enzmD
+         oHfw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=eG2UBil0D5hHGBX925J5zrtSJOG3Ry3jF6S0fEq2kwE=;
+        fh=7Cpmm8I5nMJZchyi2v7Ya+ZV7qZMS9CCT3zANJ3ZE6Y=;
+        b=Qxy5whnoG1lzQ9XyjUaMcLitXwCCV7NUXQMXv32tqlYY/PBfnVNzXHTxtrZszIV5Cw
+         QPWUGu6vVvKEMwASzZi6GRW0nLeBIJM0W38xOvbBxwPYtrdczsflnKD/MfM8abfLLgBZ
+         eFBJ1FxwWxAYDNg5wiy2Bo9wmdPzhXkg70/YWyOrr34qFkFkUP+AdZ0Av+QhMyP10n79
+         dkfMF6PGOwpu8QAw69s2hZzNphwzPhp29CxJf0eqO1AUGVlGcQ9EO0KxANjWM8eTiC1t
+         cL4f6sfRgnH8h8CmEdv0bciHMcXpC4FG8pOAl3bKC1y1gmIrUUfRrCVn1I/FVQOBJa/g
+         ODWQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@atriasolutions.com header.s=google header.b=LOwaeCbe;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of mhaykal@atriasolutions.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=mhaykal@atriasolutions.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=atriasolutions.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <mhaykal@atriasolutions.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 956f58d0204a3-64cb74b8ba9sor5261801d50.0.2026.03.02.03.49.51
+        for <gio.rizk023@gmail.com>
+        (Google Transport Security);
+        Mon, 02 Mar 2026 03:49:51 -0800 (PST)
+Received-SPF: pass (google.com: domain of mhaykal@atriasolutions.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@atriasolutions.com header.s=google header.b=LOwaeCbe;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of mhaykal@atriasolutions.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=mhaykal@atriasolutions.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=atriasolutions.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1772452191; cv=none;
+        d=google.com; s=arc-20240605;
+        b=GA7mJbojp2DU0VTLcw9HZDe1fAA7x/1f5TPkA5G1k3HI9R4oX0GJUucp+12Nxhf3qN
+         D4HjO09zlggraVIotEAcvzXD3aw9s/+aJYHrQVCgX6XlVyT2WDpIWerfYUdrnnYlFSLt
+         e1445QnjEz3LVdXe5FewijB7kDGpuxUSKby0GRVTqGKC84cPsaQyDu7Txn/2ebI4n9rl
+         qjRM1/Xh85ExjP/jbR7UQXEMZ9wgtLk8TeYjSh/eKefEjmEBW+TNj8xWcCTRjvMxnjSQ
+         N6D2JWpfd5MbQs6r+FkioAQDkPX7Xgs9YpZwIDsEigWkCwbnwC+V4DcsibHhrcW3OpgJ
+         ytAg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=eG2UBil0D5hHGBX925J5zrtSJOG3Ry3jF6S0fEq2kwE=;
+        fh=7Cpmm8I5nMJZchyi2v7Ya+ZV7qZMS9CCT3zANJ3ZE6Y=;
+        b=LtvezxVcRytDKFsrBoOTHDN5AdQwi0gcrFiJI8KwgtnpcYYVpPumaeWycXZwpgDArt
+         wDViyhjc0o2clq1TC911/PFDqUXOCfUAgcK0TX2o6J7LyNyNR2SCofguiTBb3dNSwUZc
+         e4RuvkMnGD5oiMiga+mCgO11cLMyDhDood+vSBDnys7IwXzavOViO3oiQ23kAhBU5EXb
+         Hnq+R2aUGAUDBUARvEO2jqdLEvGPeYNJB5SSgwL3N8vvsojaKFhsYJmmEs2itJI+ByfG
+         aNitdXtFyUKmA//9lYsFZ1nEQzkSI0otkB4FfI36ooeUFcTiWQTj84Cslxy5uIZ8MbUG
+         IlCw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=atriasolutions.com; s=google; t=1772452191; x=1773056991; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=eG2UBil0D5hHGBX925J5zrtSJOG3Ry3jF6S0fEq2kwE=;
+        b=LOwaeCbelfNf7TL1hCLs1a9BKP/x+qd177yFe0yIl0GhFxRZd+H7zIeEiOhmGhKfvn
+         9ekX7EAoE6nOOPCghfcAyEB60LYYu6AyyI6n+C+YUzU/t+2hz9NeUVF3SRfjJKSgpwMt
+         Ocj8rfJAbH7DihnKu1lXjk3HD3oTq8Ol6TpK6amCxSitAm42MiNrv+ru//r2xcSRjl0o
+         55vzYJx4BLljO0DhCM5G+pT586mGtZg9p1uiYq1QIeu9wQqtxejHNhmGUb3yxF0uIImI
+         PjNk60/nMkMwSSY74Nw1wf4nH2d+OvmDlaAIe8Fj7EYyHTOgRXNomCGcw/EL9Ys7yLf7
+         uBBA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1772452191; x=1773056991;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=eG2UBil0D5hHGBX925J5zrtSJOG3Ry3jF6S0fEq2kwE=;
+        b=ZpxreIbGd63eJGxHAuHTqffjpm2aPkLbW0cz+9CidWce8ZVWZE2AA5YP67Mhhe/vyW
+         j/33n/NzBh+o5GYyybkzdv0YMIk+rf+ra6eRY8vFdLPQKJ/6U0h80h66h8trAkaI5xHq
+         uxoc280IN39TUV3fa0sQCHFUmykkllmrc93jFMLUBEMIZTVoZLBZHq3VWsI1lgGpiRpS
+         1le+iP649KzD8HxiytlrthRhSpVlqxukDaxXtChnULt6MCJtF22ibhAKrUbgCF6Swd35
+         5o34rH91GWsig9q7paZF1849vlTrUYwWyI/BnQld4vmxZ59PiveS3NCDfWNaCxxkAgkV
+         LMKQ==
+X-Gm-Message-State: AOJu0YyK4Co3RG0m/4FN1JB1h5lQxk17pmLRUKODoKcizBn/Xl1OK9PJ
+	4qgWgyJg6Gxtcvr+Gb4HPjwwsX6ds1ieBaGMga18MhQONtLMtqJijf3CMti4fgYsLzB+O3FqxNu
+	WFcNWaxgizhCwQeT62rxaKlfDNIr0ujNsHwf97574fXVi8Kwd7anhjkO9sTEM/Q6XURDVPGS3PD
+	NjR5PL3pCv+gj0vW72TFeeQthXXxeUbFasOUheomSFQg==
+X-Gm-Gg: ATEYQzztU1IUP1/FG/W3JAAPc2cd7bVDCxrI5DY2EJJlREZnBdJoT+Vx/B8pU/y8a/L
+	6QG/9XmQUycARrrxKzkj3Psw1VjGsPCG0CjSJxqir17dqxx7oYIlt9WUEjG7ruE3TTC3rwvSXTb
+	MJKOdfO3agk4XOHQlplC5qOu0lOUiLbDD0vUgFf07j9Xqwr6RmpIksLODeDDjQmT7ls1+2krNhd
+	nOPfxvvZVLB/aHEgsSsUjSkRvO2RBRk2gWvU0O3k4kE+EvNJ0w1ZDV4E8lmennM3SStdPVZkFPy
+	NFQpcvHtUpeQQfn7La0XZuEhTM+Kehi0RIJOvZtVoIzE+HDwad4=
+X-Received: by 2002:a53:b9cb:0:b0:64a:e111:f5a1 with SMTP id
+ 956f58d0204a3-64cc22a883fmr6831392d50.67.1772452191366; Mon, 02 Mar 2026
+ 03:49:51 -0800 (PST)
+MIME-Version: 1.0
+From: Maroun Haykal <mhaykal@atriasolutions.com>
+Date: Mon, 2 Mar 2026 13:49:15 +0200
+X-Gm-Features: AaiRm51KtBfbUHKXy2FYols_eum6JNQaAdmS_SFFfM9IM8CBD0FtwncU_zCx8fM
+Message-ID: <CAHgkR6f=+7w2kLxBMeHttXJSrL8Co_en2DaUSqCW6TgJSAAW3w@mail.gmail.com>
+Subject: Email analyzer
+To: gio.rizk023@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000003f803b064c092fee"
+
+--0000000000003f803b064c092fee
+Content-Type: text/plain; charset="UTF-8"
+
+Hello Gio,
+
+Following is the roadmap highlighted on the steps that needs to be
+performed, take some time to check how to initiate this project as well
+some research on the tools that could be used to perform it.
+
+Build a Python script that:
+
+   1.
+
+   Connects to an IMAP mailbox and downloads messages as .eml
+   2.
+
+   Parses headers + authentication results (SPF/DKIM/DMARC)
+   3.
+
+   Extracts sender domain, checks reputation signals (AbuseIPDB + DNSBLs),
+   and domain age (WHOIS)
+   4.
+
+   Sends email content to a *local* LLM for intent analysis
+   (phishing/bec/benign/etc.)
+   5.
+
+   Produces a structured report per email that explains authenticity +
+   likely intent + spoofing/fraud risk
+
+--
+Regards,
+
+-- 
+*This email and its attachments are confidential and intended only for the 
+recipient. If you received this message in error, please notify the sender 
+immediately and delete it. Any unauthorized use, disclosure, or 
+distribution is prohibited and subject to legal pursuit.*
+
+--0000000000003f803b064c092fee
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Hello Gio,</div><div><br></div><div>Following is the =
+roadmap highlighted on the steps that needs to be performed, take some time=
+ to check how to initiate this project as well some research on the tools t=
+hat could be used to perform it.=C2=A0</div><div><p>Build a Python script t=
+hat:</p>
+<ol>
+<li>
+<p>Connects to an IMAP mailbox and downloads messages as <code>.eml</code><=
+/p>
+</li>
+<li>
+<p>Parses headers + authentication results (SPF/DKIM/DMARC)</p>
+</li>
+<li>
+<p>Extracts sender domain, checks reputation signals (AbuseIPDB + DNSBLs), =
+and domain age (WHOIS)</p>
+</li>
+<li>
+<p>Sends email content to a <strong>local</strong> LLM for intent analysis =
+(phishing/bec/benign/etc.)</p>
+</li>
+<li>
+<p>Produces a structured report per email that explains authenticity + like=
+ly intent + spoofing/fraud risk</p></li></ol></div><div><div dir=3D"ltr" cl=
+ass=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"=
+><div><div>--</div><div>Regards,</div><div><br></div></div><div></div><img =
+src=3D"https://ci3.googleusercontent.com/mail-sig/AIorK4zquNqVCSSMzQHfWil2R=
+luXphu0GOGnthJCpJc7Q2KjoPoed0xa9NdUOMZ_1GkSbg4c3qe--jIrc2YM"><br></div></di=
+v></div></div>
+
+<br>
+<font size=3D"1" color=3D"#808080"><i>This email and its attachments are co=
+nfidential and intended only for the recipient. If you received this messag=
+e in error, please notify the sender immediately and delete it. Any unautho=
+rized use, disclosure, or distribution is prohibited and subject to legal p=
+ursuit.</i></font><br>
+--0000000000003f803b064c092fee--

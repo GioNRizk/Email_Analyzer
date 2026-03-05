@@ -1,0 +1,381 @@
+Delivered-To: gio.rizk023@gmail.com
+Received: by 2002:a05:7022:ba1:b0:127:51a5:7d3b with SMTP id cy33csp2298178dlb;
+        Mon, 2 Mar 2026 16:43:05 -0800 (PST)
+X-Received: by 2002:a05:6300:614e:b0:35d:6bbc:e9ce with SMTP id adf61e73a8af0-395c3a2c665mr14006856637.16.1772498585113;
+        Mon, 02 Mar 2026 16:43:05 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1772498585; cv=none;
+        d=google.com; s=arc-20240605;
+        b=QpDYx09HjBynXyNnXUUR2WV9RFT1mYmdN8yoltKsSyz+0bcn2DDZxiGlpnydKS5ASc
+         bz9OoR+TM5iLCfkveuM+b9Lcz6moNk8hatu3b8SKVvfBotFG2DEkzJ5+OMPRc1tZZotx
+         +Do7RV12B1cmFMLLELy8QADcsCSFWBepGRp6C4yj4MgYJPir2q2YTYUHTBATztniFqS7
+         xCuIPdi6ZS6a6hN+Xuwe9XhV6mT99ANglJYBd18ZzmlqoHOgh06OyIOIkEXvkfQZjj8v
+         i1CLy6rWIhSAGSkV5zmiunu1SjKpIckjDz+cK8WMwXbHKzdE2zwzOhqFAkgKul8Pki+t
+         9fjw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:content-transfer-encoding:mime-version:precedence
+         :list-unsubscribe:list-unsubscribe-post:message-id:subject:reply-to
+         :from:to:date:dkim-signature:dkim-signature;
+        bh=HyTD8o6FONTVb72cZ2v/c6aaMZRVCq2coAH+cSmajdc=;
+        fh=Be7pn87x7PagwA3wDclK4N1QUHp4WD02XDG15o5iMO8=;
+        b=VAQra4qfuOqauDsicjkTcJxusSmr/B8YD8nOcG3BTYivd3BdcHt4MhDpD03UXC7awi
+         jB1eoJR6t+NxDy9W40aNZZx6BMWMZQqHc76G1PEWoqLbL1WMXzL9QNhmgPDJ+neKWHSq
+         t8+vzFxC6pWTN7DM79PkQKdIus87eu7yTLzMVR1x8f5vaGFVyux15MTy3uCvhOhqMHZi
+         op+nWQ+gsF+ljmpuiC3+IkgBAD4BbuZsJDpXXjAefYTMBww/iYiO4SeMW0uQhBHuWqKZ
+         zSvAh61/+/Fc18CpWVUeKcmeBXDE7hYaffahZ7fnULe17r///d47IsA3O02LWNVXxUKN
+         vcMA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmatpoint.com header.s=xyugy4o3wrjihuoxjmlth4ghdyii4inx header.b=KUy+hfCX;
+       dkim=pass header.i=@amazonses.com header.s=dvogjbaa3ou3tduyzvyu4rj5tkuzdi4h header.b=w+sMrYCo;
+       spf=pass (google.com: domain of 0109019cb125a659-64ad2865-1eb9-49ad-ae3c-96929e7fbac5-000000@ap-south-1.amazonses.com designates 76.223.180.111 as permitted sender) smtp.mailfrom=0109019cb125a659-64ad2865-1eb9-49ad-ae3c-96929e7fbac5-000000@ap-south-1.amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=gmatpoint.com
+Return-Path: <0109019cb125a659-64ad2865-1eb9-49ad-ae3c-96929e7fbac5-000000@ap-south-1.amazonses.com>
+Received: from c180-111.smtp-out.ap-south-1.amazonses.com (c180-111.smtp-out.ap-south-1.amazonses.com. [76.223.180.111])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-c70fa8c0eb1si22894896a12.438.2026.03.02.16.42.40
+        for <gio.rizk023@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 02 Mar 2026 16:43:05 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0109019cb125a659-64ad2865-1eb9-49ad-ae3c-96929e7fbac5-000000@ap-south-1.amazonses.com designates 76.223.180.111 as permitted sender) client-ip=76.223.180.111;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmatpoint.com header.s=xyugy4o3wrjihuoxjmlth4ghdyii4inx header.b=KUy+hfCX;
+       dkim=pass header.i=@amazonses.com header.s=dvogjbaa3ou3tduyzvyu4rj5tkuzdi4h header.b=w+sMrYCo;
+       spf=pass (google.com: domain of 0109019cb125a659-64ad2865-1eb9-49ad-ae3c-96929e7fbac5-000000@ap-south-1.amazonses.com designates 76.223.180.111 as permitted sender) smtp.mailfrom=0109019cb125a659-64ad2865-1eb9-49ad-ae3c-96929e7fbac5-000000@ap-south-1.amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=gmatpoint.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=xyugy4o3wrjihuoxjmlth4ghdyii4inx; d=gmatpoint.com; t=1772498560;
+	h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe-Post:List-Unsubscribe:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	bh=dbNdr3ABzDs7PALTmRZAr6UZ8e5DciAjepS7p2bYhI0=;
+	b=KUy+hfCXV4SRA54Hi1BcOmyV0E82eC6hTookT38LgFqqwwNWLP1wJLM3xEkfcfpF
+	8K9CmoNqhVeJbz6ZWameyGL0oYpnctVj2t1lh2olKj6S1NTgjVE/pPtg3Laj5CXt5KV
+	P+92nmOtt6IOSXsREFUPB91pkH0knWfO6IEwILe6AiCD3WD9dzNoyADUTcgNnmLIZBO
+	aiQlb38wf1FrHEYG5rtIzW/8tgV2DvVaRZ/Kfo95XvFIg15QbMFWvJcsj6+vDBxuFND
+	eh1joC/3iJ7ZGeT7Mk3RjekdYnxKVkRLS6jgwa0vLKfZtZYNNUDj0+y+2sWPpg4Enq2
+	BDvx/01cwQ==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=dvogjbaa3ou3tduyzvyu4rj5tkuzdi4h; d=amazonses.com; t=1772498560;
+	h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe-Post:List-Unsubscribe:MIME-Version:Content-Type:Content-Transfer-Encoding:Feedback-ID;
+	bh=dbNdr3ABzDs7PALTmRZAr6UZ8e5DciAjepS7p2bYhI0=;
+	b=w+sMrYCoNS4ZTg4811tBNWjS37YKWWaZMLMw5K7DfXu1V8Urh1qEgMsGBhmNMnIo
+	k2KFnNzccA8HZUfctaEZxecqo7EiQnqhyHk8Zr8yPPZKxgnCNkAhwMK+MzVn/ivUz2t
+	120bZDJwDd439TShPKLSEPSfTv6M71WvzCIzC8dw=
+Date: Tue, 3 Mar 2026 00:42:40 +0000
+To: Gio Rizk <gio.rizk023@gmail.com>
+From: GMATPoint <sayali@gmatpoint.com>
+Reply-To: GMATPoint <sayali@gmatpoint.com>
+Subject: GMAT 2026: CR on Satisfaction vs Productivity
+Message-ID: <0109019cb125a659-64ad2865-1eb9-49ad-ae3c-96929e7fbac5-000000@ap-south-1.amazonses.com>
+X-Mailer: Sendy (https://sendy.co)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://newsletters.cracku.in/nl/unsubscribe/o2nAQd48l763E763goTJ2rCoefbyUEHm4bKy0aW3BwSHGGg/DsaEwX68763wWcdyHPpTP0rw/59ErFUds892azwmMf892Uxvbvg>
+Precedence: Bulk
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_81814d47c93b73b8bd63b2da41389316"
+Content-Transfer-Encoding: 8bit
+Feedback-ID: ::1.ap-south-1.0212JGmn7n2NpfzFFe1HpXc3WAnDU3B+KuPD06E1Se8=:AmazonSES
+X-SES-Outgoing: 2026.03.03-76.223.180.111
+
+This is a multi-part message in MIME format.
+
+--b1_81814d47c93b73b8bd63b2da41389316
+Content-Type: text/plain; charset=us-ascii
+
+GMAT FE Questions
+
+
+--b1_81814d47c93b73b8bd63b2da41389316
+Content-Type: text/html; charset=us-ascii
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+	<title></title>
+	<!--[if !mso]><!-- --><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">#outlook a { padding:0; }
+          .ReadMsgBody { width:100%; }
+          .ExternalClass { width:100%; }
+          .ExternalClass * { line-height:100%; }
+          body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%; }
+          table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt; }
+          img { border:0;height:auto;line-height:100%; outline:none;text-decoration:none;-ms-interpolation-mode:bicubic; }
+          p { display:block;margin:13px 0; }
+	</style>
+	<!--[if !mso]>
+	<style type="text/css">@media only screen and (max-width:480px) {
+            @-ms-viewport { width:320px; }
+            @viewport { width:320px; }
+          }
+	</style>
+	<style type="text/css">.calendar{
+        background:    #eeeeee;
+        border-radius: 5px;
+        box-shadow:    0 2px #cccccc;
+        padding:       10px 15px;
+        color:         #000000;
+      	font-size: 16px;
+        display:       inline-block;
+        text-align:    center;
+      	text-decoration: none;
+      	font-weight: 700;
+
+      }
+	</style>
+	<!--<![endif]--><!--[if mso]>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]--><!--[if lte mso 11]>
+        <style type="text/css">
+          .outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]--><!--[if !mso]>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css" />
+	<style type="text/css">@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+	</style>
+	<!--<![endif]-->
+	<style type="text/css">@media only screen and (min-width:480px) {
+        .mj-column-per-100 { width:100% !important; max-width: 100%; }
+      }
+	</style>
+	<style type="text/css">@media only screen and (max-width:480px) {
+      table.full-width-mobile { width: 100% !important; }
+      td.full-width-mobile { width: auto !important; }
+    }
+	</style>
+	<style type="text/css">.hide_on_mobile { display: none !important;} 
+        @media only screen and (min-width: 480px) { .hide_on_mobile { display: block !important;} }
+        .hide_section_on_mobile { display: none !important;} 
+        @media only screen and (min-width: 480px) { .hide_section_on_mobile { display: table !important;} }
+        .hide_on_desktop { display: block !important;} 
+        @media only screen and (min-width: 480px) { .hide_on_desktop { display: none !important;} }
+        .hide_section_on_desktop { display: table !important;} 
+        @media only screen and (min-width: 480px) { .hide_section_on_desktop { display: none !important;} }
+        [owa] .mj-column-per-100 {
+            width: 100%!important;
+          }
+          [owa] .mj-column-per-50 {
+            width: 50%!important;
+          }
+          [owa] .mj-column-per-33 {
+            width: 33.333333333333336%!important;
+          }
+          p {
+              margin: 0px;
+          }
+          @media only print and (min-width:480px) {
+            .mj-column-per-100 { width:100%!important; }
+            .mj-column-per-40 { width:40%!important; }
+            .mj-column-per-60 { width:60%!important; }
+            .mj-column-per-50 { width: 50%!important; }
+            mj-column-per-33 { width: 33.333333333333336%!important; }
+            }
+	</style>
+</head>
+<body style="background-color:#E6E6E6;">
+<div style="background-color:#E6E6E6;"><!--[if mso | IE]>
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+<div style="Margin:0px auto;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="border:0px #000000 solid;direction:ltr;font-size:0px;padding:9px 0px 9px 0px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+			<div class="mj-column-per-100 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+			<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#0288d1;border-radius:4px;vertical-align:top;" width="100%">
+				<tbody>
+					<tr style="background-color: #7460ee;">
+						<td align="center" style="font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;">
+						<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+							<tbody style="background-color: #7460ee">
+								<tr>
+									<td style=""><a href="https://newsletters.cracku.in/nl/l/G1M763UhejtIXutsszySpnKQ/vdNJdA2Yao763JgBvCcfraOQ/59ErFUds892azwmMf892Uxvbvg" target="_blank"><img src="https://newsletters.cracku.in/nl/uploads/1742275717.png" style="border: 0px solid; display: block; outline: none; text-decoration: none; width: 201px; font-size: 13px; max-width: 100%; height: 34px; margin-top: 5px; margin-bottom: 5px;" /> </a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]--></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+
+<div style="Margin:0px auto;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="direction:ltr;font-size:0px;padding: 9px 0px 0px 0px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+			<div class="mj-column-per-100 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+			<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#FFFFFF;border-radius:5px;vertical-align:top;" width="100%">
+				<tbody>
+					<tr>
+						<td align="left" style="padding: 15px; padding-top: 0px; word-break: break-word;">
+						<div open="" sans="" style="font-family: ">
+						<h1 style="text-align: center;"><span style="font-size:24px;">GMAT 2026&nbsp;Material</span></h1>
+
+						<p><span style="font-size:20px;">Hello Gio Rizk, </span></p>
+
+						<p>&nbsp;</p>
+
+						<p><span style="font-size:20px;">Here are today&#39;s&nbsp;Daily Target Tests:</span></p>
+
+						<p>&nbsp;</p>
+
+						<p><span style="font-size:20px;"><strong>Critical Reasoning:&nbsp;</strong><a href="https://newsletters.cracku.in/nl/l/G1M763UhejtIXutsszySpnKQ/8sqo2T44G6ndGHuM5rByPg/59ErFUds892azwmMf892Uxvbvg">Satisfaction vs Productivity</a></span></p>
+
+						<p>&nbsp;</p>
+
+						<p><span style="font-size:18px;">In a study investigating the relationship between job satisfaction and workplace productivity, researchers surveyed 200 employees from various</span>.<span style="font-size:18px;">......&nbsp;<a href="https://newsletters.cracku.in/nl/l/G1M763UhejtIXutsszySpnKQ/8sqo2T44G6ndGHuM5rByPg/59ErFUds892azwmMf892Uxvbvg">Read more</a></span></p>
+
+						<hr />
+						<p><span style="font-size:20px;"><strong>Quants:</strong>&nbsp;<a href="https://newsletters.cracku.in/nl/l/G1M763UhejtIXutsszySpnKQ/eCQx763OPPKtu1ZLD7llviJw/59ErFUds892azwmMf892Uxvbvg">Rate and Work</a></span></p>
+
+						<p>&nbsp;</p>
+
+						<p><span style="font-size:18px;">4/9th of a number is&nbsp; 18 greater than&nbsp; 2/5th of the same number. Find the number.&nbsp;</span> &nbsp;<span style="font-size:18px;">.....&nbsp;<a href="https://newsletters.cracku.in/nl/l/G1M763UhejtIXutsszySpnKQ/eCQx763OPPKtu1ZLD7llviJw/59ErFUds892azwmMf892Uxvbvg">Read more</a></span></p>
+						</div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="font-size:0px;padding:20px 20px 20px 20px;word-break:break-word;" vertical-align="middle">
+						<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+							<tbody>
+								<tr>
+									<td align="center" bgcolor="#7460EE" role="presentation" style="border:0px solid #000;border-radius:4px;cursor:auto;mso-padding-alt:9px 26px 9px 26px;background:#7460EE;" valign="middle"><span style="font-size:16px;"><a href="https://newsletters.cracku.in/nl/l/G1M763UhejtIXutsszySpnKQ/oK8Ka4GPMTjq0UxIqG5K1Q/59ErFUds892azwmMf892Uxvbvg" style="display: inline-block; background: #7460EE; color: #ffffff; font-family: Open Sans, sans-serif; font-size: 16px; font-weight: normal; line-height: 100%; Margin: 0; text-decoration: none; text-transform: none; padding: 9px 26px 9px 26px; mso-padding-alt: 0px; border-radius: 4px;" target="_blank">Take Today&#39;s Daily Target</a></span>&nbsp;B</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]--></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]--><!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      
+      <table
+         align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+      >
+        <tr>
+          <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+      <![endif]-->
+
+<div style="background:#E6E6E6;background-color:#E6E6E6;Margin:0px auto;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#E6E6E6;background-color:#E6E6E6;width:100%;">
+	<tbody>
+		<tr>
+			<td style="direction:ltr;font-size:0px;padding: 0;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+        <tr>
+      
+            <td
+               class="" style="vertical-align:top;width:600px;"
+            >
+          <![endif]-->
+			<div class="mj-column-per-100 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+			<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+				<tbody>
+					<tr>
+						<td align="left" style="font-size:0px;padding:15px 15px 15px 15px;word-break:break-word;">
+						<div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:11px;line-height:1.5;text-align:left;color:#000000;">
+						<p style="font-family: 'Open Sans', sans-serif; text-align: center;">You are receiving these emails because you have subscribed to the GMATPoint mailing list for important updates</p>
+
+						<p style="font-family: 'Open Sans', sans-serif; text-align: center;"><a href="https://newsletters.cracku.in/nl/unsubscribe/o2nAQd48l763E763goTJ2rCoefbyUEHm4bKy0aW3BwSHGGg/DsaEwX68763wWcdyHPpTP0rw/59ErFUds892azwmMf892Uxvbvg" style="color: #0288d1;">Unsubscribe</a></p>
+						</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<!--[if mso | IE]>
+            </td>
+          
+        </tr>
+      
+                  </table>
+                <![endif]--></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]--></div>
+</body>
+</html>
+<img src="https://newsletters.cracku.in/nl/t/59ErFUds892azwmMf892Uxvbvg/G1M763UhejtIXutsszySpnKQ" alt="" style="width:1px;height:1px;"/>
+
+
+
+--b1_81814d47c93b73b8bd63b2da41389316--
