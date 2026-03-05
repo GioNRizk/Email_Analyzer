@@ -8,17 +8,6 @@ Fetches emails via IMAP, analyzes them using 9 threat intelligence sources and a
 
 ---
 
-## Pipeline
-```
-Step 1 — imap_fetch.py       → Fetch emails via IMAP and save as .eml
-Step 2 — parse_headers.py    → Extract SPF/DKIM/DMARC, save to MySQL
-Step 3 — reputation.py       → Check IP/domain against 9 threat sources
-Step 4 — llm_analysis.py     → Classify email intent using phi3 LLM
-Step 5 — report.py           → Generate final JSON report
-```
-
----
-
 
 ## Project Structure
 ```
