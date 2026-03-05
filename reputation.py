@@ -1,9 +1,3 @@
-import sys
-from pathlib import Path
-
-# Add project root to Python path
-sys.path.insert(0, str(Path(__file__).parent))
-
 from core.database import Database
 from core.email_parser import EmailParser
 from core.threat_intel import ThreatIntel
