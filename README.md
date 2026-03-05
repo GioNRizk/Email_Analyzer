@@ -1,5 +1,5 @@
 # 🛡️ Email Threat Analyzer
-Built during internship at **Atria Solutions** — automated email security analysis pipeline with SOC dashboard.
+ Automated email security analysis pipeline with SOC dashboard.
 
 ---
 
