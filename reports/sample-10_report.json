@@ -1,0 +1,49 @@
+{
+  "email": "sample-10.eml",
+  "from": "\"Microsoft account team\", _ <no-reply@access-accsecurity.com>",
+  "subject": "Microsoft account unusual signin activity",
+  "verdict": "PHISHING",
+  "verdict_emoji": "🚨",
+  "final_score": 78,
+  "level": "CRITICAL",
+  "level_emoji": "🔴",
+  "scores": {
+    "rule_engine": 73,
+    "llm": 90,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "none",
+    "dkim": "none",
+    "dmarc": "permerror"
+  },
+  "threat_intel": {
+    "sender_ip": "89.144.44.2",
+    "abuse_ipdb": 0,
+    "dnsbl_listed": "[]",
+    "domain_age_days": -1,
+    "domain_registered": "unknown",
+    "ssl": "unknown",
+    "otx_pulses": 0,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "DKIM missing",
+    "DMARC permerror",
+    "Brand impersonation: microsoft → access-accsecurity.com",
+    "Urgent keywords: ['signin activity']",
+    "No SSL certificate"
+  ],
+  "llm_summary": "Email exhibits brand impersonation, authentication failures, and suspicious content",
+  "llm_analysis": {
+    "authentication": "SPF, DKIM, and DMARC all failed, indicating a potential phishing attempt with no valid authentication mechanisms in place",
+    "sender": "The sender domain 'access-accsecurity.com' does not match the display name 'Microsoft account team', suggesting brand impersonation",
+    "threat_intel": "The domain age is unknown, and the IP reputation is mostly clean, but the lack of authentication and brand impersonation raise concerns",
+    "content": "The email body appears to be a partial HTML table with Microsoft branding, potentially attempting to trick the recipient into taking action, but the provided content is incomplete",
+    "conclusion": "Based on the authentication failures, brand impersonation, and suspicious content, this email is likely a phishing attempt aimed at stealing credentials or sensitive information"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "email": "sample-2.eml",
+  "from": "MashreqAlerts <postmaster@digitalmashreq.mg.tdi.tc>",
+  "subject": "Confirm Your Mashreq Email Now For Your Security (MOVE TO INBOX)",
+  "verdict": "PHISHING",
+  "verdict_emoji": "🚨",
+  "final_score": 97,
+  "level": "CRITICAL",
+  "level_emoji": "🔴",
+  "scores": {
+    "rule_engine": 100,
+    "llm": 90,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "none",
+    "dkim": "fail",
+    "dmarc": "fail"
+  },
+  "threat_intel": {
+    "sender_ip": "143.55.232.5",
+    "abuse_ipdb": 23,
+    "dnsbl_listed": "[]",
+    "domain_age_days": -1,
+    "domain_registered": "unknown",
+    "ssl": "unknown",
+    "otx_pulses": 1,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "DKIM failed",
+    "DMARC failed",
+    "AbuseIPDB medium (23/100)",
+    "Brand impersonation: mashreq → digitalmashreq.mg.tdi.tc",
+    "Urgent keywords: ['confirm']"
+  ],
+  "llm_summary": "Email exhibits brand impersonation, authentication failures, and suspicious content",
+  "llm_analysis": {
+    "authentication": "SPF, DKIM, and DMARC all failed, indicating a potential spoofing attempt and lack of email authentication",
+    "sender": "The sender domain digitalmashreq.mg.tdi.tc does not match the expected domain of a legitimate Mashreq organization, suggesting brand impersonation",
+    "threat_intel": "The sender IP has a high AbuseIPDB score and OTX threat reports, indicating potential malicious activity, while the domain age is unknown and SSL certificate status is unclear",
+    "content": "The email body contains urgent language and a suspicious title, potentially aiming to create a sense of urgency and fear, typical of phishing tactics",
+    "conclusion": "Based on the authentication failures, brand impersonation, and suspicious content, this email is likely a phishing attempt aimed at stealing credentials or sensitive information"
+  }
+}

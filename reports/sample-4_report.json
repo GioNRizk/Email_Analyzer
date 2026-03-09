@@ -1,0 +1,45 @@
+{
+  "email": "sample-4.eml",
+  "from": "Manpower Norge <nyhetsbrev.manpowergroup@manpowergroup.no>",
+  "subject": "Ditt abonnement er avsluttet",
+  "verdict": "BENIGN",
+  "verdict_emoji": "✅",
+  "final_score": 8,
+  "level": "LOW",
+  "level_emoji": "🟢",
+  "scores": {
+    "rule_engine": 10,
+    "llm": 5,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "softfail",
+    "dkim": "pass",
+    "dmarc": "pass"
+  },
+  "threat_intel": {
+    "sender_ip": "91.227.208.189",
+    "abuse_ipdb": 0,
+    "dnsbl_listed": "[]",
+    "domain_age_days": 5426,
+    "domain_registered": "April 27, 2011",
+    "ssl": "Issuer: Google Trust Services | Expires: Apr 12 08:33:27 2026 GMT",
+    "otx_pulses": -1,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "SPF softfail"
+  ],
+  "llm_summary": "Legitimate email from Manpower Norge with proper authentication and no malicious content",
+  "llm_analysis": {
+    "authentication": "SPF resulted in softfail, but DKIM and DMARC passed, indicating the email is likely legitimate but may have some issues with sender configuration",
+    "sender": "The sender domain manpowergroup.no is legitimate and matches the display name, with no signs of brand impersonation attempts",
+    "threat_intel": "The sender IP has a clean reputation, with no reports on AbuseIPDB, OTX, or other threat intelligence platforms, and the domain has been registered for over 14 years with a valid SSL certificate",
+    "content": "The email body does not contain any social engineering tactics, urgent language, or suspicious links, and appears to be a legitimate notification about a subscription cancellation",
+    "conclusion": "Based on the analysis, this email is likely a legitimate notification from Manpower Norge, with proper authentication and no signs of malicious intent or content"
+  }
+}

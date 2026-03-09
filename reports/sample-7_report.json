@@ -1,0 +1,45 @@
+{
+  "email": "sample-7.eml",
+  "from": "Google Notifications <notify-noreply@google.com>",
+  "subject": "dubill hd7t invited you to view a collection: \"🌅 we hope our chosen opt\"",
+  "verdict": "BENIGN",
+  "verdict_emoji": "✅",
+  "final_score": 0,
+  "level": "LOW",
+  "level_emoji": "🟢",
+  "scores": {
+    "rule_engine": 0,
+    "llm": 0,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "pass"
+  },
+  "threat_intel": {
+    "sender_ip": "209.85.166.200",
+    "abuse_ipdb": 0,
+    "dnsbl_listed": "[]",
+    "domain_age_days": 10398,
+    "domain_registered": "September 15, 1997",
+    "ssl": "Issuer: Google Trust Services | Expires: Apr 27 08:36:37 2026 GMT",
+    "otx_pulses": 1,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "Whitelisted: google.com"
+  ],
+  "llm_summary": "Known brand with all authentication passing and normal content",
+  "llm_analysis": {
+    "authentication": "SPF, DKIM, and DMARC all pass",
+    "sender": "Google Notifications from google.com",
+    "threat_intel": "No known threats from IP, domain, or URL",
+    "content": "Normal collection sharing notification from Google",
+    "conclusion": "Legitimate email from Google with no suspicious activity"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "email": "sample-3.eml",
+  "from": "Nora Alex <noraalex01@gmail.com>",
+  "subject": "Dia Bom",
+  "verdict": "BEC",
+  "verdict_emoji": "⚠️",
+  "final_score": 41,
+  "level": "MEDIUM",
+  "level_emoji": "🟡",
+  "scores": {
+    "rule_engine": 20,
+    "llm": 90,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "pass"
+  },
+  "threat_intel": {
+    "sender_ip": "209.85.208.43",
+    "abuse_ipdb": 69,
+    "dnsbl_listed": "[]",
+    "domain_age_days": 11162,
+    "domain_registered": "August 13, 1995",
+    "ssl": "Issuer: Google Trust Services | Expires: Apr 27 08:37:55 2026 GMT",
+    "otx_pulses": -1,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "AbuseIPDB high (69/100)"
+  ],
+  "llm_summary": "Email exhibits characteristics of a Business Email Compromise (BEC) scam, attempting to trick the recipient into assisting with a fraudulent investment scheme",
+  "llm_analysis": {
+    "authentication": "SPF, DKIM, and DMARC all pass, indicating the email is likely coming from a legitimate Gmail account, but this does not necessarily validate the sender's intentions",
+    "sender": "The sender domain is a public email service (gmail.com), which is often used for phishing and BEC scams, and the display name 'Nora Alex' does not match any known brand or organization, suggesting a potential impersonation attempt",
+    "threat_intel": "The sender IP has a high AbuseIPDB score (69/100), indicating potential malicious activity, and the domain age is old (11162 days), but this is expected for a public email service like Gmail",
+    "content": "The email body contains social engineering tactics, including a request for assistance with a financial transaction and a claim of inheriting a large sum of money, which are common BEC scam tactics, and the language used is an attempt to build trust and create a sense of urgency",
+    "conclusion": "Based on the analysis, this email is likely a BEC scam, attempting to trick the recipient into assisting with a fraudulent investment scheme, and therefore poses a high risk to the recipient's financial security"
+  }
+}

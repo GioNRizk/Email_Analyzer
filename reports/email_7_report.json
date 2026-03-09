@@ -1,0 +1,45 @@
+{
+  "email": "email_7.eml",
+  "from": "Medium Daily Digest <noreply@medium.com>",
+  "subject": "Why the Kalman Filter Beats Moving Averages in Trading | Emma Kirsten in Coding Nexus",
+  "verdict": "BENIGN",
+  "verdict_emoji": "✅",
+  "final_score": 0,
+  "level": "LOW",
+  "level_emoji": "🟢",
+  "scores": {
+    "rule_engine": 0,
+    "llm": 0,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "pass"
+  },
+  "threat_intel": {
+    "sender_ip": "168.245.3.222",
+    "abuse_ipdb": 0,
+    "dnsbl_listed": "[]",
+    "domain_age_days": 10144,
+    "domain_registered": "May 27, 1998",
+    "ssl": "Issuer: Google Trust Services | Expires: Apr 12 20:40:01 2026 GMT",
+    "otx_pulses": -1,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "Whitelisted: medium.com"
+  ],
+  "llm_summary": "Legitimate email from Medium with no malicious intent",
+  "llm_analysis": {
+    "authentication": "SPF, DKIM, and DMARC all pass, indicating the email is authentic and from the claimed domain medium.com",
+    "sender": "The sender domain medium.com is legitimate, and the display name matches the actual domain, with no signs of brand impersonation",
+    "threat_intel": "The sender IP has a clean reputation, with no reports of abuse or threats, and the domain age is over 27 years, indicating a well-established and trusted domain",
+    "content": "The email body contains no social engineering tactics, urgent language, or suspicious links, and appears to be a genuine newsletter from Medium",
+    "conclusion": "Based on the analysis, this email is a legitimate newsletter from Medium, with no signs of phishing, BEC, or spam, and can be classified as benign"
+  }
+}

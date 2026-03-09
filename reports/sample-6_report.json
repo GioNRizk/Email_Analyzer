@@ -1,0 +1,46 @@
+{
+  "email": "sample-6.eml",
+  "from": "Kundenservice, jehd <service@stayfriends.de>",
+  "subject": "phishing@pot, Coca Cola Jahresvorrat für Dich! ",
+  "verdict": "PHISHING",
+  "verdict_emoji": "🚨",
+  "final_score": 41,
+  "level": "MEDIUM",
+  "level_emoji": "🟡",
+  "scores": {
+    "rule_engine": 20,
+    "llm": 90,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "pass",
+    "dkim": "none",
+    "dmarc": "none"
+  },
+  "threat_intel": {
+    "sender_ip": "144.172.64.113",
+    "abuse_ipdb": 0,
+    "dnsbl_listed": "[]",
+    "domain_age_days": -1,
+    "domain_registered": "unknown",
+    "ssl": "Issuer: Let's Encrypt | Expires: May  9 22:47:14 2026 GMT",
+    "otx_pulses": 0,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "DKIM missing",
+    "DMARC none"
+  ],
+  "llm_summary": "Brand impersonation attempt with suspicious email content and domain mismatch",
+  "llm_analysis": {
+    "authentication": "SPF pass, but DKIM and DMARC failures indicate potential authentication issues, suggesting the email may not be genuinely from the claimed domain",
+    "sender": "The sender domain 'stayfriends.de' does not match the expected domain for Coca Cola, indicating a brand impersonation attempt, and the display name 'Kundenservice, jehd' does not match the actual domain",
+    "threat_intel": "The sender IP has no reported threats, but the domain age is unknown and the SSL certificate is from Let's Encrypt, which can be easily obtained, raising suspicions about the domain's legitimacy",
+    "content": "The email body contains a potential social engineering tactic with a 'Gewinnspiel' (winning game) theme, possibly aiming to lure the recipient into revealing sensitive information or clicking on a malicious link, and the presence of an external link to Google Fonts may be used to track user interactions",
+    "conclusion": "Based on the brand impersonation attempt, domain mismatch, and suspicious email content, this email is likely a phishing attempt aimed at deceiving the recipient into performing a certain action that could compromise their security"
+  }
+}

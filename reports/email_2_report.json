@@ -1,0 +1,45 @@
+{
+  "email": "email_2.eml",
+  "from": "Coursera <Coursera@m.learn.coursera.org>",
+  "subject": "Ready: Google UX Design    ",
+  "verdict": "BENIGN",
+  "verdict_emoji": "✅",
+  "final_score": 0,
+  "level": "LOW",
+  "level_emoji": "🟢",
+  "scores": {
+    "rule_engine": 0,
+    "llm": 0,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "pass"
+  },
+  "threat_intel": {
+    "sender_ip": "137.22.225.138",
+    "abuse_ipdb": 1,
+    "dnsbl_listed": "[]",
+    "domain_age_days": -1,
+    "domain_registered": "unknown",
+    "ssl": "unknown",
+    "otx_pulses": 0,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "Whitelisted: m.learn.coursera.org"
+  ],
+  "llm_summary": "Legitimate email from Coursera with proper authentication and no suspicious content",
+  "llm_analysis": {
+    "authentication": "SPF, DKIM, and DMARC all pass, indicating the email is authentic and from the claimed domain",
+    "sender": "The sender domain m.learn.coursera.org is legitimate and matches the display name Coursera, with no signs of brand impersonation",
+    "threat_intel": "The sender IP has a low AbuseIPDB score, and OTX, GreyNoise, and other threat intelligence sources do not report any threats, indicating a low risk",
+    "content": "The email body appears to be a legitimate notification from Coursera, with no urgent language, fear tactics, or suspicious links or requests",
+    "conclusion": "Based on the analysis, this email is likely a legitimate notification from Coursera, with no indicators of phishing, BEC, or spam"
+  }
+}

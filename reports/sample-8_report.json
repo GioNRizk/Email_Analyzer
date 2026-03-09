@@ -1,0 +1,46 @@
+{
+  "email": "sample-8.eml",
+  "from": "FTXinsurance <noreplye@promotix.com>",
+  "subject": "Announcement : Withdraw Process is Authorized Now !",
+  "verdict": "PHISHING",
+  "verdict_emoji": "🚨",
+  "final_score": 66,
+  "level": "HIGH",
+  "level_emoji": "🟠",
+  "scores": {
+    "rule_engine": 56,
+    "llm": 90,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "pass"
+  },
+  "threat_intel": {
+    "sender_ip": "54.240.9.14",
+    "abuse_ipdb": 20,
+    "dnsbl_listed": "[]",
+    "domain_age_days": 8762,
+    "domain_registered": "March 09, 2002",
+    "ssl": "Issuer: Sectigo Limited | Expires: Dec  2 23:59:59 2026 GMT",
+    "otx_pulses": 0,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "Brand impersonation: ftx → promotix.com",
+    "Urgent keywords: ['withdraw', 'authorized']"
+  ],
+  "llm_summary": "Brand impersonation with domain mismatch",
+  "llm_analysis": {
+    "authentication": "SPF, DKIM, and DMARC pass, but domain does not match the brand",
+    "sender": "FTXinsurance with domain promotix.com, which is not a known FTX domain",
+    "threat_intel": "No known threats, but the domain age and SSL are not suspicious",
+    "content": "The email announces a withdrawal process, which could be a lure for phishing",
+    "conclusion": "The email is likely a phishing attempt due to the brand impersonation and domain mismatch"
+  }
+}

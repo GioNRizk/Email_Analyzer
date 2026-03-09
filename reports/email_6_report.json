@@ -1,0 +1,45 @@
+{
+  "email": "email_6.eml",
+  "from": "GMATPoint <sayali@gmatpoint.com>",
+  "subject": "GMAT 2026: CR on Satisfaction vs Productivity",
+  "verdict": "BENIGN",
+  "verdict_emoji": "✅",
+  "final_score": 1,
+  "level": "LOW",
+  "level_emoji": "🟢",
+  "scores": {
+    "rule_engine": 0,
+    "llm": 5,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "pass"
+  },
+  "threat_intel": {
+    "sender_ip": "76.223.180.111",
+    "abuse_ipdb": 0,
+    "dnsbl_listed": "[]",
+    "domain_age_days": 3151,
+    "domain_registered": "July 19, 2017",
+    "ssl": "Issuer: Let's Encrypt | Expires: May 21 08:07:55 2026 GMT",
+    "otx_pulses": 0,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "Whitelisted: gmatpoint.com"
+  ],
+  "llm_summary": "Legitimate email from a known domain with no suspicious content or authentication failures",
+  "llm_analysis": {
+    "authentication": "SPF, DKIM, and DMARC all pass, indicating that the email is authentic and comes from the claimed domain",
+    "sender": "The sender domain gmatpoint.com is legitimate and matches the display name, with no signs of brand impersonation attempts",
+    "threat_intel": "The sender IP has a clean reputation, and the domain is old and has a valid SSL certificate, indicating a low risk of malicious activity",
+    "content": "The email body is empty except for a title, which suggests that this might be a newsletter or a discussion thread, with no social engineering tactics, urgent language, or suspicious links detected",
+    "conclusion": "Based on the analysis, this email appears to be a legitimate communication from a known domain, with no signs of phishing, BEC, or spam, and can be classified as benign"
+  }
+}

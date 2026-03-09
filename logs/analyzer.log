@@ -256,3 +256,214 @@
 2026-03-05 09:13:15,077 [INFO] reputation —   ✅ Saved to database
 2026-03-05 09:13:15,087 [INFO] database — Database connection closed
 2026-03-05 09:13:15,088 [INFO] reputation — ✅ Reputation checks complete!
+2026-03-05 09:40:45,906 [INFO] database — Connected to database successfully
+2026-03-05 09:40:45,918 [INFO] reputation — Processing 15 emails with 6 threat intel sources
+2026-03-05 09:40:45,918 [INFO] reputation — [1/15] email_10.eml — Zoom <teamzoom@e.zoom.us>
+2026-03-05 09:40:50,737 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:40:50,737 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:40:53,642 [WARNING] threat_intel — RDAP failed for e.zoom.us: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:41:03,866 [WARNING] threat_intel — SSL check failed for e.zoom.us: timed out
+2026-03-05 09:41:03,867 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:41:03,867 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:41:03,870 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:41:03,871 [INFO] reputation — [2/15] email_2.eml — Coursera <Coursera@m.learn.coursera.org>
+2026-03-05 09:41:09,132 [INFO] threat_intel —   AbuseIPDB: 1/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:41:09,132 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:41:14,446 [WARNING] threat_intel — SSL check failed for m.learn.coursera.org: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)
+2026-03-05 09:41:14,446 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:41:14,446 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:41:14,446 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:41:14,456 [INFO] reputation — [3/15] email_5.eml — Pinterest <recommendations@discover.pinterest.com>
+2026-03-05 09:41:23,863 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:41:23,863 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:41:27,570 [WARNING] threat_intel — RDAP failed for discover.pinterest.com: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:41:27,627 [WARNING] threat_intel — SSL check failed for discover.pinterest.com: [Errno 11001] getaddrinfo failed
+2026-03-05 09:41:27,627 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:41:27,627 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:41:27,627 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:41:27,637 [INFO] reputation — [4/15] email_6.eml — GMATPoint <sayali@gmatpoint.com>
+2026-03-05 09:41:32,682 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:41:32,682 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:41:36,908 [INFO] threat_intel —   URLhaus: clean | Domain Age: 3151 days (July 19, 2017)
+2026-03-05 09:41:36,908 [INFO] threat_intel —   SSL: Issuer: Let's Encrypt | Expires: May 21 08:07:55 2026 GMT
+2026-03-05 09:41:36,908 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:41:36,908 [INFO] reputation — [5/15] email_7.eml — Medium Daily Digest <noreply@medium.com>
+2026-03-05 09:41:39,783 [WARNING] threat_intel — AlienVault OTX failed for 168.245.3.222: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:41:45,085 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: -1 | GreyNoise: unknown
+2026-03-05 09:41:45,085 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:41:49,956 [INFO] threat_intel —   URLhaus: clean | Domain Age: 10144 days (May 27, 1998)
+2026-03-05 09:41:49,957 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 12 20:40:01 2026 GMT
+2026-03-05 09:41:49,962 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:41:49,962 [INFO] reputation — [6/15] sample-1.eml — BANCO DO BRADESCO LIVELO <banco.bradesco@atendimento.com.br>
+2026-03-05 09:41:56,644 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:41:56,644 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:42:03,197 [WARNING] threat_intel — SSL check failed for atendimento.com.br: [Errno 11002] getaddrinfo failed
+2026-03-05 09:42:03,199 [INFO] threat_intel —   URLhaus: clean | Domain Age: 2723 days (September 20, 2018)
+2026-03-05 09:42:03,199 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:42:03,200 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:42:03,201 [INFO] reputation — [7/15] sample-10.eml — "Microsoft account team", _ <no-reply@access-accsecurity.com>
+2026-03-05 09:42:07,799 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:42:07,799 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:42:11,602 [WARNING] threat_intel — RDAP failed for access-accsecurity.com: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:42:11,819 [WARNING] threat_intel — SSL check failed for access-accsecurity.com: [Errno 11001] getaddrinfo failed
+2026-03-05 09:42:11,819 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:42:11,819 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:42:11,819 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:42:11,819 [INFO] reputation — [8/15] sample-2.eml — MashreqAlerts <postmaster@digitalmashreq.mg.tdi.tc>
+2026-03-05 09:42:17,390 [INFO] threat_intel —   AbuseIPDB: 23/100 | OTX: 1 | GreyNoise: unknown
+2026-03-05 09:42:17,391 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:42:20,225 [WARNING] threat_intel — RDAP failed for digitalmashreq.mg.tdi.tc: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:42:20,416 [WARNING] threat_intel — SSL check failed for digitalmashreq.mg.tdi.tc: [Errno 11001] getaddrinfo failed
+2026-03-05 09:42:20,418 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:42:20,418 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:42:20,419 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:42:20,420 [INFO] reputation — [9/15] sample-3.eml — Nora Alex <noraalex01@gmail.com>
+2026-03-05 09:42:31,995 [WARNING] threat_intel — AlienVault OTX failed for 209.85.208.43: HTTPSConnectionPool(host='otx.alienvault.com', port=443): Read timed out. (read timeout=10)
+2026-03-05 09:42:35,838 [INFO] threat_intel —   AbuseIPDB: 69/100 | OTX: -1 | GreyNoise: unknown
+2026-03-05 09:42:35,838 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:42:40,026 [INFO] threat_intel —   URLhaus: clean | Domain Age: 11162 days (August 13, 1995)
+2026-03-05 09:42:40,026 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 27 08:37:55 2026 GMT
+2026-03-05 09:42:40,031 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:42:40,031 [INFO] reputation — [10/15] sample-4.eml — Manpower Norge <nyhetsbrev.manpowergroup@manpowergroup.no>
+2026-03-05 09:42:51,534 [WARNING] threat_intel — AlienVault OTX failed for 91.227.208.189: HTTPSConnectionPool(host='otx.alienvault.com', port=443): Read timed out. (read timeout=10)
+2026-03-05 09:42:54,687 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: -1 | GreyNoise: unknown
+2026-03-05 09:42:54,688 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:42:58,718 [INFO] threat_intel —   URLhaus: clean | Domain Age: 5426 days (April 27, 2011)
+2026-03-05 09:42:58,718 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 12 08:33:27 2026 GMT
+2026-03-05 09:42:58,723 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:42:58,723 [INFO] reputation — [11/15] sample-5.eml — phishing@pot
+2026-03-05 09:43:05,019 [INFO] threat_intel —   AbuseIPDB: 41/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:43:05,019 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:43:08,482 [WARNING] threat_intel — RDAP failed for pot: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:43:10,786 [WARNING] threat_intel — SSL check failed for pot: [Errno 11001] getaddrinfo failed
+2026-03-05 09:43:10,787 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:43:10,787 [INFO] threat_intel —   SSL: unknown
+2026-03-05 09:43:10,789 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:43:10,789 [INFO] reputation — [12/15] sample-6.eml — Kundenservice, jehd <service@stayfriends.de>
+2026-03-05 09:43:15,808 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:43:15,809 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:43:18,806 [WARNING] threat_intel — RDAP failed for stayfriends.de: Expecting value: line 1 column 1 (char 0)
+2026-03-05 09:43:19,096 [INFO] threat_intel —   URLhaus: clean | Domain Age: -1 days (unknown)
+2026-03-05 09:43:19,096 [INFO] threat_intel —   SSL: Issuer: Let's Encrypt | Expires: May  9 22:47:14 2026 GMT
+2026-03-05 09:43:19,096 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:43:19,096 [INFO] reputation — [13/15] sample-7.eml — Google Notifications <notify-noreply@google.com>
+2026-03-05 09:43:24,156 [INFO] threat_intel —   AbuseIPDB: 0/100 | OTX: 1 | GreyNoise: unknown
+2026-03-05 09:43:24,156 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:43:28,614 [INFO] threat_intel —   URLhaus: clean | Domain Age: 10398 days (September 15, 1997)
+2026-03-05 09:43:28,614 [INFO] threat_intel —   SSL: Issuer: Google Trust Services | Expires: Apr 27 08:36:37 2026 GMT
+2026-03-05 09:43:28,614 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:43:28,614 [INFO] reputation — [14/15] sample-8.eml — FTXinsurance <noreplye@promotix.com>
+2026-03-05 09:43:33,764 [INFO] threat_intel —   AbuseIPDB: 20/100 | OTX: 0 | GreyNoise: unknown
+2026-03-05 09:43:33,764 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:43:37,944 [INFO] threat_intel —   URLhaus: clean | Domain Age: 8762 days (March 09, 2002)
+2026-03-05 09:43:37,944 [INFO] threat_intel —   SSL: Issuer: Sectigo Limited | Expires: Dec  2 23:59:59 2026 GMT
+2026-03-05 09:43:37,944 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:43:37,944 [INFO] reputation — [15/15] sample-9.eml — C o i n b a s e <noreply@firesonic.ca>
+2026-03-05 09:43:43,174 [INFO] threat_intel —   AbuseIPDB: 29/100 | OTX: 2 | GreyNoise: unknown
+2026-03-05 09:43:43,174 [INFO] threat_intel —   DNSBL: clean | ThreatFox: clean | Pulsedive IP: unknown
+2026-03-05 09:43:48,665 [INFO] threat_intel —   URLhaus: clean | Domain Age: 1060 days (April 10, 2023)
+2026-03-05 09:43:48,665 [INFO] threat_intel —   SSL: Issuer: Let's Encrypt | Expires: Apr 26 17:23:17 2026 GMT
+2026-03-05 09:43:48,666 [INFO] reputation —   ✅ Saved to database
+2026-03-05 09:43:48,667 [INFO] database — Database connection closed
+2026-03-05 09:43:48,667 [INFO] reputation — ✅ Reputation checks complete!
+2026-03-05 10:06:34,487 [INFO] database — Connected to database successfully
+2026-03-05 10:06:34,669 [INFO] llm_analysis — Running dual LLM analysis on 15 emails
+2026-03-05 10:12:21,613 [INFO] database — Connected to database successfully
+2026-03-05 10:12:21,623 [INFO] llm_analysis — Running Groq SOC analysis on 15 emails
+2026-03-05 10:12:23,358 [INFO] llm_analysis —   Saved — BENIGN 0/100
+2026-03-05 10:12:24,659 [INFO] llm_analysis —   Saved — BENIGN 0/100
+2026-03-05 10:12:26,014 [INFO] llm_analysis —   Saved — BENIGN 0/100
+2026-03-05 10:12:28,142 [INFO] llm_analysis —   Saved — BENIGN 5/100
+2026-03-05 10:12:30,370 [INFO] llm_analysis —   Saved — BENIGN 0/100
+2026-03-05 10:12:32,884 [INFO] llm_analysis —   Saved — PHISHING 90/100
+2026-03-05 10:12:34,384 [INFO] llm_analysis —   Saved — PHISHING 90/100
+2026-03-05 10:12:35,818 [INFO] llm_analysis —   Saved — PHISHING 90/100
+2026-03-05 10:12:37,623 [INFO] llm_analysis —   Saved — BEC 90/100
+2026-03-05 10:12:39,159 [INFO] llm_analysis —   Saved — BENIGN 5/100
+2026-03-05 10:12:40,988 [INFO] llm_analysis —   Saved — PHISHING 90/100
+2026-03-05 10:12:42,786 [INFO] llm_analysis —   Saved — PHISHING 90/100
+2026-03-05 10:12:43,386 [WARNING] llm_analysis — Groq failed: 'choices'
+2026-03-05 10:12:43,386 [WARNING] llm_analysis —   Groq returned no result for sample-7.eml
+2026-03-05 10:12:43,953 [WARNING] llm_analysis — Groq failed: 'choices'
+2026-03-05 10:12:43,963 [WARNING] llm_analysis —   Groq returned no result for sample-8.eml
+2026-03-05 10:12:44,644 [WARNING] llm_analysis — Groq failed: 'choices'
+2026-03-05 10:12:44,646 [WARNING] llm_analysis —   Groq returned no result for sample-9.eml
+2026-03-05 10:12:44,647 [INFO] database — Database connection closed
+2026-03-05 10:12:44,647 [INFO] llm_analysis — Groq SOC analysis complete!
+2026-03-05 10:22:08,230 [INFO] database — Connected to database successfully
+2026-03-05 10:22:08,242 [INFO] llm_analysis — Running Groq SOC analysis on 15 emails
+2026-03-05 10:22:08,242 [INFO] llm_analysis — [1/15] email_10.eml — already analyzed, skipping
+2026-03-05 10:22:08,243 [INFO] llm_analysis — [2/15] email_2.eml — already analyzed, skipping
+2026-03-05 10:22:08,243 [INFO] llm_analysis — [3/15] email_5.eml — already analyzed, skipping
+2026-03-05 10:22:08,243 [INFO] llm_analysis — [4/15] email_6.eml — already analyzed, skipping
+2026-03-05 10:22:08,243 [INFO] llm_analysis — [5/15] email_7.eml — already analyzed, skipping
+2026-03-05 10:22:08,244 [INFO] llm_analysis — [6/15] sample-1.eml — already analyzed, skipping
+2026-03-05 10:22:08,244 [INFO] llm_analysis — [7/15] sample-10.eml — already analyzed, skipping
+2026-03-05 10:22:08,244 [INFO] llm_analysis — [8/15] sample-2.eml — already analyzed, skipping
+2026-03-05 10:22:08,244 [INFO] llm_analysis — [9/15] sample-3.eml — already analyzed, skipping
+2026-03-05 10:22:08,245 [INFO] llm_analysis — [10/15] sample-4.eml — already analyzed, skipping
+2026-03-05 10:22:08,245 [INFO] llm_analysis — [11/15] sample-5.eml — already analyzed, skipping
+2026-03-05 10:22:08,245 [INFO] llm_analysis — [12/15] sample-6.eml — already analyzed, skipping
+2026-03-05 10:22:09,581 [INFO] llm_analysis —   Saved — BENIGN 0/100
+2026-03-05 10:22:14,798 [INFO] llm_analysis —   Saved — PHISHING 90/100
+2026-03-05 10:22:19,149 [INFO] llm_analysis —   Saved — PHISHING 90/100
+2026-03-05 10:22:22,164 [INFO] database — Database connection closed
+2026-03-05 10:22:22,164 [INFO] llm_analysis — Groq SOC analysis complete!
+2026-03-05 10:28:12,083 [INFO] database — Connected to database successfully
+2026-03-05 10:28:12,094 [INFO] recheck — Running hybrid scoring on 15 emails
+2026-03-05 10:28:12,111 [INFO] recheck —   Saved — BENIGN 0/100 LOW
+2026-03-05 10:28:12,115 [INFO] recheck —   Saved — BENIGN 0/100 LOW
+2026-03-05 10:28:12,120 [INFO] recheck —   Saved — BENIGN 0/100 LOW
+2026-03-05 10:28:12,124 [INFO] recheck —   Saved — BENIGN 1/100 LOW
+2026-03-05 10:28:12,130 [INFO] recheck —   Saved — BENIGN 0/100 LOW
+2026-03-05 10:28:12,137 [INFO] recheck —   Saved — PHISHING 72/100 HIGH
+2026-03-05 10:28:12,142 [INFO] recheck —   Saved — PHISHING 78/100 CRITICAL
+2026-03-05 10:28:12,148 [INFO] recheck —   Saved — PHISHING 97/100 CRITICAL
+2026-03-05 10:28:12,153 [INFO] recheck —   Saved — BEC 41/100 MEDIUM
+2026-03-05 10:28:12,160 [INFO] recheck —   Saved — BENIGN 8/100 LOW
+2026-03-05 10:28:12,165 [INFO] recheck —   Saved — PHISHING 48/100 MEDIUM
+2026-03-05 10:28:12,172 [INFO] recheck —   Saved — PHISHING 41/100 MEDIUM
+2026-03-05 10:28:12,177 [INFO] recheck —   Saved — BENIGN 0/100 LOW
+2026-03-05 10:28:12,182 [INFO] recheck —   Saved — PHISHING 66/100 HIGH
+2026-03-05 10:28:12,187 [INFO] recheck —   Saved — PHISHING 72/100 HIGH
+2026-03-05 10:28:12,188 [INFO] database — Database connection closed
+2026-03-05 10:28:12,189 [INFO] recheck — Hybrid scoring complete!
+2026-03-09 15:05:19,006 [INFO] database — Connected to database successfully
+2026-03-09 15:05:19,123 [INFO] recheck — Running hybrid scoring on 15 emails
+2026-03-09 15:05:19,130 [INFO] recheck —   Saved — BENIGN 0/100 LOW
+2026-03-09 15:05:19,132 [INFO] recheck —   Saved — BENIGN 0/100 LOW
+2026-03-09 15:05:19,134 [INFO] recheck —   Saved — BENIGN 0/100 LOW
+2026-03-09 15:05:19,137 [INFO] recheck —   Saved — BENIGN 1/100 LOW
+2026-03-09 15:05:19,139 [INFO] recheck —   Saved — BENIGN 0/100 LOW
+2026-03-09 15:05:19,142 [INFO] recheck —   Saved — PHISHING 72/100 HIGH
+2026-03-09 15:05:19,144 [INFO] recheck —   Saved — PHISHING 78/100 CRITICAL
+2026-03-09 15:05:19,148 [INFO] recheck —   Saved — PHISHING 97/100 CRITICAL
+2026-03-09 15:05:19,150 [INFO] recheck —   Saved — BEC 41/100 MEDIUM
+2026-03-09 15:05:19,152 [INFO] recheck —   Saved — BENIGN 8/100 LOW
+2026-03-09 15:05:19,155 [INFO] recheck —   Saved — PHISHING 48/100 MEDIUM
+2026-03-09 15:05:19,157 [INFO] recheck —   Saved — PHISHING 41/100 MEDIUM
+2026-03-09 15:05:19,160 [INFO] recheck —   Saved — BENIGN 0/100 LOW
+2026-03-09 15:05:19,162 [INFO] recheck —   Saved — PHISHING 66/100 HIGH
+2026-03-09 15:05:19,165 [INFO] recheck —   Saved — PHISHING 72/100 HIGH
+2026-03-09 15:05:19,168 [INFO] database — Database connection closed
+2026-03-09 15:05:19,168 [INFO] recheck — Hybrid scoring complete!
+2026-03-09 23:29:16,291 [INFO] report_generator — Reports directory: C:\Users\gio\Downloads\Atria_Internship\reports
+2026-03-09 23:29:16,403 [INFO] database — Connected to database successfully
+2026-03-09 23:29:16,445 [INFO] report_generator — Generating reports for 15 emails
+2026-03-09 23:29:16,448 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\email_10_report.json
+2026-03-09 23:29:16,451 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\email_2_report.json
+2026-03-09 23:29:16,454 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\email_5_report.json
+2026-03-09 23:29:16,457 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\email_6_report.json
+2026-03-09 23:29:16,459 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\email_7_report.json
+2026-03-09 23:29:16,461 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-1_report.json
+2026-03-09 23:29:16,464 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-10_report.json
+2026-03-09 23:29:16,467 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-2_report.json
+2026-03-09 23:29:16,470 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-3_report.json
+2026-03-09 23:29:16,475 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-4_report.json
+2026-03-09 23:29:16,477 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-5_report.json
+2026-03-09 23:29:16,480 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-6_report.json
+2026-03-09 23:29:16,483 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-7_report.json
+2026-03-09 23:29:16,486 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-8_report.json
+2026-03-09 23:29:16,489 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-9_report.json
+2026-03-09 23:29:16,491 [INFO] database — Database connection closed
+2026-03-09 23:29:16,493 [INFO] report_generator — Report generation complete — 15 success, 0 failed

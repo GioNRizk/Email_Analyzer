@@ -20,7 +20,7 @@ DB_PORT     = int(os.getenv("DB_PORT", 3306))
 ABUSEIPDB_KEY  = os.getenv("ABUSEIPDB_API_KEY")
 ALIENVAULT_KEY = os.getenv("ALIENVAULT_API_KEY")
 PULSEDIVE_KEY  = os.getenv("PULSEDIVE_API_KEY")
-
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 # ── Email Folders ─────────────────────────────────────────────
 LEGIT_FOLDER   = "eml_downloads"
 SAMPLE_FOLDER  = "eml_downloads1"

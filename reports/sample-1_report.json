@@ -1,0 +1,48 @@
+{
+  "email": "sample-1.eml",
+  "from": "BANCO DO BRADESCO LIVELO <banco.bradesco@atendimento.com.br>",
+  "subject": "CLIENTE PRIME - BRADESCO LIVELO: Seu cartão tem 92.990 pontos LIVELO expirando hoje!",
+  "verdict": "PHISHING",
+  "verdict_emoji": "🚨",
+  "final_score": 72,
+  "level": "HIGH",
+  "level_emoji": "🟠",
+  "scores": {
+    "rule_engine": 65,
+    "llm": 90,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "temperror",
+    "dkim": "none",
+    "dmarc": "temperror"
+  },
+  "threat_intel": {
+    "sender_ip": "137.184.34.4",
+    "abuse_ipdb": 0,
+    "dnsbl_listed": "[]",
+    "domain_age_days": 2723,
+    "domain_registered": "September 20, 2018",
+    "ssl": "unknown",
+    "otx_pulses": 0,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "SPF temperror",
+    "DKIM missing",
+    "Brand impersonation: bradesco → atendimento.com.br",
+    "No SSL certificate"
+  ],
+  "llm_summary": "Brand impersonation attempt with domain mismatch and suspicious link",
+  "llm_analysis": {
+    "authentication": "SPF and DMARC results show temperror, indicating potential authentication issues, while DKIM is none, suggesting a lack of domain key validation. These failures suggest the email may not be coming from the legitimate domain it claims to be from.",
+    "sender": "The sender domain atendimento.com.br does not match the display name BANCO DO BRADESCO, indicating a potential brand impersonation attempt. The display name is trying to mimic a well-known Brazilian bank, which raises suspicions.",
+    "threat_intel": "The sender IP 137.184.34.4 has no reported threats in AbuseIPDB, OTX, or other threat intelligence sources. The domain age is over 2 years, which could suggest legitimacy, but the lack of SSL information and the context of the email raise concerns.",
+    "content": "The email body uses social engineering tactics, creating a sense of urgency with the claim of expiring points and including a suspicious link to 'visualizar as imagens deste email' which could lead to phishing or malware sites. The use of 'Clique aqui' (Click here) is a common tactic to lure victims into clicking on malicious links.",
+    "conclusion": "Given the brand impersonation attempt, domain mismatch, suspicious link, and social engineering tactics, this email is classified as phishing with a high confidence level. The goal appears to be to trick the recipient into revealing sensitive information or clicking on a malicious link."
+  }
+}

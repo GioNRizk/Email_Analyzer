@@ -1,0 +1,47 @@
+{
+  "email": "sample-5.eml",
+  "from": "phishing@pot",
+  "subject": "Fw: Your Bank Account has been blocked due to unusual activities CASE# T53-H32-C10-C83",
+  "verdict": "PHISHING",
+  "verdict_emoji": "🚨",
+  "final_score": 48,
+  "level": "MEDIUM",
+  "level_emoji": "🟡",
+  "scores": {
+    "rule_engine": 31,
+    "llm": 90,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "pass"
+  },
+  "threat_intel": {
+    "sender_ip": "209.85.221.179",
+    "abuse_ipdb": 41,
+    "dnsbl_listed": "[]",
+    "domain_age_days": -1,
+    "domain_registered": "unknown",
+    "ssl": "unknown",
+    "otx_pulses": 0,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "AbuseIPDB medium (41/100)",
+    "Urgent keywords: ['blocked', 'case#']",
+    "No SSL certificate"
+  ],
+  "llm_summary": "Brand impersonation with domain mismatch and suspicious content",
+  "llm_analysis": {
+    "authentication": "SPF, DKIM, and DMARC all pass, but this can be spoofed or the attacker has control over the domain, however, the 'From' field is using a different domain 'boonsupply.com' which is not related to the claimed bank 'Chase', indicating a potential brand impersonation attempt",
+    "sender": "The sender domain 'pot' is not legitimate for a bank like Chase, and the display name 'Chase' does not match the actual domain, which is a clear indication of brand impersonation",
+    "threat_intel": "The sender IP has a high AbuseIPDB score, indicating potential malicious activity, and the domain age is unknown, which could indicate a newly created domain for malicious purposes",
+    "content": "The email body uses urgent language and fear tactics to prompt the user into action, and the presence of a suspicious link, although not explicitly visible, is implied by the mention of 'unusual activities' and the need for the user to presumably click on something to resolve the issue",
+    "conclusion": "Given the brand impersonation, domain mismatch, and suspicious content, this email is classified as a phishing attempt, aiming to steal user credentials or sensitive information"
+  }
+}

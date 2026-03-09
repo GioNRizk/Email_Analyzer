@@ -1,0 +1,47 @@
+{
+  "email": "sample-9.eml",
+  "from": "C o i n b a s e <noreply@firesonic.ca>",
+  "subject": "You sent 0.79 ETH via Ethereum network",
+  "verdict": "PHISHING",
+  "verdict_emoji": "🚨",
+  "final_score": 72,
+  "level": "HIGH",
+  "level_emoji": "🟠",
+  "scores": {
+    "rule_engine": 65,
+    "llm": 90,
+    "llm_source": "groq",
+    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  },
+  "authentication": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "none"
+  },
+  "threat_intel": {
+    "sender_ip": "23.251.234.51",
+    "abuse_ipdb": 29,
+    "dnsbl_listed": "[]",
+    "domain_age_days": 1060,
+    "domain_registered": "April 10, 2023",
+    "ssl": "Issuer: Let's Encrypt | Expires: Apr 26 17:23:17 2026 GMT",
+    "otx_pulses": 2,
+    "greynoise": "unknown",
+    "urlhaus": "clean",
+    "threatfox": "IP: clean | Domain: clean",
+    "pulsedive_risk": "IP: unknown | Domain: unknown"
+  },
+  "top_reasons": [
+    "DMARC none",
+    "AbuseIPDB medium (29/100)",
+    "Coinbase impersonation from firesonic.ca"
+  ],
+  "llm_summary": "Brand impersonation with domain mismatch and suspicious content",
+  "llm_analysis": {
+    "authentication": "SPF and DKIM pass, but DMARC is none, indicating potential impersonation",
+    "sender": "Sender claims to be CoinBase, but domain is firesonic.ca, which is not a known CoinBase domain",
+    "threat_intel": "Domain age is over 2 years, but IP has a moderate abuse score and OTX pulses",
+    "content": "Email contains a suspicious transaction notification with a cryptocurrency transfer",
+    "conclusion": "Email is likely a phishing attempt to trick the recipient into taking action"
+  }
+}
