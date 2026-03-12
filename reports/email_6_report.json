@@ -1,41 +1,62 @@
 {
-  "email": "email_6.eml",
-  "from": "GMATPoint <sayali@gmatpoint.com>",
-  "subject": "GMAT 2026: CR on Satisfaction vs Productivity",
-  "verdict": "BENIGN",
-  "verdict_emoji": "✅",
-  "final_score": 1,
-  "level": "LOW",
-  "level_emoji": "🟢",
-  "scores": {
-    "rule_engine": 0,
-    "llm": 5,
-    "llm_source": "groq",
-    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  "report_metadata": {
+    "generated_at": "2026-03-10 15:17:52",
+    "report_version": "1.0",
+    "analyzer": "Email Threat Analyzer — Atria Solutions"
+  },
+  "email_identity": {
+    "filename": "email_6.eml",
+    "from": "GMATPoint <sayali@gmatpoint.com>",
+    "subject": "GMAT 2026: CR on Satisfaction vs Productivity",
+    "domain": "gmatpoint.com",
+    "sender_ip": "76.223.180.111"
+  },
+  "final_verdict": {
+    "classification": "BENIGN",
+    "threat_category": "Legitimate Email",
+    "risk_score": 1,
+    "severity": "LOW",
+    "risk_score_breakdown": {
+      "rule_engine_score": 0,
+      "llm_score": 5,
+      "llm_source": "GROQ",
+      "formula": "Final Score = (Rule Engine x 0.70) + (LLM x 0.30)"
+    }
   },
   "authentication": {
-    "spf": "pass",
-    "dkim": "pass",
-    "dmarc": "pass"
+    "overall_status": "PASS",
+    "spf": "PASS",
+    "dkim": "PASS",
+    "dmarc": "PASS"
   },
-  "threat_intel": {
-    "sender_ip": "76.223.180.111",
-    "abuse_ipdb": 0,
-    "dnsbl_listed": "[]",
-    "domain_age_days": 3151,
-    "domain_registered": "July 19, 2017",
-    "ssl": "Issuer: Let's Encrypt | Expires: May 21 08:07:55 2026 GMT",
+  "threat_intelligence": {
+    "abuse_ipdb": {
+      "score": 0,
+      "max_score": 100,
+      "risk_level": "LOW"
+    },
+    "domain_age": {
+      "days_since_registration": 3151,
+      "registered_on": "July 19, 2017",
+      "note": "Domains under 180 days are considered high risk"
+    },
+    "ssl_certificate": "Issuer: Let's Encrypt | Expires: May 21 08:07:55 2026 GMT",
+    "dnsbl_status": "[]",
     "otx_pulses": 0,
     "greynoise": "unknown",
     "urlhaus": "clean",
     "threatfox": "IP: clean | Domain: clean",
     "pulsedive_risk": "IP: unknown | Domain: unknown"
   },
-  "top_reasons": [
-    "Whitelisted: gmatpoint.com"
-  ],
-  "llm_summary": "Legitimate email from a known domain with no suspicious content or authentication failures",
+  "rule_engine_findings": {
+    "total_flags": 1,
+    "flags": [
+      "Whitelisted: gmatpoint.com"
+    ]
+  },
   "llm_analysis": {
+    "source": "GROQ",
+    "summary": "Legitimate email from a known domain with no suspicious content or authentication failures",
     "authentication": "SPF, DKIM, and DMARC all pass, indicating that the email is authentic and comes from the claimed domain",
     "sender": "The sender domain gmatpoint.com is legitimate and matches the display name, with no signs of brand impersonation attempts",
     "threat_intel": "The sender IP has a clean reputation, and the domain is old and has a valid SSL certificate, indicating a low risk of malicious activity",

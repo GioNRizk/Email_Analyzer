@@ -1,0 +1,20 @@
+2026-03-10 15:17:52,120 [INFO] report_generator — Reports directory ready: C:\Users\gio\Downloads\Atria_Internship\reports
+2026-03-10 15:17:52,407 [INFO] database — Connected to database successfully
+2026-03-10 15:17:52,470 [INFO] report_generator — Generating reports for 15 emails
+2026-03-10 15:17:52,474 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\email_10_report.json
+2026-03-10 15:17:52,477 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\email_2_report.json
+2026-03-10 15:17:52,480 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\email_5_report.json
+2026-03-10 15:17:52,483 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\email_6_report.json
+2026-03-10 15:17:52,486 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\email_7_report.json
+2026-03-10 15:17:52,489 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-1_report.json
+2026-03-10 15:17:52,492 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-10_report.json
+2026-03-10 15:17:52,496 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-2_report.json
+2026-03-10 15:17:52,496 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-3_report.json
+2026-03-10 15:17:52,502 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-4_report.json
+2026-03-10 15:17:52,505 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-5_report.json
+2026-03-10 15:17:52,507 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-6_report.json
+2026-03-10 15:17:52,511 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-7_report.json
+2026-03-10 15:17:52,513 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-8_report.json
+2026-03-10 15:17:52,517 [INFO] report_generator — Report saved: C:\Users\gio\Downloads\Atria_Internship\reports\sample-9_report.json
+2026-03-10 15:17:52,519 [INFO] database — Database connection closed
+2026-03-10 15:17:52,521 [INFO] report_generator — Report generation complete — 15 success, 0 failed

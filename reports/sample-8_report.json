@@ -1,42 +1,63 @@
 {
-  "email": "sample-8.eml",
-  "from": "FTXinsurance <noreplye@promotix.com>",
-  "subject": "Announcement : Withdraw Process is Authorized Now !",
-  "verdict": "PHISHING",
-  "verdict_emoji": "🚨",
-  "final_score": 66,
-  "level": "HIGH",
-  "level_emoji": "🟠",
-  "scores": {
-    "rule_engine": 56,
-    "llm": 90,
-    "llm_source": "groq",
-    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  "report_metadata": {
+    "generated_at": "2026-03-10 15:17:52",
+    "report_version": "1.0",
+    "analyzer": "Email Threat Analyzer — Atria Solutions"
+  },
+  "email_identity": {
+    "filename": "sample-8.eml",
+    "from": "FTXinsurance <noreplye@promotix.com>",
+    "subject": "Announcement : Withdraw Process is Authorized Now !",
+    "domain": "promotix.com",
+    "sender_ip": "54.240.9.14"
+  },
+  "final_verdict": {
+    "classification": "PHISHING",
+    "threat_category": "Email Phishing Attack",
+    "risk_score": 66,
+    "severity": "HIGH",
+    "risk_score_breakdown": {
+      "rule_engine_score": 56,
+      "llm_score": 90,
+      "llm_source": "GROQ",
+      "formula": "Final Score = (Rule Engine x 0.70) + (LLM x 0.30)"
+    }
   },
   "authentication": {
-    "spf": "pass",
-    "dkim": "pass",
-    "dmarc": "pass"
+    "overall_status": "PASS",
+    "spf": "PASS",
+    "dkim": "PASS",
+    "dmarc": "PASS"
   },
-  "threat_intel": {
-    "sender_ip": "54.240.9.14",
-    "abuse_ipdb": 20,
-    "dnsbl_listed": "[]",
-    "domain_age_days": 8762,
-    "domain_registered": "March 09, 2002",
-    "ssl": "Issuer: Sectigo Limited | Expires: Dec  2 23:59:59 2026 GMT",
+  "threat_intelligence": {
+    "abuse_ipdb": {
+      "score": 20,
+      "max_score": 100,
+      "risk_level": "LOW"
+    },
+    "domain_age": {
+      "days_since_registration": 8762,
+      "registered_on": "March 09, 2002",
+      "note": "Domains under 180 days are considered high risk"
+    },
+    "ssl_certificate": "Issuer: Sectigo Limited | Expires: Dec  2 23:59:59 2026 GMT",
+    "dnsbl_status": "[]",
     "otx_pulses": 0,
     "greynoise": "unknown",
     "urlhaus": "clean",
     "threatfox": "IP: clean | Domain: clean",
     "pulsedive_risk": "IP: unknown | Domain: unknown"
   },
-  "top_reasons": [
-    "Brand impersonation: ftx → promotix.com",
-    "Urgent keywords: ['withdraw', 'authorized']"
-  ],
-  "llm_summary": "Brand impersonation with domain mismatch",
+  "rule_engine_findings": {
+    "total_flags": 2,
+    "flags": [
+      "Brand impersonation: ftx → promotix.com",
+      "Urgent keywords: ['withdraw', 'authorized']"
+    ]
+  },
   "llm_analysis": {
+    "source": "GROQ",
+    "summary": "Brand impersonation with domain mismatch",
     "authentication": "SPF, DKIM, and DMARC pass, but domain does not match the brand",
     "sender": "FTXinsurance with domain promotix.com, which is not a known FTX domain",
     "threat_intel": "No known threats, but the domain age and SSL are not suspicious",

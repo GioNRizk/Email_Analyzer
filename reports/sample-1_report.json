@@ -1,44 +1,65 @@
 {
-  "email": "sample-1.eml",
-  "from": "BANCO DO BRADESCO LIVELO <banco.bradesco@atendimento.com.br>",
-  "subject": "CLIENTE PRIME - BRADESCO LIVELO: Seu cartão tem 92.990 pontos LIVELO expirando hoje!",
-  "verdict": "PHISHING",
-  "verdict_emoji": "🚨",
-  "final_score": 72,
-  "level": "HIGH",
-  "level_emoji": "🟠",
-  "scores": {
-    "rule_engine": 65,
-    "llm": 90,
-    "llm_source": "groq",
-    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  "report_metadata": {
+    "generated_at": "2026-03-10 15:17:52",
+    "report_version": "1.0",
+    "analyzer": "Email Threat Analyzer — Atria Solutions"
+  },
+  "email_identity": {
+    "filename": "sample-1.eml",
+    "from": "BANCO DO BRADESCO LIVELO <banco.bradesco@atendimento.com.br>",
+    "subject": "CLIENTE PRIME - BRADESCO LIVELO: Seu cartão tem 92.990 pontos LIVELO expirando hoje!",
+    "domain": "atendimento.com.br",
+    "sender_ip": "137.184.34.4"
+  },
+  "final_verdict": {
+    "classification": "PHISHING",
+    "threat_category": "Email Phishing Attack",
+    "risk_score": 72,
+    "severity": "HIGH",
+    "risk_score_breakdown": {
+      "rule_engine_score": 65,
+      "llm_score": 90,
+      "llm_source": "GROQ",
+      "formula": "Final Score = (Rule Engine x 0.70) + (LLM x 0.30)"
+    }
   },
   "authentication": {
-    "spf": "temperror",
-    "dkim": "none",
-    "dmarc": "temperror"
+    "overall_status": "PARTIAL FAIL - DKIM failed",
+    "spf": "TEMPERROR",
+    "dkim": "NONE",
+    "dmarc": "TEMPERROR"
   },
-  "threat_intel": {
-    "sender_ip": "137.184.34.4",
-    "abuse_ipdb": 0,
-    "dnsbl_listed": "[]",
-    "domain_age_days": 2723,
-    "domain_registered": "September 20, 2018",
-    "ssl": "unknown",
+  "threat_intelligence": {
+    "abuse_ipdb": {
+      "score": 0,
+      "max_score": 100,
+      "risk_level": "LOW"
+    },
+    "domain_age": {
+      "days_since_registration": 2723,
+      "registered_on": "September 20, 2018",
+      "note": "Domains under 180 days are considered high risk"
+    },
+    "ssl_certificate": "unknown",
+    "dnsbl_status": "[]",
     "otx_pulses": 0,
     "greynoise": "unknown",
     "urlhaus": "clean",
     "threatfox": "IP: clean | Domain: clean",
     "pulsedive_risk": "IP: unknown | Domain: unknown"
   },
-  "top_reasons": [
-    "SPF temperror",
-    "DKIM missing",
-    "Brand impersonation: bradesco → atendimento.com.br",
-    "No SSL certificate"
-  ],
-  "llm_summary": "Brand impersonation attempt with domain mismatch and suspicious link",
+  "rule_engine_findings": {
+    "total_flags": 4,
+    "flags": [
+      "SPF temperror",
+      "DKIM missing",
+      "Brand impersonation: bradesco → atendimento.com.br",
+      "No SSL certificate"
+    ]
+  },
   "llm_analysis": {
+    "source": "GROQ",
+    "summary": "Brand impersonation attempt with domain mismatch and suspicious link",
     "authentication": "SPF and DMARC results show temperror, indicating potential authentication issues, while DKIM is none, suggesting a lack of domain key validation. These failures suggest the email may not be coming from the legitimate domain it claims to be from.",
     "sender": "The sender domain atendimento.com.br does not match the display name BANCO DO BRADESCO, indicating a potential brand impersonation attempt. The display name is trying to mimic a well-known Brazilian bank, which raises suspicions.",
     "threat_intel": "The sender IP 137.184.34.4 has no reported threats in AbuseIPDB, OTX, or other threat intelligence sources. The domain age is over 2 years, which could suggest legitimacy, but the lack of SSL information and the context of the email raise concerns.",

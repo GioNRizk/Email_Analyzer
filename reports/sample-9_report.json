@@ -1,43 +1,64 @@
 {
-  "email": "sample-9.eml",
-  "from": "C o i n b a s e <noreply@firesonic.ca>",
-  "subject": "You sent 0.79 ETH via Ethereum network",
-  "verdict": "PHISHING",
-  "verdict_emoji": "🚨",
-  "final_score": 72,
-  "level": "HIGH",
-  "level_emoji": "🟠",
-  "scores": {
-    "rule_engine": 65,
-    "llm": 90,
-    "llm_source": "groq",
-    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  "report_metadata": {
+    "generated_at": "2026-03-10 15:17:52",
+    "report_version": "1.0",
+    "analyzer": "Email Threat Analyzer — Atria Solutions"
+  },
+  "email_identity": {
+    "filename": "sample-9.eml",
+    "from": "C o i n b a s e <noreply@firesonic.ca>",
+    "subject": "You sent 0.79 ETH via Ethereum network",
+    "domain": "firesonic.ca",
+    "sender_ip": "23.251.234.51"
+  },
+  "final_verdict": {
+    "classification": "PHISHING",
+    "threat_category": "Email Phishing Attack",
+    "risk_score": 72,
+    "severity": "HIGH",
+    "risk_score_breakdown": {
+      "rule_engine_score": 65,
+      "llm_score": 90,
+      "llm_source": "GROQ",
+      "formula": "Final Score = (Rule Engine x 0.70) + (LLM x 0.30)"
+    }
   },
   "authentication": {
-    "spf": "pass",
-    "dkim": "pass",
-    "dmarc": "none"
+    "overall_status": "PARTIAL FAIL - DMARC failed",
+    "spf": "PASS",
+    "dkim": "PASS",
+    "dmarc": "NONE"
   },
-  "threat_intel": {
-    "sender_ip": "23.251.234.51",
-    "abuse_ipdb": 29,
-    "dnsbl_listed": "[]",
-    "domain_age_days": 1060,
-    "domain_registered": "April 10, 2023",
-    "ssl": "Issuer: Let's Encrypt | Expires: Apr 26 17:23:17 2026 GMT",
+  "threat_intelligence": {
+    "abuse_ipdb": {
+      "score": 29,
+      "max_score": 100,
+      "risk_level": "LOW"
+    },
+    "domain_age": {
+      "days_since_registration": 1060,
+      "registered_on": "April 10, 2023",
+      "note": "Domains under 180 days are considered high risk"
+    },
+    "ssl_certificate": "Issuer: Let's Encrypt | Expires: Apr 26 17:23:17 2026 GMT",
+    "dnsbl_status": "[]",
     "otx_pulses": 2,
     "greynoise": "unknown",
     "urlhaus": "clean",
     "threatfox": "IP: clean | Domain: clean",
     "pulsedive_risk": "IP: unknown | Domain: unknown"
   },
-  "top_reasons": [
-    "DMARC none",
-    "AbuseIPDB medium (29/100)",
-    "Coinbase impersonation from firesonic.ca"
-  ],
-  "llm_summary": "Brand impersonation with domain mismatch and suspicious content",
+  "rule_engine_findings": {
+    "total_flags": 3,
+    "flags": [
+      "DMARC none",
+      "AbuseIPDB medium (29/100)",
+      "Coinbase impersonation from firesonic.ca"
+    ]
+  },
   "llm_analysis": {
+    "source": "GROQ",
+    "summary": "Brand impersonation with domain mismatch and suspicious content",
     "authentication": "SPF and DKIM pass, but DMARC is none, indicating potential impersonation",
     "sender": "Sender claims to be CoinBase, but domain is firesonic.ca, which is not a known CoinBase domain",
     "threat_intel": "Domain age is over 2 years, but IP has a moderate abuse score and OTX pulses",

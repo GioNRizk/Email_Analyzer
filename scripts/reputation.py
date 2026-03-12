@@ -5,7 +5,7 @@ from utils.logger import get_logger
 import os
 from dotenv import load_dotenv
 logger = get_logger("reputation")
-
+#step 3
 # ── Initialize components ─────────────────────────────────────
 db     = Database()
 parser = EmailParser()

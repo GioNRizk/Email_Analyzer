@@ -1,41 +1,62 @@
 {
-  "email": "sample-7.eml",
-  "from": "Google Notifications <notify-noreply@google.com>",
-  "subject": "dubill hd7t invited you to view a collection: \"🌅 we hope our chosen opt\"",
-  "verdict": "BENIGN",
-  "verdict_emoji": "✅",
-  "final_score": 0,
-  "level": "LOW",
-  "level_emoji": "🟢",
-  "scores": {
-    "rule_engine": 0,
-    "llm": 0,
-    "llm_source": "groq",
-    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  "report_metadata": {
+    "generated_at": "2026-03-10 15:17:52",
+    "report_version": "1.0",
+    "analyzer": "Email Threat Analyzer — Atria Solutions"
+  },
+  "email_identity": {
+    "filename": "sample-7.eml",
+    "from": "Google Notifications <notify-noreply@google.com>",
+    "subject": "dubill hd7t invited you to view a collection: \"🌅 we hope our chosen opt\"",
+    "domain": "google.com",
+    "sender_ip": "209.85.166.200"
+  },
+  "final_verdict": {
+    "classification": "BENIGN",
+    "threat_category": "Legitimate Email",
+    "risk_score": 0,
+    "severity": "LOW",
+    "risk_score_breakdown": {
+      "rule_engine_score": 0,
+      "llm_score": 0,
+      "llm_source": "GROQ",
+      "formula": "Final Score = (Rule Engine x 0.70) + (LLM x 0.30)"
+    }
   },
   "authentication": {
-    "spf": "pass",
-    "dkim": "pass",
-    "dmarc": "pass"
+    "overall_status": "PASS",
+    "spf": "PASS",
+    "dkim": "PASS",
+    "dmarc": "PASS"
   },
-  "threat_intel": {
-    "sender_ip": "209.85.166.200",
-    "abuse_ipdb": 0,
-    "dnsbl_listed": "[]",
-    "domain_age_days": 10398,
-    "domain_registered": "September 15, 1997",
-    "ssl": "Issuer: Google Trust Services | Expires: Apr 27 08:36:37 2026 GMT",
+  "threat_intelligence": {
+    "abuse_ipdb": {
+      "score": 0,
+      "max_score": 100,
+      "risk_level": "LOW"
+    },
+    "domain_age": {
+      "days_since_registration": 10398,
+      "registered_on": "September 15, 1997",
+      "note": "Domains under 180 days are considered high risk"
+    },
+    "ssl_certificate": "Issuer: Google Trust Services | Expires: Apr 27 08:36:37 2026 GMT",
+    "dnsbl_status": "[]",
     "otx_pulses": 1,
     "greynoise": "unknown",
     "urlhaus": "clean",
     "threatfox": "IP: clean | Domain: clean",
     "pulsedive_risk": "IP: unknown | Domain: unknown"
   },
-  "top_reasons": [
-    "Whitelisted: google.com"
-  ],
-  "llm_summary": "Known brand with all authentication passing and normal content",
+  "rule_engine_findings": {
+    "total_flags": 1,
+    "flags": [
+      "Whitelisted: google.com"
+    ]
+  },
   "llm_analysis": {
+    "source": "GROQ",
+    "summary": "Known brand with all authentication passing and normal content",
     "authentication": "SPF, DKIM, and DMARC all pass",
     "sender": "Google Notifications from google.com",
     "threat_intel": "No known threats from IP, domain, or URL",

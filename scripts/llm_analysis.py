@@ -9,7 +9,7 @@ import sys
 import json
 import time
 import requests
-
+#step 4
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from core.database import Database
 from core.email_parser import EmailParser

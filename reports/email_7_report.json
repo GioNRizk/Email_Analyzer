@@ -1,41 +1,62 @@
 {
-  "email": "email_7.eml",
-  "from": "Medium Daily Digest <noreply@medium.com>",
-  "subject": "Why the Kalman Filter Beats Moving Averages in Trading | Emma Kirsten in Coding Nexus",
-  "verdict": "BENIGN",
-  "verdict_emoji": "✅",
-  "final_score": 0,
-  "level": "LOW",
-  "level_emoji": "🟢",
-  "scores": {
-    "rule_engine": 0,
-    "llm": 0,
-    "llm_source": "groq",
-    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  "report_metadata": {
+    "generated_at": "2026-03-10 15:17:52",
+    "report_version": "1.0",
+    "analyzer": "Email Threat Analyzer — Atria Solutions"
+  },
+  "email_identity": {
+    "filename": "email_7.eml",
+    "from": "Medium Daily Digest <noreply@medium.com>",
+    "subject": "Why the Kalman Filter Beats Moving Averages in Trading | Emma Kirsten in Coding Nexus",
+    "domain": "medium.com",
+    "sender_ip": "168.245.3.222"
+  },
+  "final_verdict": {
+    "classification": "BENIGN",
+    "threat_category": "Legitimate Email",
+    "risk_score": 0,
+    "severity": "LOW",
+    "risk_score_breakdown": {
+      "rule_engine_score": 0,
+      "llm_score": 0,
+      "llm_source": "GROQ",
+      "formula": "Final Score = (Rule Engine x 0.70) + (LLM x 0.30)"
+    }
   },
   "authentication": {
-    "spf": "pass",
-    "dkim": "pass",
-    "dmarc": "pass"
+    "overall_status": "PASS",
+    "spf": "PASS",
+    "dkim": "PASS",
+    "dmarc": "PASS"
   },
-  "threat_intel": {
-    "sender_ip": "168.245.3.222",
-    "abuse_ipdb": 0,
-    "dnsbl_listed": "[]",
-    "domain_age_days": 10144,
-    "domain_registered": "May 27, 1998",
-    "ssl": "Issuer: Google Trust Services | Expires: Apr 12 20:40:01 2026 GMT",
+  "threat_intelligence": {
+    "abuse_ipdb": {
+      "score": 0,
+      "max_score": 100,
+      "risk_level": "LOW"
+    },
+    "domain_age": {
+      "days_since_registration": 10144,
+      "registered_on": "May 27, 1998",
+      "note": "Domains under 180 days are considered high risk"
+    },
+    "ssl_certificate": "Issuer: Google Trust Services | Expires: Apr 12 20:40:01 2026 GMT",
+    "dnsbl_status": "[]",
     "otx_pulses": -1,
     "greynoise": "unknown",
     "urlhaus": "clean",
     "threatfox": "IP: clean | Domain: clean",
     "pulsedive_risk": "IP: unknown | Domain: unknown"
   },
-  "top_reasons": [
-    "Whitelisted: medium.com"
-  ],
-  "llm_summary": "Legitimate email from Medium with no malicious intent",
+  "rule_engine_findings": {
+    "total_flags": 1,
+    "flags": [
+      "Whitelisted: medium.com"
+    ]
+  },
   "llm_analysis": {
+    "source": "GROQ",
+    "summary": "Legitimate email from Medium with no malicious intent",
     "authentication": "SPF, DKIM, and DMARC all pass, indicating the email is authentic and from the claimed domain medium.com",
     "sender": "The sender domain medium.com is legitimate, and the display name matches the actual domain, with no signs of brand impersonation",
     "threat_intel": "The sender IP has a clean reputation, with no reports of abuse or threats, and the domain age is over 27 years, indicating a well-established and trusted domain",

@@ -3,7 +3,7 @@
 # Step 5: Generate a structured JSON scorecard report per email
 # Output: reports/<filename>_report.json
 # =============================================================
-
+#step 5
 import os
 import sys
 import json

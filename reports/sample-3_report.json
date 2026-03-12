@@ -1,41 +1,62 @@
 {
-  "email": "sample-3.eml",
-  "from": "Nora Alex <noraalex01@gmail.com>",
-  "subject": "Dia Bom",
-  "verdict": "BEC",
-  "verdict_emoji": "⚠️",
-  "final_score": 41,
-  "level": "MEDIUM",
-  "level_emoji": "🟡",
-  "scores": {
-    "rule_engine": 20,
-    "llm": 90,
-    "llm_source": "groq",
-    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  "report_metadata": {
+    "generated_at": "2026-03-10 15:17:52",
+    "report_version": "1.0",
+    "analyzer": "Email Threat Analyzer — Atria Solutions"
+  },
+  "email_identity": {
+    "filename": "sample-3.eml",
+    "from": "Nora Alex <noraalex01@gmail.com>",
+    "subject": "Dia Bom",
+    "domain": "gmail.com",
+    "sender_ip": "209.85.208.43"
+  },
+  "final_verdict": {
+    "classification": "BEC",
+    "threat_category": "Business Email Compromise (BEC)",
+    "risk_score": 41,
+    "severity": "MEDIUM",
+    "risk_score_breakdown": {
+      "rule_engine_score": 20,
+      "llm_score": 90,
+      "llm_source": "GROQ",
+      "formula": "Final Score = (Rule Engine x 0.70) + (LLM x 0.30)"
+    }
   },
   "authentication": {
-    "spf": "pass",
-    "dkim": "pass",
-    "dmarc": "pass"
+    "overall_status": "PASS",
+    "spf": "PASS",
+    "dkim": "PASS",
+    "dmarc": "PASS"
   },
-  "threat_intel": {
-    "sender_ip": "209.85.208.43",
-    "abuse_ipdb": 69,
-    "dnsbl_listed": "[]",
-    "domain_age_days": 11162,
-    "domain_registered": "August 13, 1995",
-    "ssl": "Issuer: Google Trust Services | Expires: Apr 27 08:37:55 2026 GMT",
+  "threat_intelligence": {
+    "abuse_ipdb": {
+      "score": 69,
+      "max_score": 100,
+      "risk_level": "HIGH"
+    },
+    "domain_age": {
+      "days_since_registration": 11162,
+      "registered_on": "August 13, 1995",
+      "note": "Domains under 180 days are considered high risk"
+    },
+    "ssl_certificate": "Issuer: Google Trust Services | Expires: Apr 27 08:37:55 2026 GMT",
+    "dnsbl_status": "[]",
     "otx_pulses": -1,
     "greynoise": "unknown",
     "urlhaus": "clean",
     "threatfox": "IP: clean | Domain: clean",
     "pulsedive_risk": "IP: unknown | Domain: unknown"
   },
-  "top_reasons": [
-    "AbuseIPDB high (69/100)"
-  ],
-  "llm_summary": "Email exhibits characteristics of a Business Email Compromise (BEC) scam, attempting to trick the recipient into assisting with a fraudulent investment scheme",
+  "rule_engine_findings": {
+    "total_flags": 1,
+    "flags": [
+      "AbuseIPDB high (69/100)"
+    ]
+  },
   "llm_analysis": {
+    "source": "GROQ",
+    "summary": "Email exhibits characteristics of a Business Email Compromise (BEC) scam, attempting to trick the recipient into assisting with a fraudulent investment scheme",
     "authentication": "SPF, DKIM, and DMARC all pass, indicating the email is likely coming from a legitimate Gmail account, but this does not necessarily validate the sender's intentions",
     "sender": "The sender domain is a public email service (gmail.com), which is often used for phishing and BEC scams, and the display name 'Nora Alex' does not match any known brand or organization, suggesting a potential impersonation attempt",
     "threat_intel": "The sender IP has a high AbuseIPDB score (69/100), indicating potential malicious activity, and the domain age is old (11162 days), but this is expected for a public email service like Gmail",

@@ -1,41 +1,62 @@
 {
-  "email": "sample-4.eml",
-  "from": "Manpower Norge <nyhetsbrev.manpowergroup@manpowergroup.no>",
-  "subject": "Ditt abonnement er avsluttet",
-  "verdict": "BENIGN",
-  "verdict_emoji": "✅",
-  "final_score": 8,
-  "level": "LOW",
-  "level_emoji": "🟢",
-  "scores": {
-    "rule_engine": 10,
-    "llm": 5,
-    "llm_source": "groq",
-    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  "report_metadata": {
+    "generated_at": "2026-03-10 15:17:52",
+    "report_version": "1.0",
+    "analyzer": "Email Threat Analyzer — Atria Solutions"
+  },
+  "email_identity": {
+    "filename": "sample-4.eml",
+    "from": "Manpower Norge <nyhetsbrev.manpowergroup@manpowergroup.no>",
+    "subject": "Ditt abonnement er avsluttet",
+    "domain": "manpowergroup.no",
+    "sender_ip": "91.227.208.189"
+  },
+  "final_verdict": {
+    "classification": "BENIGN",
+    "threat_category": "Legitimate Email",
+    "risk_score": 8,
+    "severity": "LOW",
+    "risk_score_breakdown": {
+      "rule_engine_score": 10,
+      "llm_score": 5,
+      "llm_source": "GROQ",
+      "formula": "Final Score = (Rule Engine x 0.70) + (LLM x 0.30)"
+    }
   },
   "authentication": {
-    "spf": "softfail",
-    "dkim": "pass",
-    "dmarc": "pass"
+    "overall_status": "PARTIAL FAIL - SPF failed",
+    "spf": "SOFTFAIL",
+    "dkim": "PASS",
+    "dmarc": "PASS"
   },
-  "threat_intel": {
-    "sender_ip": "91.227.208.189",
-    "abuse_ipdb": 0,
-    "dnsbl_listed": "[]",
-    "domain_age_days": 5426,
-    "domain_registered": "April 27, 2011",
-    "ssl": "Issuer: Google Trust Services | Expires: Apr 12 08:33:27 2026 GMT",
+  "threat_intelligence": {
+    "abuse_ipdb": {
+      "score": 0,
+      "max_score": 100,
+      "risk_level": "LOW"
+    },
+    "domain_age": {
+      "days_since_registration": 5426,
+      "registered_on": "April 27, 2011",
+      "note": "Domains under 180 days are considered high risk"
+    },
+    "ssl_certificate": "Issuer: Google Trust Services | Expires: Apr 12 08:33:27 2026 GMT",
+    "dnsbl_status": "[]",
     "otx_pulses": -1,
     "greynoise": "unknown",
     "urlhaus": "clean",
     "threatfox": "IP: clean | Domain: clean",
     "pulsedive_risk": "IP: unknown | Domain: unknown"
   },
-  "top_reasons": [
-    "SPF softfail"
-  ],
-  "llm_summary": "Legitimate email from Manpower Norge with proper authentication and no malicious content",
+  "rule_engine_findings": {
+    "total_flags": 1,
+    "flags": [
+      "SPF softfail"
+    ]
+  },
   "llm_analysis": {
+    "source": "GROQ",
+    "summary": "Legitimate email from Manpower Norge with proper authentication and no malicious content",
     "authentication": "SPF resulted in softfail, but DKIM and DMARC passed, indicating the email is likely legitimate but may have some issues with sender configuration",
     "sender": "The sender domain manpowergroup.no is legitimate and matches the display name, with no signs of brand impersonation attempts",
     "threat_intel": "The sender IP has a clean reputation, with no reports on AbuseIPDB, OTX, or other threat intelligence platforms, and the domain has been registered for over 14 years with a valid SSL certificate",

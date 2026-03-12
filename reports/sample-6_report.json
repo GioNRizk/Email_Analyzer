@@ -1,42 +1,63 @@
 {
-  "email": "sample-6.eml",
-  "from": "Kundenservice, jehd <service@stayfriends.de>",
-  "subject": "phishing@pot, Coca Cola Jahresvorrat für Dich! ",
-  "verdict": "PHISHING",
-  "verdict_emoji": "🚨",
-  "final_score": 41,
-  "level": "MEDIUM",
-  "level_emoji": "🟡",
-  "scores": {
-    "rule_engine": 20,
-    "llm": 90,
-    "llm_source": "groq",
-    "formula": "Final = (Rule × 0.7) + (LLM × 0.3)"
+  "report_metadata": {
+    "generated_at": "2026-03-10 15:17:52",
+    "report_version": "1.0",
+    "analyzer": "Email Threat Analyzer — Atria Solutions"
+  },
+  "email_identity": {
+    "filename": "sample-6.eml",
+    "from": "Kundenservice, jehd <service@stayfriends.de>",
+    "subject": "phishing@pot, Coca Cola Jahresvorrat für Dich! ",
+    "domain": "stayfriends.de",
+    "sender_ip": "144.172.64.113"
+  },
+  "final_verdict": {
+    "classification": "PHISHING",
+    "threat_category": "Email Phishing Attack",
+    "risk_score": 41,
+    "severity": "MEDIUM",
+    "risk_score_breakdown": {
+      "rule_engine_score": 20,
+      "llm_score": 90,
+      "llm_source": "GROQ",
+      "formula": "Final Score = (Rule Engine x 0.70) + (LLM x 0.30)"
+    }
   },
   "authentication": {
-    "spf": "pass",
-    "dkim": "none",
-    "dmarc": "none"
+    "overall_status": "PARTIAL FAIL - DKIM, DMARC failed",
+    "spf": "PASS",
+    "dkim": "NONE",
+    "dmarc": "NONE"
   },
-  "threat_intel": {
-    "sender_ip": "144.172.64.113",
-    "abuse_ipdb": 0,
-    "dnsbl_listed": "[]",
-    "domain_age_days": -1,
-    "domain_registered": "unknown",
-    "ssl": "Issuer: Let's Encrypt | Expires: May  9 22:47:14 2026 GMT",
+  "threat_intelligence": {
+    "abuse_ipdb": {
+      "score": 0,
+      "max_score": 100,
+      "risk_level": "LOW"
+    },
+    "domain_age": {
+      "days_since_registration": -1,
+      "registered_on": "unknown",
+      "note": "Domains under 180 days are considered high risk"
+    },
+    "ssl_certificate": "Issuer: Let's Encrypt | Expires: May  9 22:47:14 2026 GMT",
+    "dnsbl_status": "[]",
     "otx_pulses": 0,
     "greynoise": "unknown",
     "urlhaus": "clean",
     "threatfox": "IP: clean | Domain: clean",
     "pulsedive_risk": "IP: unknown | Domain: unknown"
   },
-  "top_reasons": [
-    "DKIM missing",
-    "DMARC none"
-  ],
-  "llm_summary": "Brand impersonation attempt with suspicious email content and domain mismatch",
+  "rule_engine_findings": {
+    "total_flags": 2,
+    "flags": [
+      "DKIM missing",
+      "DMARC none"
+    ]
+  },
   "llm_analysis": {
+    "source": "GROQ",
+    "summary": "Brand impersonation attempt with suspicious email content and domain mismatch",
     "authentication": "SPF pass, but DKIM and DMARC failures indicate potential authentication issues, suggesting the email may not be genuinely from the claimed domain",
     "sender": "The sender domain 'stayfriends.de' does not match the expected domain for Coca Cola, indicating a brand impersonation attempt, and the display name 'Kundenservice, jehd' does not match the actual domain",
     "threat_intel": "The sender IP has no reported threats, but the domain age is unknown and the SSL certificate is from Let's Encrypt, which can be easily obtained, raising suspicions about the domain's legitimacy",

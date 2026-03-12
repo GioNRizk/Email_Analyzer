@@ -5,7 +5,7 @@ import email
 from email import policy
 from config.settings import LEGIT_FOLDER, SAMPLE_FOLDER
 from utils.logger import get_logger
-
+#email parser
 logger = get_logger("email_parser")
 
 class EmailParser:
